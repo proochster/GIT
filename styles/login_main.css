@@ -1,0 +1,1065 @@
+/*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/* -------------------------------------------------------------------------- */
+
+html, body { height: 95%; }
+
+/*body {
+    overflow:hidden;
+}*/
+
+/* -------------------------------------------------------------------------- */
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between images, videos, audio and canvas and the bottom of
+ * their containers: h5bp.com/i/440
+ */
+
+audio,
+canvas,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browse Happy prompt
+   ========================================================================== */
+
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+.logincontainer {
+	width: auto;
+	height: 700px;
+	margin-top: 125px;
+}
+
+.textaligncenter {
+	text-align:center;
+}
+
+.logincontainer p {
+	text-align:center;
+	font-family: Abel,sans-serif;
+	color: #636363;
+}
+
+.logincontainer a {
+	text-align:center;
+	font-family: Abel,sans-serif;
+}
+
+.loginboxlogo {
+	display: block;
+	width: 400px;
+	height: 100px;
+	margin-right: auto;
+	margin-left: auto;
+	position: relative;
+}
+
+.loginboxlogo img {
+	display: block;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+}
+
+.loginboxtext h3 {
+	text-align:center;
+	font-family: Abel,sans-serif;
+	color: #636363;
+}
+
+.loginbox {
+	margin-top: 20px;
+	background-color:#F3F3F3;
+	display: block;
+	width: 270px;
+	height: 340px;
+	/*border: solid 1px #FF00FF;*/
+	margin-right: auto;
+	margin-left: auto;
+	border: 5px solid #F3F3F3;
+	-webkit-box-shadow: 
+      inset 0 0 0px  rgba(0,0,0,0.3),
+            0 0 10px rgba(0,0,0,0.3); 
+    -moz-box-shadow: 
+      inset 0 0 0px  rgba(0,0,0,0.3),
+            0 0 10px rgba(0,0,0,0.3); 
+    box-shadow: 
+      inset 0 0 0px  rgba(0,0,0,0.3),
+            0 0 10px rgba(0,0,0,0.3); 
+    padding: 15px;
+    background: rgba(255,255,255,0.);
+}
+
+
+.logincontainer input[type="text"] {
+	display: block;
+	margin: 0 auto;
+	border: 1px solid #E3E3E3; 
+    padding: 15px 40px 15px 40px;
+    
+}
+
+
+.logincontainer input[type="password"] {
+	display: block;
+	margin: 0 auto;
+	border: 1px solid #E3E3E3; 
+    padding: 15px 40px 15px 40px;
+}
+
+/* ==========================================================================
+   Menu Page Styles
+   ========================================================================== */
+
+.logocontainer {
+	position: absolute;
+	width: 300px;
+	height: 45px;
+	left: 10px;
+	top: 25px;
+}
+
+.logocontainer img {
+	margin: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+}
+
+/*--------------------------------------------------------------------------- */
+
+.menucontainer {
+	position: absolute;
+	width: 300px;
+	height: 700px;
+	left: 10px;
+	top: 80px;
+}
+
+.mainmenu {
+	width: 290px;
+	height: auto;
+	
+}
+
+.mainmenu li {
+	position: relative;
+}
+
+.mainmenu li a {
+	height: 20px;
+	width: 215px;
+	border-top: solid 1px #e3e3e3;
+	border-bottom: solid 1px #e3e3e3;
+	text-decoration: none;
+	margin: 20px 0px 0px 20px;
+	padding-left: 50px;
+	padding-top: 10px;
+	padding-bottom: 12px;
+	font-family: Abel,sans-serif;
+	
+}
+
+.mainmenu li a:link {
+	color: #000;
+	display: block;
+}
+
+.mainmenu li a:visited {
+	color: #000;
+	display: block;
+}
+
+.mainmenu li a:active {
+	color: #c41846;
+	border-top: solid 1px #c41846;
+	border-bottom: solid 1px #c41846;
+	font-weight: bold;
+}
+
+.mainmenu li a:hover {
+	color: #c41846;
+	border-top: solid 1px #c41846;
+	border-bottom: solid 1px #c41846;
+	font-weight: bold;
+}
+
+.mainmenu ul {
+	list-style:none;
+	margin: 0;
+	padding: 0;
+}
+
+.mainmenu a:active {
+	color: #c41846;
+	border-top: solid 1px #c41846;
+	border-bottom: solid 1px #c41846;
+	font-weight: bold;
+}
+/* -------------------------------------------------------------------------- */
+
+.contentcontainer {
+	position:relative;
+	margin: 0px 0px 0px 350px;
+	height: 90%;
+}
+
+.contentcontainer img {
+	max-width:80%;
+	max-height:80%;
+	margin: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+}
+
+.contentcontainer h2 {
+	text-align: center;
+	margin-top: 40px;
+	font-family: Abel,sans-serif;
+}
+
+.contentcontainer h1 {
+	text-align: center;
+	margin-top: 40px;
+	font-family: Abel,sans-serif;
+}
+
+.contentcontainer h3 {
+	text-align: left;
+	margin-top: 40px;
+	font-family: Abel,sans-serif;
+}
+
+/* -------------------------------------------------------------------------- */
+/*  DATA SOURCES PAGE */
+/* -------------------------------------------------------------------------- */
+
+.tableodbccontainer {
+	width: 90%;
+	position: absolute;
+	margin: 0;
+	margin-top: -300px;
+	top: 0;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, 50%);
+}
+
+.table-odbc a {
+	text-decoration: none;
+	font-weight: bold;
+	color:#c41846;
+}
+
+.table-odbc {
+	margin:0px;
+	padding:0px;
+	width:100%;
+	border:1px solid #e3e3e3;
+	
+	-moz-border-radius-bottomleft:0px;
+	-webkit-border-bottom-left-radius:0px;
+	border-bottom-left-radius:0px;
+	
+	-moz-border-radius-bottomright:0px;
+	-webkit-border-bottom-right-radius:0px;
+	border-bottom-right-radius:0px;
+	
+	-moz-border-radius-topright:0px;
+	-webkit-border-top-right-radius:0px;
+	border-top-right-radius:0px;
+	
+	-moz-border-radius-topleft:0px;
+	-webkit-border-top-left-radius:0px;
+	border-top-left-radius:0px;
+}
+
+.table-odbc table{
+    border-collapse: collapse;
+        border-spacing: 0;
+	width:100%;
+	height:100%;
+	margin:0px;padding:0px;
+}
+
+.table-odbc tr:last-child td:last-child {
+	-moz-border-radius-bottomright:0px;
+	-webkit-border-bottom-right-radius:0px;
+	border-bottom-right-radius:0px;
+}
+
+.table-odbc table tr:first-child td:first-child {
+	-moz-border-radius-topleft:0px;
+	-webkit-border-top-left-radius:0px;
+	border-top-left-radius:0px;
+}
+
+.table-odbc table tr:first-child td:last-child {
+	-moz-border-radius-topright:0px;
+	-webkit-border-top-right-radius:0px;
+	border-top-right-radius:0px;
+}
+
+.table-odbc tr:last-child td:first-child{
+	-moz-border-radius-bottomleft:0px;
+	-webkit-border-bottom-left-radius:0px;
+	border-bottom-left-radius:0px;
+}
+
+.table-odbc tr:hover td{
+	background-color:#c4c4c4;
+}
+
+.table-odbc td{
+	vertical-align:middle;
+	
+	background-color:#e3e3e3;
+
+	border:1px solid #FFFFFF;
+	border-width:0px 1px 1px 0px;
+	text-align:left;
+	padding:10px;
+	font-size:15px;
+	font-family: Lato,sans-serif;
+	font-weight:normal;
+	color:#000000;
+}
+
+.table-odbc tr:last-child td{
+	border-width:0px 1px 0px 0px;
+}
+
+.table-odbc tr td:last-child{
+	border-width:0px 0px 1px 0px;
+}
+
+.table-odbc tr:last-child td:last-child{
+	border-width:0px 0px 0px 0px;
+}
+
+.table-odbc tr:first-child td{
+		background:-o-linear-gradient(bottom, #c41846 5%, #c41846 100%);	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #c41846), color-stop(1, #c41846) );
+	background:-moz-linear-gradient( center top, #c41846 5%, #c41846 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#c41846", endColorstr="#c41846");	background: -o-linear-gradient(top,#c41846,c41846);
+
+	background-color:#c41846;
+	border:0px solid #e3e3e3;
+	text-align:center;
+	border-width:0px 0px 1px 1px;
+	font-size:18px;
+	font-family: Abel,sans-serif;
+	font-weight:bold;
+	color:#ffffff;
+}
+
+.table-odbc tr:first-child:hover td{
+	background:-o-linear-gradient(bottom, #c41846 5%, #c41846 100%);	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #c41846), color-stop(1, #c41846) );
+	background:-moz-linear-gradient( center top, #c41846 5%, #c41846 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#c41846", endColorstr="#c41846");	background: -o-linear-gradient(top,#c41846,c41846);
+
+	background-color:#c41846;
+}
+
+.table-odbc tr:first-child td:first-child{
+	border-width:0px 0px 1px 0px;
+}
+
+.table-odbc tr:first-child td:last-child{
+	border-width:0px 0px 1px 1px;
+}
+
+/* -------------------------------------------------------------------------- */
+/* REPORTS PAGE */
+/* -------------------------------------------------------------------------- */
+
+
+.reportscontainer {
+	width: 90%;
+	position: absolute;
+	margin: 0;
+	top: 0;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, 50%);
+	/*border: 2px solid #0000ff;*/
+}
+
+.reportscontainer_table {
+	width: 90%;
+	position: absolute;
+	margin: 0;
+	top: -23%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, 50%);
+	z-index: -1;
+	/*border: 2px solid #0000ff;*/
+}
+
+/* -------------------------------------------------------------------------- */
+/* ------------------------------------ Drop Down Menu Container ------------ */
+/* -------------------------------------------------------------------------- */
+
+.dropdown_menu {
+	width: 90%;
+	position: absolute;
+	margin: 0;
+	top: 5% ;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, 50%);
+	z-index: +10;
+}
+
+/* -------------------------------------------------------------------------- */
+
+/* Reports Table */
+
+.table-reports {
+	z-index: +1;
+	position:relative;
+	margin:0px;padding:0px;
+	width:100%;
+	box-shadow: 10px 10px 5px #888888;
+	border:1px solid #000000;
+	
+	-moz-border-radius-bottomleft:0px;
+	-webkit-border-bottom-left-radius:0px;
+	border-bottom-left-radius:0px;
+	
+	-moz-border-radius-bottomright:0px;
+	-webkit-border-bottom-right-radius:0px;
+	border-bottom-right-radius:0px;
+	
+	-moz-border-radius-topright:0px;
+	-webkit-border-top-right-radius:0px;
+	border-top-right-radius:0px;
+	
+	-moz-border-radius-topleft:0px;
+	-webkit-border-top-left-radius:0px;
+	border-top-left-radius:0px;
+}
+.table-reports table{
+    border-collapse: collapse;
+    border-spacing: 0;
+	width:100%;
+	height:100%;
+	margin:0px;
+	padding:0px;
+	z-index: -1;
+	position:relative;
+}
+.table-reports tr:last-child td:last-child {
+	-moz-border-radius-bottomright:0px;
+	-webkit-border-bottom-right-radius:0px;
+	border-bottom-right-radius:0px;
+}
+.table-reports table tr:first-child td:first-child {
+	-moz-border-radius-topleft:0px;
+	-webkit-border-top-left-radius:0px;
+	border-top-left-radius:0px;
+}
+.table-reports table tr:first-child td:last-child {
+	-moz-border-radius-topright:0px;
+	-webkit-border-top-right-radius:0px;
+	border-top-right-radius:0px;
+}
+.table-reports tr:last-child td:first-child{
+	-moz-border-radius-bottomleft:0px;
+	-webkit-border-bottom-left-radius:0px;
+	border-bottom-left-radius:0px;
+}
+.table-reports tr:hover td{
+	
+}
+.table-reports tr:nth-child(odd){ 
+	background-color:#c4c4c4; 
+}
+.table-reports tr:nth-child(even)    {
+	background-color:#ffffff; 
+}
+
+.table-reports td {
+	vertical-align:middle;
+	border:1px solid #000000;
+	border-width:0px 1px 1px 0px;
+	text-align:center;
+	padding:5px;
+	font-size:14px;
+	font-family: Lato,sans-serif;
+	font-weight:normal;
+	color:#000000;
+}
+.table-reports tr:last-child td{
+	border-width:0px 1px 0px 0px;
+}
+.table-reports tr td:last-child{
+	border-width:0px 0px 1px 0px;
+}
+.table-reports tr:last-child td:last-child{
+	border-width:0px 0px 0px 0px;
+}
+.table-reports tr:first-child td{
+		background:-o-linear-gradient(bottom, #c41846 5%, #c41846 100%);	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #c41846), color-stop(1, #c41846) );
+	background:-moz-linear-gradient( center top, #c41846 5%, #c41846 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#c41846", endColorstr="#c41846");	background: -o-linear-gradient(top,#c41846,c41846);
+
+	background-color:#c41846;
+	border:0px solid #000000;
+	text-align:center;
+	border-width:0px 0px 1px 1px;
+	font-size:20px;
+	font-family: Abel,sans-serif;
+	font-weight:bold;
+	color:#ffffff;
+}
+.table-reports tr:first-child:hover td{
+	background:-o-linear-gradient(bottom, #c41846 5%, #c41846 100%);	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #c41846), color-stop(1, #c41846) );
+	background:-moz-linear-gradient( center top, #c41846 5%, #c41846 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#c41846", endColorstr="#c41846");	background: -o-linear-gradient(top,#c41846,c41846);
+
+	background-color:#c41846;
+}
+.table-reports tr:first-child td:first-child{
+	border-width:0px 0px 1px 0px;
+}
+.table-reports tr:first-child td:last-child{
+	border-width:0px 0px 1px 1px;
+} 
+
+
+
+
+/* -------------------------------------------------------------------------- */
+/* ----------------------- Drop Down Menu ----------------------------------- */
+/* -------------------------------------------------------------------------- */
+
+
+.dropdown_menu ul {
+	list-style: none;
+	padding: 0px;
+	margin: 0px;
+}
+
+.dropdown_menu ul li {
+	display: block;
+	position: relative;
+	float: left;
+	border:1px solid #008DCA;
+}
+
+.dropdown_menu li ul {
+	display: none;
+}
+
+.dropdown_menu ul li a {
+	display: block;
+	background: #008DCA;
+	padding: 5px 10px 5px 10px;
+	text-decoration: none;
+	white-space: nowrap;
+	color: #fff;
+	font-size: 15px;
+	font-family: Lato,sans-serif;
+}
+
+.dropdown_menu ul li a:hover {
+	background: #4DAFDA;
+}
+.dropdown_menu li:hover ul {
+	display: block; position: absolute;
+}
+.dropdown_menu li:hover li {
+	float: none;
+}
+.dropdown_menu li:hover a {
+	background: #008DCA;
+}
+.dropdown_menu li:hover li a:hover {
+	background: #4DAFDA;
+}
+.dropdown_menu #drop-nav li ul li {
+	border-top: 0px;
+}
+
+.dropdown_menu #drop-nav1 li ul li {border-top: 0px;
+}
+
+/* ==========================================================================
+   File Upload
+   ========================================================================== */
+  
+.fileupload {
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+	height: auto;
+	font-family: Abel,sans-serif;
+}
+
+.text {
+	margin: 0px 25px 0px 25px;
+}
+
+.text2 {
+	margin: 0px 0px 0px 150px;
+}
+
+
+
+/* ==========================================================================
+   Links
+   ========================================================================== */
+  
+.hotpinklinks a {
+	text-decoration:none;
+	color: #c41846;
+}  
+
+
+/* ==========================================================================
+   Fancy button
+   ========================================================================== */
+
+
+
+.login-button {
+	-moz-box-shadow:inset 0px 1px 0px 0px #c1ed9c;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #c1ed9c;
+	box-shadow:inset 0px 1px 0px 0px #c1ed9c;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #9dce2c), color-stop(1, #8cb82b) );
+	background:-moz-linear-gradient( center top, #9dce2c 5%, #8cb82b 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#9dce2c', endColorstr='#8cb82b');
+	background-color:#9dce2c;
+	-webkit-border-top-left-radius:0px;
+	-moz-border-radius-topleft:0px;
+	border-top-left-radius:0px;
+	-webkit-border-top-right-radius:0px;
+	-moz-border-radius-topright:0px;
+	border-top-right-radius:0px;
+	-webkit-border-bottom-right-radius:0px;
+	-moz-border-radius-bottomright:0px;
+	border-bottom-right-radius:0px;
+	-webkit-border-bottom-left-radius:0px;
+	-moz-border-radius-bottomleft:0px;
+	border-bottom-left-radius:0px;
+	text-indent:1px;
+	border:1px solid #83c41a;
+	display:inline-block;
+	color:#ffffff;
+	font-size:15px;
+	font-weight:normal;
+	font-style:normal;
+	height:45px;
+	line-height:45px;
+	width:232px;
+	text-decoration:none;
+	text-align:center;
+	text-shadow:1px 1px 0px #689324;
+	margin-bottom: 10px;
+}
+.login-button:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #8cb82b), color-stop(1, #9dce2c) );
+	background:-moz-linear-gradient( center top, #8cb82b 5%, #9dce2c 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#8cb82b', endColorstr='#9dce2c');
+	background-color:#8cb82b;
+}
+.login-button:active {
+	position:relative;
+	top:1px;
+}
+/* Blue button */
+
+.blue-button {
+	-moz-box-shadow:inset 0px 1px 0px 0px #c1ed9c;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #c1ed9c;
+	box-shadow:inset 0px 1px 0px 0px #c1ed9c;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #008DCA), color-stop(1, #009EDB) );
+	background:-moz-linear-gradient( center top, #008DCA 5%, #009EDB 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#008DCA', endColorstr='#009EDB');
+	background-color:#9dce2c;
+	-webkit-border-top-left-radius:0px;
+	-moz-border-radius-topleft:0px;
+	border-top-left-radius:0px;
+	-webkit-border-top-right-radius:0px;
+	-moz-border-radius-topright:0px;
+	border-top-right-radius:0px;
+	-webkit-border-bottom-right-radius:0px;
+	-moz-border-radius-bottomright:0px;
+	border-bottom-right-radius:0px;
+	-webkit-border-bottom-left-radius:0px;
+	-moz-border-radius-bottomleft:0px;
+	border-bottom-left-radius:0px;
+	text-indent:1px;
+	border:1px solid #008DCA;
+	display:inline-block;
+	color:#ffffff;
+	font-size:13px;
+	font-weight:bold;
+	font-style:normal;
+	/*height:30px;*/
+	line-height:30px;
+	width:150px;
+	text-decoration:none;
+	text-align:center;
+	text-shadow:1px 1px 0px #009EDB;
+	margin-bottom: 10px;
+	font-family: Lato,sans-serif;
+}
+.blue-button:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #33A4D5), color-stop(1, #4DAFDA) );
+	background:-moz-linear-gradient( center top, #33A4D5 5%, #4DAFDA 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#33A4D5', endColorstr='#4DAFDA');
+	background-color:#8cb82b;
+}
+.blue-button:active {
+	position:relative;
+	top:1px;
+}
+
+/* ==========================================================================
+   Google charts
+   ========================================================================== */
+
+.googlecharts {
+	position: absolute;
+	width: 40%;
+	height: auto;
+	top: 20%;
+	left: -5%%;
+	z-index: -10;
+}
+
+.googlecharts1 {
+	position: absolute;
+	width: 40%;
+	height: auto;
+	top: -15%;
+	left: -10%;
+	z-index: -10;
+}
+
+.googlecharts2 {
+	position: absolute;
+	width: 40%;
+	height: auto;
+	top: 10%;
+	left: -5%;
+	z-index: -10;
+}
+
+.googlecharts3 {
+	position: absolute;
+	width: 40%;
+	height: auto;
+	top: 15%;
+	left: 15%;
+	z-index: 0;
+}
+
+.charts_table_container {
+	position: absolute;
+	width: 40%;
+	height: auto;
+	top: 35%;
+	left: 40%;
+}
+
+.charts_table_container1 {
+	position: absolute;
+	width: 40%;
+	height: auto;
+	top: 12%;
+	left: 40%;
+}
+/* ==========================================================================
+   Bottom buttons
+   ========================================================================== */
+
+.buttons_bottom {
+	position: absolute;
+	top: 95%;
+	left: 4%;
+}
+
+.buttons_bottom ul {
+	list-style: none;
+	padding: 0px;
+	margin: 0px;
+}
+
+.buttons_bottom ul li {
+	display: block;
+	position: relative;
+	float: left;
+	margin: 15px;
+}
+
+.buttons_bottom ul li a {
+	display: block;
+	padding: 5px 10px 5px 10px;
+	text-decoration: none;
+	white-space: nowrap;
+	color: #fff;
+	font-size: 12px;
+	font-family: Lato,sans-serif;
+}
+
+.buttons_bottom input {
+	display: block;
+	padding: 5px 10px 5px 10px;
+	text-decoration: none;
+	white-space: nowrap;
+	color: #fff;
+	font-size: 12px;
+	font-family: Lato,sans-serif;
+}
+/*----------------------------------------------------------------------------*/
+
+
+
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers: h5bp.com/u
+ */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers: h5bp.com/v
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request: h5bp.com/r
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}

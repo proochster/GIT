@@ -14,7 +14,7 @@
 | path to your installation.
 |
 */
-$config['base_url']	= 'http://backup-pc.dyndns-server.com/bikdemo/';
+$config['base_url']	= 'http://backup-pc.dyndns-server.com/stage/bik/';
 
 /*
 |--------------------------------------------------------------------------
