@@ -2,7 +2,7 @@
 	
 	<h1>Welcome to FPS Data Management</h1>
 
-	<img id="logolarge" src="http://backup-pc.dyndns-server.com/webform/img/fps600.png" />
+	<img id="logolarge" src="http://backup-pc.dyndns-server.com/stage/bik/img/fps600.png" />
 	
 	<table id="table7">
 	

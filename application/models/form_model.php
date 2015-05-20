@@ -255,23 +255,6 @@ class Form_model extends CI_Model {
 		 return $getDateTo;
 	}
 	
-	
-
-//	public function getUserCarsFrom15To31Jan (){
-			
-//		$selecteduser = $this->form_model->getSelectedUser();
-			
-//		$this->db->select('*');
-//		$this->db->where($where);
-		
-//		$where = "`fromdate` BETWEEN ";
-		
-//		$query = $this->db->get('users');
-				
-//		return $query->result();
-		
-//	}	
-	
 	public function getUserCarsForPeriod() {
 		
 		
@@ -283,13 +266,6 @@ class Form_model extends CI_Model {
 		
 		$dateto =  $this->form_model->getDateTo();
 		$querydateto = ("'".$dateto."'");
-		
-//		$this->db->select('*');
-//		$this->db->where('fromdate >=', $datefrom);
-//		$this->db->where('fromdate <=', $dateto);
-//		$this->db->where('todate >=', $datefrom);
-//		$this->db->where('todate <=', $dateto);
-//		$this->db->where('username', $selecteduser);
 		
 		$query = $this->db->query('
 									SELECT * FROM carassign
@@ -306,8 +282,6 @@ class Form_model extends CI_Model {
 		
 		
 		
-//		$query = $this->db->get('carassign');
-				
 		return $query->result();
 		
 	}
