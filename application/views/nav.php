@@ -9,12 +9,23 @@
 		<!--	<li><?php echo anchor('forms/invoice', 'Invoice', 'title="Invoice"'); ?></li> -->
 		</ul>
 	</li>
+	<li><a href="#">User Data Input</a>
+		<ul>
+			<li><?php echo anchor('forms/mileage', 'Mileage', 'title="Mileage"'); ?></li>
+			<li><?php echo anchor('forms/purchases', 'Purchases', 'title="Purchases"'); ?></li>
+		<!--	<li><?php echo anchor('forms/invoice', 'Invoice', 'title="Invoice"'); ?></li> -->
+		</ul>
+	</li>
 	<li><a href="#">Setup</a>
 			
 				<ul>
 					<li><?php echo anchor('forms/users', 'Add User', 'title="Add User"'); ?></li>
 					<li><?php echo anchor('forms/cars', 'Add Car', 'title="Add Car"'); ?></li>
 					<li><?php echo anchor('forms/carassign', 'Assign Car to User', 'title="Car Assign"'); ?></li>
+					<li><?php echo anchor('forms/narrative', 'Add Narrative', 'title="Add Narrative"'); ?></li>
+					<li><?php echo anchor('forms/period', 'Add Period', 'title="Add Period"'); ?></li>
+					<li><?php echo anchor('forms/paymentmthd', 'Add Payment Method', 'title="Add Payment Method"'); ?></li>
+					<li><?php echo anchor('forms/supplier', 'Add Supplier', 'title="Add Supplier"'); ?></li>
 				<!--	<li><?php echo anchor('forms/supplier', 'Supplier Name', 'title="Suppliers"'); ?></li>
 					<li><?php echo anchor('forms/cars', 'Car Details', 'title="Cars"'); ?></li> -->
 				</ul>

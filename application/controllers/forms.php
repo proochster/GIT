@@ -398,6 +398,56 @@ class Forms extends CI_Controller {
 			}
 
 
+/* ------------------------------------------------------------------------------------
+ * -------------------------------------PERIOD-----------------------------------------
+ * ------------------------------------------------------------------------------------ */
+
+		public function period()
+		{
+			if($this->session->userdata('logged_in'))
+   			
+   				{
+				$session_data = $this->session->userdata('logged_in');
+ 				$ldata['username'] = $session_data['username'];
+				$this->load->model("form_model");
+				$this->load->library('form_validation');
+				
+				$config = array(
+		               array(
+		                     'field'   => 'period', 
+		                     'label'   => 'Period', 
+		                     'rules'   => 'required'
+		                  )
+		            );
+		
+				$this->form_validation->set_rules($config);
+				
+				
+				if ($this->form_validation->run() == FALSE)
+				{
+					$this->load->view('header',$ldata);
+					$this->load->view('nav',$ldata);					
+					$this->load->view('period_content');
+					$this->load->view('footer',$ldata);
+				}
+				else
+				{
+					$this->form_model->insertValues_period();	
+					
+					$this->load->view('header',$ldata);
+					$this->load->view('nav',$ldata);	
+					$this->load->view('period_content');
+					$this->load->view('footer',$ldata);
+				}
+			}
+   			else
+   			{
+		    //If no session, redirect to login page
+		    redirect('login', 'refresh');
+		   	}
+
+			}
+
 
 /* ------------------------------------------------------------------------------------
  * ------------------------------------MILEAGE-----------------------------------------
@@ -448,7 +498,7 @@ class Forms extends CI_Controller {
 		{
 			$this->load->view('header',$ldata);
 			$this->load->view('nav',$ldata);
-			$data['registration'] = $this->form_model->getReg();	
+			$data['registration'] = $this->form_model->getRegOnly();	
 			$data['results'] = $this->form_model->getAll_mileage();						
 			$this->load->view("mileage_content", $data);
 			$this->load->view('footer',$ldata);
@@ -459,7 +509,7 @@ class Forms extends CI_Controller {
 					
 			$this->load->view('header',$ldata);
 			$this->load->view('nav',$ldata);
-			$data['registration'] = $this->form_model->getReg();	
+			$data['registration'] = $this->form_model->getRegOnly();	
 			$data['results'] = $this->form_model->getAll_mileage();			
 			$this->load->view('mileage_content', $data);
 			$this->load->view('footer',$ldata);
@@ -553,83 +603,109 @@ class Forms extends CI_Controller {
 			
 	}
 
+/* ------------------------------------------------------------------------------------
+ * ----------------------------------PAYMENT METHOD------------------------------------
+ * ------------------------------------------------------------------------------------ */
+
+		public function paymentmthd()
+			{
+				
+			if($this->session->userdata('logged_in'))
+   			
+   				{
+				$session_data = $this->session->userdata('logged_in');
+ 				$ldata['username'] = $session_data['username'];
+				$this->load->model("form_model");
+				$this->load->library('form_validation');
+				
+				$config = array(
+		               array(
+		                     'field'   => 'paymentmthd', 
+		                     'label'   => 'Payment Method', 
+		                     'rules'   => 'required'
+		                  )
+		            );
+		
+				$this->form_validation->set_rules($config);
+				
+				
+				if ($this->form_validation->run() == FALSE)
+				{
+					$this->load->view('header',$ldata);
+					$this->load->view('nav',$ldata);					
+					$this->load->view('paymentmthd_content');
+					$this->load->view('footer',$ldata);
+				}
+				else
+				{
+					$this->form_model->insertValues_paymentmthd();	
+					
+					$this->load->view('header',$ldata);
+					$this->load->view('nav',$ldata);	
+					$this->load->view('paymentmthd_content');
+					$this->load->view('footer',$ldata);
+				}
+				}
+   			else
+   			{
+		    //If no session, redirect to login page
+		    redirect('login', 'refresh');
+		   	}
+			}
+
 
 /* ------------------------------------------------------------------------------------
  * ----------------------------------SUPPLIER------------------------------------------
  * ------------------------------------------------------------------------------------ */
 
-public function supplier_content_detail()
-	{
-		
-		if($this->session->userdata('logged_in'))
-   			
-   		{
-   		$session_data = $this->session->userdata('logged_in');
- 		$ldata['username'] = $session_data['username'];	
-		$this->load->model("form_model");
-		$this->load->library('form_validation');
-		
-		$config = array(
-               array(
-                     'field'   => 'fullname', 
-                     'label'   => 'Full Name', 
-                     'rules'   => 'required'
-                  ),
-               array(
-                     'field'   => 'business', 
-                     'label'   => 'Business Name', 
-                     'rules'   => 'required'
-                  ),
-               array(
-                     'field'   => 'address1', 
-                     'label'   => 'Address', 
-                     'rules'   => 'required'
-                  ),
-               array(
-                     'field'   => 'town', 
-                     'label'   => 'Town', 
-                     'rules'   => 'required'
-                  ),
-               array(
-                     'field'   => 'postcode', 
-                     'label'   => 'Postcode', 
-                     'rules'   => 'required'
-                  ),
-               array(
-                     'field'   => 'uniquecustcode', 
-                     'label'   => 'Unique Customer Code', 
-                     'rules'   => 'required'
-                  )  
+		public function supplier()
+			{
 				
-            );
-
-		$this->form_validation->set_rules($config);
+			if($this->session->userdata('logged_in'))
+   			
+   				{
+   				$session_data = $this->session->userdata('logged_in');
+ 				$ldata['username'] = $session_data['username'];
+				$this->load->model("form_model");
+				$this->load->library('form_validation');
+				
+				$config = array(
+		               array(
+		                     'field'   => 'supname', 
+		                     'label'   => 'Supplier Name', 
+		                     'rules'   => 'required'
+		                  )
+		            );
 		
-		
-		if ($this->form_validation->run() == FALSE)
-		{
-			$this->load->view('header',$ldata);
-			$this->load->view('nav',$ldata);					
-			$this->load->view('supplier_content_detail');
-			$this->load->view('footer',$ldata);
-		}
-		else
-		{
-			$this->form_model->insertValues_customers();	
-			
-			$this->load->view('header',$ldata);
-			$this->load->view('nav',$ldata);	
-			$this->load->view('supplier_content_detail');
-			$this->load->view('footer',$ldata);
-		}
+				$this->form_validation->set_rules($config);
+				
+				
+				if ($this->form_validation->run() == FALSE)
+				{
+					$this->load->view('header',$ldata);
+					$this->load->view('nav',$ldata);					
+					$this->load->view('supplier_content');
+					$this->load->view('footer',$ldata);
+				}
+				else
+				{
+					$this->form_model->insertValues_supplier();	
+					
+					$this->load->view('header',$ldata);
+					$this->load->view('nav',$ldata);	
+					$this->load->view('supplier_content');
+					$this->load->view('footer',$ldata);
+				}
+				
 			}
    			else
    			{
 		    //If no session, redirect to login page
 		    redirect('login', 'refresh');
 		   	}
-		
-	}
+				
+			}
+
 
 
 /* ------------------------------------------------------------------------------------

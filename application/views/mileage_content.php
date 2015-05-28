@@ -23,7 +23,7 @@
 				<select name="reg">
 						<?php	
 							foreach($registration as $row){
-								echo "<option value='".$row->reg."'>".$row->reg."</option>";
+								echo "<option value='".$row->registration."'>".$row->registration."</option>";
 							} 						 
 						?>
 				</select>
@@ -85,8 +85,8 @@
 		echo "<td>".$row->client."</td>";
 		echo "<td>".$row->return."</td>";		
 		echo "<td>".$row->reg."</td>";
-		echo "<td>".$row->model."</td>";
-		echo "<td>".$row->fuel_type."</td>";
+		echo "<td>".$row->car."</td>";
+		echo "<td>".$row->fuel."</td>";
 		echo "<td>".$row->mileage."</td>";
 	} 
 	 

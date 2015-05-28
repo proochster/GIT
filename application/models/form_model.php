@@ -184,6 +184,14 @@ class Form_model extends CI_Model {
 				
 		return $query->result();
 	}
+	
+	public function getRegOnly() {
+		
+		$this->db->select('registration');
+		$query = $this->db->get('cars');
+				
+		return $query->result();
+	}
 
 // Car Assign --END--
  
@@ -468,6 +476,55 @@ class Form_model extends CI_Model {
 
 // Select Form --END--
 
+// Suppliers --BEGIN--
+ 
+ 	public function insertValues_supplier() {
+		
+		$data = array(		
+			'supname' => $this->input->post('supname')
+		);
+		
+		$this->db->insert('supplier_tb', $data);
+		
+	}
+	
+// ----
+ 
+ 	public function getSupplier() {
+ 		
+		$this->db->select('supname')->order_by('supname', 'asc');
+		$query = $this->db->get('supplier_tb');
+				
+		return $query->result();
+ 		
+ 	}
+ 
+
+// Suppliers --END--
+
+// paymentmthd --BEGIN--
+ 
+ 	public function insertValues_paymentmthd() {
+		
+		$data = array(		
+			'paymentmthd' => $this->input->post('paymentmthd')
+		);
+		
+		$this->db->insert('paymentmthd_tb', $data);
+		
+	}
+	
+	public function getPaymentmthd() {
+ 		
+		$this->db->select('paymentmthd')->order_by('paymentmthd', 'asc');
+		$query = $this->db->get('paymentmthd_tb');
+				
+		return $query->result();
+ 		
+ 	}
+  
+// paymentmthd --END--
+
 // Period --BEGIN--
  
  	public function insertValues_period() {
@@ -520,6 +577,8 @@ class Form_model extends CI_Model {
 
 	public function insertValues_mileage() {
 		
+		$dateconv = $this->form_model->dateconv();
+		
 		$return = $this->input->post('return');
 		$milage = $this->input->post('mileage');
 		
@@ -528,7 +587,7 @@ class Form_model extends CI_Model {
 		}
 		
 		$data = array(
-			'date' => $this->input->post('date'),
+			'date' => $dateconv,
 			'reg' => $this->input->post('reg'),
 			'from' => $this->input->post('from'),
 			'to' => $this->input->post('to'),
@@ -541,7 +600,7 @@ class Form_model extends CI_Model {
 	}
 	
 	public function getAll_mileage() {
-		$query = $this->db->query("SELECT * FROM fpsmasterdb.mileage LEFT JOIN fpsmasterdb.cars_tb ON fpsmasterdb.mileage.`reg` = fpsmasterdb.cars_tb.`reg` ORDER BY fpsmasterdb.mileage.`autoid` DESC");
+		$query = $this->db->query("SELECT * FROM bikdemo.mileage LEFT JOIN bikdemo.cars ON bikdemo.mileage.`reg` = bikdemo.cars.`registration` ORDER BY bikdemo.mileage.`autoid` DESC");
 		
 		return $query->result();
 	}
@@ -556,9 +615,20 @@ class Form_model extends CI_Model {
 	
  // Mileage --END--
  
+// Purchases --BEGIN--
+
+	public function dateconv() {
+		$getDate = $this->input->post('date');
+		$dateconv = date('Y-m-d',strtotime($getDate));
+		
+		return $dateconv;
+	}
+
 
   	public function insertValues_purchases() {
   		
+		$dateconv = $this->form_model->dateconv();
+		
 		$vatpercent = $this->input->post('vatpercent');
 		$gross = $this->input->post('gross');
 		
@@ -575,7 +645,7 @@ class Form_model extends CI_Model {
 		$data = array(
 			'supplier' => $this->input->post('supplier'),
 			'invoiceref' => $this->input->post('invoiceref'),
-			'date' => $this->input->post('date'),
+			'date' => $dateconv,
 			'period' => $this->input->post('period'),
 			'net' => round($net,2),
 			'vat' => round($vat,2),
@@ -585,12 +655,12 @@ class Form_model extends CI_Model {
 			'paidby' => $this->input->post('paymentmthd')
 		);
 	
-		$this->db->insert('MarkExpenses', $data);	
+		$this->db->insert('expenses', $data);	
  		
  	}	
 	
 	public function getAll_purchases() {
-		$query = $this->db->query("SELECT * FROM fpsmasterdb.MarkExpenses ORDER BY fpsmasterdb.MarkExpenses.`date` DESC;");
+		$query = $this->db->query("SELECT * FROM bikdemo.expenses ORDER BY bikdemo.expenses.`date` DESC;");
 		
 		return $query->result();
 	}

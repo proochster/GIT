@@ -87,7 +87,7 @@
 	<table id="table2" width="100%">
 		<thead>
 			<tr>
-				<td class="fpsref"><h4>Ref No</h4></td>
+				<td class="ref"><h4>Ref No</h4></td>
 				<td class="supplier"><h4>Supplier</h4></td>
 				<td class="invoiceref"><h4>Invoice Ref</h4></td>
 				<td class="date"><h4>Date</h4></td>
@@ -104,7 +104,7 @@
 	<?php
 	
 	foreach($results as $row){
-		echo "<tr><td>".$row->fpsref."</td>";
+		echo "<tr><td>".$row->autoid."</td>";
 		echo "<td>".$row->supplier."</td>";
 		echo "<td>".$row->invoiceref."</td>";
 		echo "<td>".$row->date."</td>";
