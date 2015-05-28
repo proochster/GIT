@@ -556,64 +556,7 @@ class Form_model extends CI_Model {
 	
  // Mileage --END--
  
- // Invoice Stuff
- 
- 	public function insertValues_customers() {
- 		
-		$data = array(
-			'fullname' => $this->input->post('fullname'),
-			'business' => $this->input->post('business'),
-			'address1' => $this->input->post('address1'),
-			'address2' => $this->input->post('address2'),
-			'town' => $this->input->post('town'),
-			'postcode' => $this->input->post('postcode'),
-			'uniquecustcode' => $this->input->post('uniquecustcode')
-		);
-	
-		$this->db->insert('clients', $data);	
- 		
- 	}
- 	
- 	public function getCustomer() {
- 		
-		$this->db->select('uniquecustcode');
-		$query = $this->db->get('clients');
-				
-		return $query->result();
- 		
- 	}
 
-//	public function getCustomer_specific() {
-//		$query = $this->db->query("SELECT * FROM fpsdemodata.clients");
-//		
-//		return $query->result();
-//	}
- 	
- // --------------------
- 
- 	public function insertValues_invoice() {
- 		
-		$data = array(
-			'uniquecustcode' => $this->input->post('uniquecustcode'),
-			'description' => $this->input->post('description'),
-			'basis' => $this->input->post('basis'),
-			'rate' => $this->input->post('rate'),
-			'quantity' => $this->input->post('quantity'),
-			'net' => $this->input->post('net')
-		);
-	
-		$this->db->insert('invoice', $data);	
- 		
- 	}	
-	
-	public function getAll_invoice() {
-		$query = $this->db->query("SELECT * FROM fpsdemodata.invoice LEFT JOIN fpsdemodata.clients ON fpsdemodata.invoice.`uniquecustcode` = fpsdemodata.clients.`uniquecustcode` ORDER BY fpsdemodata.clients.`auto_id` DESC;");
-		
-		return $query->result();
-	}
-	
- // End Of Invoice stuff	
- 
   	public function insertValues_purchases() {
   		
 		$vatpercent = $this->input->post('vatpercent');

@@ -33,7 +33,14 @@ class Forms extends CI_Controller {
    		redirect('login', 'refresh');
 	}
 	
-// ---- CARS BEGIN ----
+	
+	
+	
+	
+
+/* ------------------------------------------------------------------------------------
+ * -----------------------------------ADD CAR------------------------------------------
+ * ------------------------------------------------------------------------------------ */
 	
 	public function cars()
 	{
@@ -113,9 +120,9 @@ class Forms extends CI_Controller {
 		   	}
 	}
 
-// ---- CARS END ----
-
-// ---- USERS BEGIN ----	
+/* ------------------------------------------------------------------------------------
+ * ----------------------------------ADD USER------------------------------------------
+ * ------------------------------------------------------------------------------------ */	
 
 	public function users()
 	{
@@ -180,9 +187,11 @@ class Forms extends CI_Controller {
 		
 	}
 	
-// --USERS END--
 
-// --CAR ASSIGN BEGIN--
+/* ------------------------------------------------------------------------------------
+ * ---------------------------------CAR ASSIGN TO USER---------------------------------
+ * ------------------------------------------------------------------------------------ */
+
 
 		public function carassign()
 			{
@@ -241,9 +250,11 @@ class Forms extends CI_Controller {
 				
 			}
 
-// --CAR ASSIGN END--
 
-// --TAX BY CAR BEGIN--
+/* ------------------------------------------------------------------------------------
+ * -----------------------------------TAX BY CAR---------------------------------------
+ * ------------------------------------------------------------------------------------ */
+
 
 		public function taxbycar()
 			{
@@ -272,9 +283,12 @@ class Forms extends CI_Controller {
 	   	}
 		
 	}
-// --TAX BY CAR END--
 
-// --SELECTFORM (Company Car Log By User) BEGIN--
+
+/* ------------------------------------------------------------------------------------
+ * -----------------------SELECTFORM (Company Car Log By User)-------------------------
+ * ------------------------------------------------------------------------------------ */
+
 
 		public function selectform()
 	{
@@ -329,10 +343,12 @@ class Forms extends CI_Controller {
 	}
 			
 	}
-
-// --SELECTFORM (Company Car Log By User) END--
 	
-// --NARRATIVE BEGIN--
+
+/* ------------------------------------------------------------------------------------
+ * ------------------------------------NARRATIVE---------------------------------------
+ * ------------------------------------------------------------------------------------ */
+
 
 		public function narrative()
 			{
@@ -381,81 +397,11 @@ class Forms extends CI_Controller {
 				
 			}
 
-// --NARRATIVE END--
-	
-	
-	public function customers()
-	{
-		
-		if($this->session->userdata('logged_in'))
-   			
-   		{
-   		$session_data = $this->session->userdata('logged_in');
- 		$ldata['username'] = $session_data['username'];	
-		$this->load->model("form_model");
-		$this->load->library('form_validation');
-		
-		$config = array(
-               array(
-                     'field'   => 'fullname', 
-                     'label'   => 'Full Name', 
-                     'rules'   => 'required'
-                  ),
-               array(
-                     'field'   => 'business', 
-                     'label'   => 'Business Name', 
-                     'rules'   => 'required'
-                  ),
-               array(
-                     'field'   => 'address1', 
-                     'label'   => 'Address', 
-                     'rules'   => 'required'
-                  ),
-               array(
-                     'field'   => 'town', 
-                     'label'   => 'Town', 
-                     'rules'   => 'required'
-                  ),
-               array(
-                     'field'   => 'postcode', 
-                     'label'   => 'Postcode', 
-                     'rules'   => 'required'
-                  ),
-               array(
-                     'field'   => 'uniquecustcode', 
-                     'label'   => 'Unique Customer Code', 
-                     'rules'   => 'required'
-                  )  
-				
-            );
 
-		$this->form_validation->set_rules($config);
-		
-		
-		if ($this->form_validation->run() == FALSE)
-		{
-			$this->load->view('header',$ldata);
-			$this->load->view('nav',$ldata);					
-			$this->load->view('customers_content');
-			$this->load->view('footer',$ldata);
-		}
-		else
-		{
-			$this->form_model->insertValues_customers();	
-			
-			$this->load->view('header',$ldata);
-			$this->load->view('nav',$ldata);	
-			$this->load->view('customers_content');
-			$this->load->view('footer',$ldata);
-		}
-			}
-   			else
-   			{
-		    //If no session, redirect to login page
-		    redirect('login', 'refresh');
-		   	}
-		
-	}
+
+/* ------------------------------------------------------------------------------------
+ * ------------------------------------MILEAGE-----------------------------------------
+ * ------------------------------------------------------------------------------------ */
 	
 	public function mileage()
 	{
@@ -528,75 +474,11 @@ class Forms extends CI_Controller {
 	
 	}
 
-	public function invoice()
-	{
-		
-		if($this->session->userdata('logged_in'))
-   			
-   		{
-   		$session_data = $this->session->userdata('logged_in');
- 		$ldata['username'] = $session_data['username'];
-		$this->load->model("form_model");
-		$this->load->library('form_validation');
-		
-		$config = array(
-               array(
-                     'field'   => 'description', 
-                     'label'   => 'Description', 
-                     'rules'   => 'required'
-                  ),
-               array(
-                     'field'   => 'rate', 
-                     'label'   => 'Rate', 
-                     'rules'   => 'required'
-                  ),
-               array(
-                     'field'   => 'quantity', 
-                     'label'   => 'Quantity', 
-                     'rules'   => 'required'
-                  ),   
-               array(
-                     'field'   => 'net', 
-                     'label'   => 'Net', 
-                     'rules'   => 'required'
-                  )
-            );
 
-		$this->form_validation->set_rules($config);
-		
-		
-		if ($this->form_validation->run() == FALSE)
-		{
-			$this->load->view('header',$ldata);
-			$this->load->view('nav',$ldata);
-		/*	$data['customer'] = $this->form_model->getCustomer();	
-			$data['results'] = $this->form_model->getAll_invoice(); */						
-			$this->load->view("invoice_content"/* , $data */);
-			$this->load->view('footer',$ldata);
-		}
-		else
-		{
-			$this->form_model->insertValues_invoice();	
-					
-			$this->load->view('header',$ldata);
-			$this->load->view('nav',$ldata);
-		/*	$data['customer'] = $this->form_model->getCustomer();	
-			$data['results'] = $this->form_model->getAll_invoice(); */			
-			$this->load->view('invoice_content'/* , $data */);
-			$this->load->view('footer',$ldata);
-		}	
-			}
-   			else
-   			{
-		    //If no session, redirect to login page
-		    redirect('login', 'refresh');
-		   	}
-		
-	}
 
-// --INVOICE END--
-
-// --PURCHASES START--
+/* ------------------------------------------------------------------------------------
+ * ----------------------------------PURCHASES-----------------------------------------
+ * ------------------------------------------------------------------------------------ */
 
 
 	public function purchases()
@@ -671,9 +553,10 @@ class Forms extends CI_Controller {
 			
 	}
 
-// --PURCHASES END--
 
-// --SUPPLIER FORM START--
+/* ------------------------------------------------------------------------------------
+ * ----------------------------------SUPPLIER------------------------------------------
+ * ------------------------------------------------------------------------------------ */
 
 public function supplier_content_detail()
 	{
@@ -749,49 +632,42 @@ public function supplier_content_detail()
 	}
 
 
-public function customer_content_detail()
+/* ------------------------------------------------------------------------------------
+ * ----------------------------------EXPENSES------------------------------------------
+ * ------------------------------------------------------------------------------------ */
+
+public function expenses()
 	{
 		
 		if($this->session->userdata('logged_in'))
    			
    		{
-   		$session_data = $this->session->userdata('logged_in');
- 		$ldata['username'] = $session_data['username'];	
+		$session_data = $this->session->userdata('logged_in');
+ 		$ldata['username'] = $session_data['username'];
 		$this->load->model("form_model");
 		$this->load->library('form_validation');
 		
 		$config = array(
                array(
-                     'field'   => 'fullname', 
-                     'label'   => 'Full Name', 
+                     'field'   => 'date1', 
+                     'label'   => 'Date', 
                      'rules'   => 'required'
                   ),
                array(
-                     'field'   => 'business', 
-                     'label'   => 'Business Name', 
+                     'field'   => 'details1', 
+                     'label'   => 'Details', 
                      'rules'   => 'required'
                   ),
                array(
-                     'field'   => 'address1', 
-                     'label'   => 'Address', 
+                     'field'   => 'client1', 
+                     'label'   => 'Client', 
                      'rules'   => 'required'
-                  ),
+                  ),   
                array(
-                     'field'   => 'town', 
-                     'label'   => 'Town', 
+                     'field'   => 'total1', 
+                     'label'   => 'Total', 
                      'rules'   => 'required'
-                  ),
-               array(
-                     'field'   => 'postcode', 
-                     'label'   => 'Postcode', 
-                     'rules'   => 'required'
-                  ),
-               array(
-                     'field'   => 'uniquecustcode', 
-                     'label'   => 'Unique Customer Code', 
-                     'rules'   => 'required'
-                  )  
-				
+                  )
             );
 
 		$this->form_validation->set_rules($config);
@@ -800,17 +676,19 @@ public function customer_content_detail()
 		if ($this->form_validation->run() == FALSE)
 		{
 			$this->load->view('header',$ldata);
-			$this->load->view('nav',$ldata);					
-			$this->load->view('customer_content_detail');
+			$this->load->view('nav',$ldata);
+			$data['results'] = $this->form_model->getAll_expenses();					
+			$this->load->view("expenses_content", $data);
 			$this->load->view('footer',$ldata);
 		}
 		else
 		{
-			$this->form_model->insertValues_customers();	
-			
+			$this->form_model->insertValues_expenses();		
+		
 			$this->load->view('header',$ldata);
-			$this->load->view('nav',$ldata);	
-			$this->load->view('customer_content_detail');
+			$this->load->view('nav',$ldata);
+			$data['results'] = $this->form_model->getAll_expenses();		
+			$this->load->view("expenses_content", $data);
 			$this->load->view('footer',$ldata);
 		}
 			}
@@ -819,88 +697,13 @@ public function customer_content_detail()
 		    //If no session, redirect to login page
 		    redirect('login', 'refresh');
 		   	}
-		
-	}
-
-public function business_parameters()
-	{
-		
-		if($this->session->userdata('logged_in'))
-   			
-   		{
-   		$session_data = $this->session->userdata('logged_in');
- 		$ldata['username'] = $session_data['username'];	
-		$this->load->model("form_model");
-		$this->load->library('form_validation');
-		
-		$config = array(
-               array(
-                     'field'   => 'fullname', 
-                     'label'   => 'Full Name', 
-                     'rules'   => 'required'
-                  ),
-               array(
-                     'field'   => 'business', 
-                     'label'   => 'Business Name', 
-                     'rules'   => 'required'
-                  ),
-               array(
-                     'field'   => 'address1', 
-                     'label'   => 'Address', 
-                     'rules'   => 'required'
-                  ),
-               array(
-                     'field'   => 'town', 
-                     'label'   => 'Town', 
-                     'rules'   => 'required'
-                  ),
-               array(
-                     'field'   => 'postcode', 
-                     'label'   => 'Postcode', 
-                     'rules'   => 'required'
-                  ),
-               array(
-                     'field'   => 'uniquecustcode', 
-                     'label'   => 'Unique Customer Code', 
-                     'rules'   => 'required'
-                  )  
-				
-            );
-
-		$this->form_validation->set_rules($config);
-		
-		
-		if ($this->form_validation->run() == FALSE)
-		{
-			$this->load->view('header',$ldata);
-			$this->load->view('nav',$ldata);					
-			$this->load->view('business_parameters');
-			$this->load->view('footer',$ldata);
-		}
-		else
-		{
-			$this->form_model->insertValues_customers();	
-			
-			$this->load->view('header',$ldata);
-			$this->load->view('nav',$ldata);	
-			$this->load->view('business_parameters');
-			$this->load->view('footer',$ldata);
-		}
-			}
-   			else
-   			{
-		    //If no session, redirect to login page
-		    redirect('login', 'refresh');
-		   	}
-		
 	}
 
 
 
-
+/* --- THE LAST BRACKET --- */
+  
 }
-
-
 
 
 /* End of file welcome.php */
