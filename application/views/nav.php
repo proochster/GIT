@@ -2,21 +2,39 @@
 <ul>
 	
 	<li><?php echo anchor( base_url(), 'Home', 'title="Home"'); ?></li>
-	<li><a href="#">Tax</a>
+	<li><a href="#">Calculations</a>
 		<ul>
-			<li><?php echo anchor('forms/taxbycar', 'View All Company Cars', 'title="Tax By Car"'); ?></li>
-			<li><?php echo anchor('forms/selectform', 'View Company Car Log By User', 'title="Company Car Log"'); ?></li>
+			<li><a href="#">Instructions</a>
+				<ul>
+					<li><?php echo anchor('forms/taxbycar', 'Demo', 'title="Tax By Car"'); ?></li>
+					<li><?php echo anchor('forms/selectform', 'Tutorials', 'title="Company Car Log"'); ?></li>
+				</ul>
+			</li>
+			<li><a href="#">Benefit In Kind</a>
+				<ul>
+					<li><?php echo anchor('forms/taxbycar', 'View All Company Cars', 'title="Tax By Car"'); ?></li>
+					<li><?php echo anchor('forms/selectform', 'View Company Car Log By User', 'title="Company Car Log"'); ?></li>
+				</ul>
+			</li>
+			<li><a href="#">Comparisons</a>
+				<ul>
+					<li><?php echo anchor('forms/taxbycar', 'Compare Cars', 'title="Tax By Car"'); ?></li>
+				</ul>
+			</li>
+			<li><a href="#">VAT Scale Charge</a></li>
+			
+			<li></li>
 		<!--	<li><?php echo anchor('forms/invoice', 'Invoice', 'title="Invoice"'); ?></li> -->
 		</ul>
 	</li>
-	<li><a href="#">User Data Input</a>
+	<li><a href="#">Reports</a>
 		<ul>
 			<li><?php echo anchor('forms/mileage', 'Mileage', 'title="Mileage"'); ?></li>
 			<li><?php echo anchor('forms/purchases', 'Purchases', 'title="Purchases"'); ?></li>
 		<!--	<li><?php echo anchor('forms/invoice', 'Invoice', 'title="Invoice"'); ?></li> -->
 		</ul>
 	</li>
-	<li><a href="#">Setup</a>
+	<li><a href="#">Input</a>
 			
 				<ul>
 					<li><?php echo anchor('forms/users', 'Add User', 'title="Add User"'); ?></li>
@@ -31,6 +49,27 @@
 				</ul>
 			
 	</li>
+	<li><a href="#">Support</a>
+		<ul>
+		<!--	<li><?php echo anchor('forms/mileage', 'Mileage', 'title="Mileage"'); ?></li>
+				<li><?php echo anchor('forms/purchases', 'Purchases', 'title="Purchases"'); ?></li>
+				<li><?php echo anchor('forms/invoice', 'Invoice', 'title="Invoice"'); ?></li> 			-->
+		</ul>
+	</li>
+		<li><a href="#">Maintenance</a>
+		<ul>
+		<!--	<li><?php echo anchor('forms/mileage', 'Mileage', 'title="Mileage"'); ?></li>
+				<li><?php echo anchor('forms/purchases', 'Purchases', 'title="Purchases"'); ?></li>
+				<li><?php echo anchor('forms/invoice', 'Invoice', 'title="Invoice"'); ?></li> 			-->
+		</ul>
+	</li>
+		<li><a href="#">Admin</a>
+		<ul>
+		<!--	<li><?php echo anchor('forms/mileage', 'Mileage', 'title="Mileage"'); ?></li>
+				<li><?php echo anchor('forms/purchases', 'Purchases', 'title="Purchases"'); ?></li>
+				<li><?php echo anchor('forms/invoice', 'Invoice', 'title="Invoice"'); ?></li> 			-->
+		</ul>
+	</li>
 
 <!--	 <li><a href="#">Tests</a>
 		<ul>
@@ -40,7 +79,7 @@
 		</ul>
 		</li> --> 
 		
-	<li><?php echo anchor('forms/logout', '>> Logout: '.$username.' <<', 'title="logout"'); ?></li>	
+	<!-- <li><?php echo anchor('forms/logout', '>> Logout: '.$username.' <<', 'title="logout"'); ?></li> -->	
 </ul>
 </nav>
 

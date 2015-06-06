@@ -103,7 +103,34 @@ textarea {
 
 
 #logo {
-	margin: 2%;
+	margin-top: 0.5%;
+	margin-bottom: 0.5%;
+	margin-left: 2%;
+	margin-right: 2%;
+	float: left;
+}
+
+#logout {
+	float: right;
+	margin-top: 1%;
+	margin-bottom: 0.5%;
+	margin-left: 2%;
+	margin-right: 2%;
+}
+
+
+
+.top_bar {
+	display: block;
+	clear: both;
+	height: 60px;
+}
+
+.top_bar a {
+	text-decoration: none;
+	color: #3f3f3f;
+	font-family: Abel,sans-serif;
+	text-align:center;
 }
 
 #logolarge {
@@ -1603,11 +1630,13 @@ nav ul li:hover > ul {
 
 nav ul {
 	background: #175696;
-	padding 0 20px;
+/*	padding 0 5px;  */
 	list-style: none;
 	position: relative;
 	display: block;
 	font-family: Abel,sans-serif;
+	font-weight: 900;
+	margin: 0;
 	
 }
 
@@ -1631,7 +1660,7 @@ nav ul li:hover a {
 	
 nav ul li a {
 	display: block; 
-	padding: 25px 40px;
+	padding: 5px 30px;
 	color: #FFF; 
 	text-decoration: none;
 }
@@ -1652,7 +1681,7 @@ nav ul ul li {
 }
 
 nav ul ul li a {
-	padding: 15px 40px;
+	padding: 5px 40px;
 	color: #fff;
 }	
 			
@@ -1665,6 +1694,41 @@ nav ul ul ul {
 	left: 100%;
 	top:0;
 }
+
+
+/* ------------------------------------------------ */
+
+nav ul ul ul {
+/*	background: #175696;  */
+	background: #888888;
+	padding: 0;
+	position: absolute; 
+	top: 100%;
+	width:300px;
+}
+
+nav ul ul ul li {
+	float: none; 
+	position: relative;
+}
+
+nav ul ul ul li a {
+	padding: 5px 40px;
+	color: #fff;
+/*	border-bottom: 1px #222222 solid; */
+}	
+			
+nav ul ul ul li a:hover {
+	background: #888888;
+	color: #C41846;
+}
+
+nav ul ul ul {
+	position: absolute; 
+	left: 100%;
+	top:0;
+}
+
 
 /*
 
