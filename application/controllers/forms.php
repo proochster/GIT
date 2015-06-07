@@ -5,15 +5,18 @@ class Forms extends CI_Controller {
 	 function __construct()
 	{
    		parent::__construct();
+		$this->auth = new stdClass;
+		$this->load->library('flexi_auth');
+		$this->data = null;
 	}
 	
 	public function index()
 	{
-		if($this->session->userdata('logged_in'))
+		if ($this->flexi_auth->is_logged_in())
    			
    		{
- 		$session_data = $this->session->userdata('logged_in');
- 		$ldata['username'] = $session_data['username'];
+ 		$session_data = $this->session->userdata('logged_in_via_password');
+ 		$ldata['username'] = $session_data['user_identifier'];
 			$this->load->view('header',$ldata);
 			$this->load->view('nav',$ldata);		
 			$this->load->view("home_content",$ldata);
@@ -22,7 +25,7 @@ class Forms extends CI_Controller {
    			else
    			{
 		    //If no session, redirect to login page
-		    redirect('login', 'refresh');
+		    redirect('auth_lite/index', 'refresh');
 		   	}
 			
 	}
@@ -45,7 +48,7 @@ class Forms extends CI_Controller {
 	public function cars()
 	{
 		
-		if($this->session->userdata('logged_in'))
+		if ($this->flexi_auth->is_logged_in())
    			
    		{
 		$session_data = $this->session->userdata('logged_in');
@@ -127,7 +130,7 @@ class Forms extends CI_Controller {
 	public function users()
 	{
 		
-		if($this->session->userdata('logged_in'))
+		if ($this->flexi_auth->is_logged_in())
    			
    		{
 		$session_data = $this->session->userdata('logged_in');
@@ -196,7 +199,7 @@ class Forms extends CI_Controller {
 		public function carassign()
 			{
 				
-			if($this->session->userdata('logged_in'))
+			if ($this->flexi_auth->is_logged_in())
    			
    				{
    				$session_data = $this->session->userdata('logged_in');
@@ -258,7 +261,7 @@ class Forms extends CI_Controller {
 
 		public function taxbycar()
 			{
-		if($this->session->userdata('logged_in'))
+		if ($this->flexi_auth->is_logged_in())
    			
    		{
    			
@@ -292,7 +295,7 @@ class Forms extends CI_Controller {
 
 		public function selectform()
 	{
-	if($this->session->userdata('logged_in'))
+	if ($this->flexi_auth->is_logged_in())
 		
 	{
    		$this->load->model("form_model");
@@ -353,7 +356,7 @@ class Forms extends CI_Controller {
 		public function narrative()
 			{
 				
-				if($this->session->userdata('logged_in'))
+				if ($this->flexi_auth->is_logged_in())
    			
    				{
    				$session_data = $this->session->userdata('logged_in');
@@ -404,7 +407,7 @@ class Forms extends CI_Controller {
 
 		public function period()
 		{
-			if($this->session->userdata('logged_in'))
+			if ($this->flexi_auth->is_logged_in())
    			
    				{
 				$session_data = $this->session->userdata('logged_in');
@@ -455,7 +458,7 @@ class Forms extends CI_Controller {
 	
 	public function mileage()
 	{
-		if($this->session->userdata('logged_in'))
+		if ($this->flexi_auth->is_logged_in())
    			
    		{
 		$session_data = $this->session->userdata('logged_in');
@@ -534,7 +537,7 @@ class Forms extends CI_Controller {
 	public function purchases()
 	{
 		
-	if($this->session->userdata('logged_in'))
+	if ($this->flexi_auth->is_logged_in())
    			
    		{
    		$session_data = $this->session->userdata('logged_in');
@@ -610,7 +613,7 @@ class Forms extends CI_Controller {
 		public function paymentmthd()
 			{
 				
-			if($this->session->userdata('logged_in'))
+			if ($this->flexi_auth->is_logged_in())
    			
    				{
 				$session_data = $this->session->userdata('logged_in');
@@ -661,7 +664,7 @@ class Forms extends CI_Controller {
 		public function supplier()
 			{
 				
-			if($this->session->userdata('logged_in'))
+			if ($this->flexi_auth->is_logged_in())
    			
    				{
    				$session_data = $this->session->userdata('logged_in');
@@ -715,7 +718,7 @@ class Forms extends CI_Controller {
 public function expenses()
 	{
 		
-		if($this->session->userdata('logged_in'))
+		if ($this->flexi_auth->is_logged_in())
    			
    		{
 		$session_data = $this->session->userdata('logged_in');

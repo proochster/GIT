@@ -38,7 +38,8 @@
 |
 */
 
-$route['default_controller'] = "forms";
+// $route['default_controller'] = "forms";
+$route['default_controller'] = "auth_lite/index";
 $route['404_override'] = 'login';
 
 

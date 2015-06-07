@@ -26,7 +26,7 @@ $config['base_url']	= 'http://backup-pc.dyndns-server.com/stage/bik/';
 | variable so that it is blank.
 |
 */
-$config['index_page'] = 'index.php';
+$config['index_page'] = '';
 
 /*
 |--------------------------------------------------------------------------
