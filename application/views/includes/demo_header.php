@@ -1,9 +1,9 @@
 	<div class="content_wrap nav_bg">
 		<div id="sub_nav_wrap" class="content">
 			<ul id="sub_nav">
-				<li>
+			<!--	<li>
 					<a href="<?php echo $base_url;?>auth_lite/demo">About Demo</a>
-				</li>
+			</li> -->
 <!--			<?php if (! $this->flexi_auth->is_logged_in_via_password()) { ?>
 				<li>
 					<a href="<?php echo $base_url;?>auth"><?php echo ($this->flexi_auth->is_logged_in()) ? 'Login via Password' : 'Login';?></a>
@@ -22,9 +22,9 @@
 				</li>
 			<?php } ?> -->
 			
-				<li>
+			<!--	<li>
 					<a href="<?php echo $base_url;?>auth_lite/privilege_examples">Privilege Examples</a>
-				</li>
+			</li>  -->
 				
 				<li class="css_nav_dropmenu">
 					<a href="<?php echo $base_url;?>auth_public/">Public Dashboard</a>
@@ -79,9 +79,9 @@
 					</ul>		
 				</li>
 				
-				<li>
+			<!--	<li>
 					<a href="<?php echo $base_url;?>auth_lite/lite_library">Lite Library</a>
-				</li>
+			</li> -->
 				<li>
 					<a href="<?php echo $base_url;?>forms/index">Forms</a>
 				</li>

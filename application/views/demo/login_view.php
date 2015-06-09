@@ -6,9 +6,7 @@
 <!--[if (gt IE 9)|!(IE)]><!--><html lang="en" class="no-js"><!--<![endif]-->
 <head>
 	<meta charset="utf-8">
-	<title>Login Demo | flexi auth | A User Authentication Library for CodeIgniter</title>
-	<meta name="description" content="flexi auth, the user authentication library designed for developers."/> 
-	<meta name="keywords" content="demo, flexi auth, user authentication, codeigniter"/>
+	<title>FPS Gateway</title>
 	<?php $this->load->view('includes/head'); ?> 
 </head>
 
@@ -25,10 +23,10 @@
 	<div class="content_wrap intro_bg">
 		<div class="content clearfix">
 			<div class="col100">
-				<h2>User Login</h2>
+			<!--	<h2>User Login</h2>
 				<p>The user login page is the primary gateway for authenticating a users login details are valid before redirecting the user to a logged in landing page.</p>
 				<p>The flexi auth library offers numerous methods and features to aid authentication of users, including auto login via 'Remember me' cookies, captchas automatically activated upon repeated failed login attempts, and incremental time limit bans for users with a high number of failed login attempts.</p>
-				<p>In addition to the authentication methods, the library includes functions to help users with tasks like reseting forgotten passwords, and resending account activation emails. All of these features available within the library are optional, and can be mixed and matched with each other or completely left out.</p>
+				<p>In addition to the authentication methods, the library includes functions to help users with tasks like reseting forgotten passwords, and resending account activation emails. All of these features available within the library are optional, and can be mixed and matched with each other or completely left out.</p> -->
 			</div>		
 		</div>
 	</div>

@@ -20,11 +20,11 @@
 				<a href="<?php echo $base_url;?>auth_lite/features">Contact</a>
 			</li>
 			<li>
-				<a href="<?php echo $base_url;?>auth_lite/demo">Demo</a>
+				<a href="<?php echo $base_url;?>auth_lite/demo">Admin</a>
 			</li>
-			<li>
+		<!--	<li>
 				<a href="<?php echo $base_url;?>auth_lite/user_guide">User Guide</a>
-			</li>
+		</li> -->
 						<?php if (! $this->flexi_auth->is_logged_in_via_password()) { ?>
 			<li>
 					<a href="<?php echo $base_url;?>auth"><?php echo ($this->flexi_auth->is_logged_in()) ? 'Login via Password' : 'Login';?></a>

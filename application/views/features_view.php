@@ -6,9 +6,7 @@
 <!--[if (gt IE 9)|!(IE)]><!--><html lang="en" class="no-js"><!--<![endif]-->
 <head>
 	<meta charset="utf-8">
-	<title>Features | flexi auth | A User Authentication Library for CodeIgniter</title>
-	<meta name="description" content="A summary of the features flexi auth has to offer."/> 
-	<meta name="keywords" content="features, flexi auth, user authentication, codeigniter"/>
+	<title>FPS Gateway</title>
 	<?php $this->load->view('includes/head'); ?> 
 </head>
 
