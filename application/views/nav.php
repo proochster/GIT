@@ -149,12 +149,44 @@
 		</ul>
 	</li>
 		<li><a href="#">Admin</a>
-		<ul>
+		    <ul>
+		    
+  <!--           <?php if (! $this->flexi_auth->is_logged_in_via_password()) { ?>
+           <li>
+                    <a href="<?php echo $base_url;?>auth"><?php echo ($this->flexi_auth->is_logged_in()) ? 'Login via Password' : 'Login';?></a>
+</li>  
+            <?php } ?>
+            <?php if (! $this->flexi_auth->is_admin()) { ?>
+                <li>
+                    <a href="<?php echo $base_url;?>auth/login">Login</a>
+                </li>
+            <?php } else { ?>
+                <li>
+                    <a href="<?php echo $base_url;?>auth_admin/dashboard">Admin sdfsfdsfd Panel</a>
+                </li>
+            <?php } ?> -->
+            
+            
+                  <?php 
+                    if ($this->flexi_auth->is_logged_in())
+                        {
+                            if ($this->flexi_auth->is_admin()) 
+                                { ?>
+		                      <li>
+                                    <a href="<?php echo $base_url;?>auth_admin/dashboard">Admin Panel</a>
+                              </li>
+		                         <?php } else { ?>
+		                      <li>
+                                    <a href="<?php echo $base_url;?>auth/login">Login</a>
+                              </li>    
+		                         <?php } ?>
+		           <?php } ?>       
+		                             
 		<!--	<li><?php echo anchor('forms/mileage', 'Mileage', 'title="Mileage"'); ?></li>
 				<li><?php echo anchor('forms/purchases', 'Purchases', 'title="Purchases"'); ?></li>
 				<li><?php echo anchor('forms/invoice', 'Invoice', 'title="Invoice"'); ?></li> 			-->
-		</ul>
-	</li>
+		  </ul>
+	    </li>
 
 <!--	 <li><a href="#">Tests</a>
 		<ul>
