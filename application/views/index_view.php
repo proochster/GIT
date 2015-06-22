@@ -42,7 +42,7 @@
 		<div class="content clearfix">
 			<div class="w100">
 				<h3>Welcome to FPS Gateway</h3>
-				<p>This is a development version - v0.0.0.11.2015</p>
+				<p>This is a development version - v0.0.0.21.2015</p>
 				<hr style="margin-top:10px; margin-bottom:10px; border:none; border-top:1px dotted #999;"/>
 			</div>
 		</div>
@@ -55,12 +55,12 @@
 			<div class="w100 frame">
 				<h2>News	</h2>
 				
-				<p>Version - v0.0.0.0.11.2015</p>
+				<p>Version - v0.0.0.0.21.2015</p>
 				<h5>Changelog</h5>
-				<p>Added new Role Based Account System - at the moment operational at 40%</p>
-				<p>Added salt to passwords</p>
-				<p>Fixed few styling issues</p>
-				
+				<p>Fully integrated role based system</p>
+				<p>Group based navigation system</p>
+				<p>Removed obsolette library functions and methods</p>
+				<p>Integrated Expenses and Mileage forms, and access to those based on user role</p>
 				<hr/>
 
 			</div>

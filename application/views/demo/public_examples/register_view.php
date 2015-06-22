@@ -17,17 +17,17 @@
 	<?php $this->load->view('includes/header'); ?> 
 
 	<!-- Demo Navigation -->
-	<?php // $this->load->view('includes/demo_header'); ?> 
+	<?php // $this->load->view('includes/admin_header'); ?> 
 	
 	<!-- Intro Content -->
 	<div class="content_wrap intro_bg">
 		<div class="content clearfix">
 			<div class="col100">
 				<h2>Register Account</h2>
-				<p>User registation is a core requirement for any site that is to allow anonymous users to register for an account within the site.</p>
-				<p>The data collected and saved during this process will always vary from site to site, but typically comes down to two primary types, data that is essential for user authentication and then user profile data.</p>
-				<p>The essential user authentication data consists of information like a users email address and password that are required by users to securely log into their account. In addition to this, the flexi auth library can also automatically save and manage user data like IP addresses, last login dates etc.</p>
-				<p>As for the user profile data, flexi auth allows you to save and relate whatever data you require to the users account, whether that data is all stored in the same table, or via multiple tables. The design of the database schema is up to you.</p>
+				<p>Please use this form to register an account. You will get an email to activate your account.</p>
+				<p>Your new user will have no privilages, you need to contact your admin to be granted access to the forms you need. </p>
+				<p>Please make sure that you observe your company rules for creating new accounts and naming conventions.</p>
+				
 			</div>
 		</div>
 	</div>
@@ -90,7 +90,7 @@
 							</li>
 							<li>							
 								<small>
-									<strong>For this demo, the following validation settings have been defined:</strong><br/>
+									<strong>Validation settings:</strong><br/>
 									Password length must be more than <?php echo $this->flexi_auth->min_password_length(); ?> characters in length.<br/>Only alpha-numeric, dashes, underscores, periods and comma characters are allowed.
 								</small>
 							</li>
@@ -109,10 +109,10 @@
 						<legend>Register</legend>
 
 						<ul>
-							<li>
+						<!--	<li>
 								<h6>Important Note</h6>
 								<small>The data saved via this demo is available for anyone else using the demo to see, therefore, you may wish to only test this registration page via your local development environment. All data that is saved via this demo, is completely wiped every few hours.</small>
-							</li>
+							</li> -->
 							<li>
 								<hr/>
 								<label for="submit">Register:</label>

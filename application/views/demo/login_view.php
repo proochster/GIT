@@ -17,7 +17,7 @@
 	<?php $this->load->view('includes/header'); ?> 
 
 	<!-- Demo Navigation -->
-	<?php // $this->load->view('includes/demo_header'); ?> 
+	<?php // $this->load->view('includes/admin_header'); ?> 
 	
 	<!-- Intro Content -->
 	<div class="content_wrap intro_bg">
@@ -49,11 +49,11 @@
 						<ul>
 							<li>
 								<label for="identity">Email or Username:</label>
-								<input type="text" id="identity" name="login_identity" value="<?php echo set_value('login_identity', 'admin@admin.com');?>" class="tooltip_parent"/>
+								<input type="text" id="identity" name="login_identity" class="tooltip_parent"/>
 								<span class="tooltip width_400">
-									<h6>Example Users</h6>
-									<p>There are 3 example users setup, login to each account using the following details.</p>
-									<table>
+									<h6>Have you forgotten your login?</h6>
+									<p>Please email support@fpsgateway.com for help with retrieveing your credentials or contact your company's admin for help.</p>
+									<!-- <table>
 										<thead>
 											<tr>
 												<th>Email</th>
@@ -78,7 +78,7 @@
 												<td>password123</td>
 											</tr>
 										</tbody>
-									</table>
+									</table> -->
 								</span>
 							</li>
 							<li>

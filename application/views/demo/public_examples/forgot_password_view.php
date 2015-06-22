@@ -17,7 +17,7 @@
 	<?php $this->load->view('includes/header'); ?> 
 
 	<!-- Demo Navigation -->
-	<?php $this->load->view('includes/demo_header'); ?> 
+	<?php $this->load->view('includes/admin_header'); ?> 
 	
 	<!-- Intro Content -->
 	<div class="content_wrap intro_bg">

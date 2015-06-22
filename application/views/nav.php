@@ -2,6 +2,17 @@
 <ul>
 	
 	<li><?php echo anchor( base_url(), 'Home', 'title="Home"'); ?></li>
+	
+	<li><a href="#">Policies</a>
+        <ul>
+            <li><a href="#">HMRC Tax Guidelines</a></li>
+            <li><a href="#">Company Tax Guide</a></li>
+            <li><a href="#">Company Cars</a></li>
+            <li><a href="#">Mileage Claims</a></li>
+            <li><a href="#">Fuel Expenses</a></li>
+            <li><a href="#">Business Expenses</a></li>
+        </ul>
+    </li>
 	<li><a href="#">Calculations</a>
 		<ul>
 			<li><a href="#">Instructions</a>
@@ -54,17 +65,39 @@
 			</li>
 			<li><a href="#">Business Mileage</a>
 				<ul>
-					<li><?php echo anchor('forms/taxbycar', 'By User', 'title="Tax By Car"'); ?></li>
+				    <?php 
+                    if ($this->flexi_auth->is_logged_in())
+                        {         ?>
+                            
+					<li><?php echo anchor('forms/mileage', 'By User', 'title="Mileage"'); ?></li>
 					<li><?php echo anchor('forms/selectform', 'By Department', 'title="Company Car Log"'); ?></li>
+					   
+					<?php  
+					        if ($this->flexi_auth->is_admin()) 
+                   { ?>
+					
 					<li><?php echo anchor('forms/selectform', 'By Company', 'title="Company Car Log"'); ?></li>
+				                                 <?php } ?>
+                    <?php } ?>  
 				</ul>
 			</li>
 			<li><a href="#">Business Expenses</a>
-				<ul>
-					<li><?php echo anchor('forms/taxbycar', 'By User', 'title="Tax By Car"'); ?></li>
-					<li><?php echo anchor('forms/selectform', 'By Department', 'title="Company Car Log"'); ?></li>
-					<li><?php echo anchor('forms/selectform', 'By Company', 'title="Company Car Log"'); ?></li>
-				</ul>
+                <ul>
+                    <?php 
+                    if ($this->flexi_auth->is_logged_in())
+                        {         ?>
+                            
+                    <li><?php echo anchor('forms/purchases', 'Purchases', 'title="Purchases"'); ?></li>
+                    <li><?php echo anchor('forms/selectform', 'By Department', 'title="Company Car Log"'); ?></li>
+                       
+                    <?php  
+                            if ($this->flexi_auth->is_admin()) 
+                   { ?>
+                    
+                    <li><?php echo anchor('forms/purchases', 'Purchases', 'title="Purchases"'); ?></li>
+                                                 <?php } ?>
+                    <?php } ?>  
+                </ul>
 			</li>
 			<li><a href="#">Spending Report</a>
 				<ul>
@@ -139,13 +172,13 @@
 		<ul>
 			<li><a href="#">Vehicles</a></li>
 			<li><a href="#">Company Structure</a></li>
-			<li><a href="#">HMRC Correspondence</a>
+			<li><a href="#">HMRC Correspondence</a></li>
 			<li><a href="#">HMRC Report Submission</a></li>
 			<li><a href="#">Vat Information</a></li>
-			<li><a href="#">Paye Information</a>
+			<li><a href="#">Paye Information</a></li>
 			<li><a href="#">Authorisations</a></li>
 			<li><a href="#">Management Review</a></li>
-			<li><a href="#">Exceptions</a>
+			<li><a href="#">Exceptions</a></li>
 		</ul>
 	</li>
 		<li><a href="#">Admin</a>
@@ -173,18 +206,18 @@
                             if ($this->flexi_auth->is_admin()) 
                                 { ?>
 		                      <li>
-                                    <a href="<?php echo $base_url;?>auth_admin/dashboard">Admin Panel</a>
+                                    <a href="<?php echo $base_url;?>auth_admin/dashboard">Admin Control Panel</a>
                               </li>
 		                         <?php } else { ?>
 		                      <li>
-                                    <a href="<?php echo $base_url;?>auth/login">Login</a>
+                                    <a href="<?php echo $base_url;?>auth/login">User Control Panel</a>
                               </li>    
 		                         <?php } ?>
 		           <?php } ?>       
 		                             
-		<!--	<li><?php echo anchor('forms/mileage', 'Mileage', 'title="Mileage"'); ?></li>
+			    
 				<li><?php echo anchor('forms/purchases', 'Purchases', 'title="Purchases"'); ?></li>
-				<li><?php echo anchor('forms/invoice', 'Invoice', 'title="Invoice"'); ?></li> 			-->
+				<li><?php echo anchor('forms/invoice', 'Invoice', 'title="Invoice"'); ?></li> 			
 		  </ul>
 	    </li>
 
