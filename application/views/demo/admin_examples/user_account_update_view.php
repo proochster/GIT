@@ -24,7 +24,7 @@
 		<div class="content clearfix">
 			<div class="col100">
 				<h2>Admin: Update User Account</h2>
-				<p>The flexi auth library includes functions to aid the management of user accounts by site administrators.</p>
+				<p>This page allows you to manage user accounts.</p>
 				<p>This page is similar to the page used by users updating their own account details, but has the additional option for the admininstrator to update the users user group.</p>
 			</div>		
 		</div>

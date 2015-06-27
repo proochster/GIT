@@ -26,7 +26,7 @@
 					<a href="<?php echo $base_url;?>auth_lite/privilege_examples">Privilege Examples</a>
 			</li>  -->
 				
-		<!--		<li class="css_nav_dropmenu">
+				<li class="css_nav_dropmenu">
 					<a href="<?php echo $base_url;?>auth_public/">Public Dashboard</a>
 					<ul>
 						<li>
@@ -46,7 +46,7 @@
 							<a href="<?php echo $base_url;?>auth_public/manage_address_book">Manage Address Book</a>
 						</li>
 					</ul>		
-				</li>   -->
+				</li>  
 				
 				<li class="css_nav_dropmenu">
 					<a href="<?php echo $base_url;?>auth_admin/">Admin Dashboard</a>

@@ -24,8 +24,8 @@
 		<div class="content clearfix">
 			<div class="col100">
 				<h2>Admin: Manage User Accounts</h2>
-				<p>The flexi auth library includes functions to aid the management of user accounts by site administrators.</p>
-				<p>This page demonstrates how to display a pagninated list of all user accounts and then apply a search filter to find specific users via their email address or first and last name. In addition, the page demonstrates how to mass update or delete multiple accounts at the same time.</p>
+				<p>This page allows you to manage user accounts.</p>
+				<p>This page displays a pagninated list of all user accounts and then applies a search filter to find specific users via their email address or first and last name. In addition, the page allows to mass update or delete multiple accounts at the same time.</p>
 			</div>		
 		</div>
 	</div>

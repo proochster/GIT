@@ -13,6 +13,18 @@
             <li><a href="#">Business Expenses</a></li>
         </ul>
     </li>
+    <li><a href="#">Input</a>
+        <ul>
+               
+                    <li><?php echo anchor('forms/mileage', 'Business Mileage', 'title="Business Mileage"'); ?></li>
+                    <li><?php echo anchor('forms/purchases', 'Fuel Claims', 'title="Fuel Claims"'); ?></li>
+                    <li><?php echo anchor('forms/purchases', 'Business Expenses', 'title="Business Expenses"'); ?></li>
+                
+
+            <li></li>
+        <!--    <li><?php echo anchor('forms/invoice', 'Invoice', 'title="Invoice"'); ?></li> -->
+        </ul>
+    </li>
 	<li><a href="#">Calculations</a>
 		<ul>
 			<li><a href="#">Instructions</a>
@@ -122,30 +134,7 @@
 	
 	
 	
-		<li><a href="#">Input</a>
-		<ul>
-			<li><a href="#">BIK Details</a>
-				<ul>
-					<li><?php echo anchor('forms/users', 'Add User', 'title="Add User"'); ?></li>
-					<li><?php echo anchor('forms/cars', 'Add Car', 'title="Add Car"'); ?></li>
-					<li><?php echo anchor('forms/carassign', 'Assign Car to User', 'title="Car Assign"'); ?></li>
-				</ul>
-			</li>
-			<li><a href="#">Purchases Details</a>
-				<ul>
-					<li><?php echo anchor('forms/narrative', 'Add Narrative', 'title="Add Narrative"'); ?></li>
-					<li><?php echo anchor('forms/period', 'Add Period', 'title="Add Period"'); ?></li>
-					<li><?php echo anchor('forms/paymentmthd', 'Add Payment Method', 'title="Add Payment Method"'); ?></li>
-					<li><?php echo anchor('forms/supplier', 'Add Supplier', 'title="Add Supplier"'); ?></li>
-				</ul>
-			</li>
 
-			
-			
-			<li></li>
-		<!--	<li><?php echo anchor('forms/invoice', 'Invoice', 'title="Invoice"'); ?></li> -->
-		</ul>
-	</li>
 	
 	
 		<li><a href="#">Support</a>
@@ -179,6 +168,21 @@
 			<li><a href="#">Authorisations</a></li>
 			<li><a href="#">Management Review</a></li>
 			<li><a href="#">Exceptions</a></li>
+		    <li><a href="#">BIK Details</a>
+                <ul>
+                    <li><?php echo anchor('forms/users', 'Add User', 'title="Add User"'); ?></li>
+                    <li><?php echo anchor('forms/cars', 'Add Car', 'title="Add Car"'); ?></li>
+                    <li><?php echo anchor('forms/carassign', 'Assign Car to User', 'title="Car Assign"'); ?></li>
+                </ul>
+            </li>
+            <li><a href="#">Purchases Details</a>
+                <ul>
+                    <li><?php echo anchor('forms/narrative', 'Add Narrative', 'title="Add Narrative"'); ?></li>
+                    <li><?php echo anchor('forms/period', 'Add Period', 'title="Add Period"'); ?></li>
+                    <li><?php echo anchor('forms/paymentmthd', 'Add Payment Method', 'title="Add Payment Method"'); ?></li>
+                    <li><?php echo anchor('forms/supplier', 'Add Supplier', 'title="Add Supplier"'); ?></li>
+                </ul>
+            </li>
 		</ul>
 	</li>
 		<li><a href="#">Admin</a>
@@ -205,19 +209,19 @@
                         {
                             if ($this->flexi_auth->is_admin()) 
                                 { ?>
-		                      <li>
+                              <li>
                                     <a href="<?php echo $base_url;?>auth_admin/dashboard">Admin Control Panel</a>
                               </li>
-		                         <?php } else { ?>
-		                      <li>
+                                 <?php } else { ?>
+                              <li>
                                     <a href="<?php echo $base_url;?>auth/login">User Control Panel</a>
                               </li>    
-		                         <?php } ?>
-		           <?php } ?>       
-		                             
-			    
-				<li><?php echo anchor('forms/purchases', 'Purchases', 'title="Purchases"'); ?></li>
-				<li><?php echo anchor('forms/invoice', 'Invoice', 'title="Invoice"'); ?></li> 			
+                                 <?php } ?>
+                   <?php } ?>       
+                                     
+                
+                <li><?php echo anchor('forms/privilagetest', 'Privilage Test', 'title="Privilages"'); ?></li>
+
 		  </ul>
 	    </li>
 

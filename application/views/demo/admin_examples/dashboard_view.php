@@ -24,7 +24,7 @@
 		<div class="content clearfix">
 			<div class="col100">
 				<h2>Admin: Dashboard</h2>
-				<p>This page acts as an example dashboard landing page for logged in admin users, demonstrating how some of the functions within the flexi auth library can be used to manage the user accounts, groups and privileges.</p>
+				<p>This is dashboard page for logged in admin users, it can be used to manage the user accounts, groups and privileges.</p>
 			</div>		
 		</div>
 	</div>
@@ -44,8 +44,8 @@
 					<h3>User Accounts</h3>
 					<p>Manage the account details of all site users.</p>
 					<p>
-						This example updates records from the required 'User Accounts' table, and from the custom 'Demo User Profile' table that in this demo is used to store a users name, phone number etc.<br/>
-						In addition, this demo also allows the privileges of users to be defined.   
+						This option updates records from the required 'User Accounts' table, and from the custom 'User Profile' table that is used to store an user's name, phone number etc.<br/>
+						In addition, the privileges of users can be defined.   
 					</p>
 					<ul>
 						<li>

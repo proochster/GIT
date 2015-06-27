@@ -24,9 +24,9 @@
 		<div class="content clearfix">
 			<div class="col100">
 				<h2>Admin: Update Privilege</h2>
-				<p>The flexi auth library allows for unlimited custom user privileges to be defined. The privileges can then be assigned to users on an individual basis.</p>
-				<p>Once privileges have been defined, access to specific pages or even specific sections of pages can be controlled by checking whether a user has permission to access a requested page.</p>
-				<p>The default setup of this demo uses user groups and privileges to restrict the example public user from accessing the admin area, and the example moderator user from inserting, updating and deleting specific data within the admin area.</p>
+				<p>Unlimited custom user privileges can be defined, the privileges can then be assigned to users on an individual basis.</p>
+                <p>Once privileges have been defined, access to specific pages or even specific sections of pages can be controlled.</p>
+                <p>The default setup uses user groups and privileges to restrict the standard user from accessing the admin area, and the site admin user from inserting, updating and deleting specific data within the admin area.</p>
 			</div>		
 		</div>
 	</div>

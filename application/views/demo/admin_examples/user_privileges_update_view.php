@@ -24,12 +24,12 @@
 		<div class="content clearfix">
 			<div class="col100">
 				<h2>Admin: Update User Privileges</h2>
-				<p>The flexi auth library allows for unlimited custom privileges to be defined. The privileges can then be assigned to user groups or users individually.</p>
-				<p>Once privileges have been defined, access to specific pages or even specific sections of pages can be controlled by checking whether a user has permission to access a requested page.</p>
-				<p>The default setup of this demo uses user groups and privileges to restrict the example public user from accessing the admin area, and the example moderator user from inserting, updating and deleting specific data within the admin area.</p>
+				<p>This is the list of user privilages, you can add as many as you like. The privileges can then be assigned to user groups or users individually.</p>
+				<p>Please note that our system primarily uses groups to control access to restricted parts of the site. </p>
+				<p>The default privilage setup below should be enough for most if not all situations. If you would like to restrict access to specific area of the site please create user group instead, if you cant then please consult with the system admin first.</p>
                 <h3 class="toggle">&raquo; View Current Privilege Sources</h3>
                 <div class="hide_toggle">
-	                <p>The flexi auth config. setting '<em>privilege_sources</em>' defines whether user privileges should be determined by individual privileges assigned per user, or via privileges assigned to a users user group. 
+	                <p>The auth config. setting '<em>privilege_sources</em>' defines whether user privileges should be determined by individual privileges assigned per user, or via privileges assigned to a users user group. 
 	                <p>According to the current settings:</p>
 	                <ul class="bullet">
 	                <?php

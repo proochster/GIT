@@ -24,8 +24,8 @@
 		<div class="content clearfix">
 			<div class="col100">
 				<h2>Admin: User Accounts Not Activated in 31 Days</h2>
-				<p>The flexi auth library includes functions to return custom database queries on user account data.</p>
-				<p>The page demonstrates a function used to return all accounts that have not been activated within 31 days since registation. All accounts listed can then optionally be deleted.</p>
+				<p>Users management</p>
+				<p>Currently showing: All accounts that have not been activated within 31 days since registation. All accounts listed below can optionally be deleted.</p>
 			</div>		
 		</div>
 	</div>

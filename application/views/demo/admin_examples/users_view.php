@@ -24,14 +24,14 @@
 		<div class="content clearfix">
 			<div class="col100">
 				<h2>Admin: <?php echo $page_title;?></h2>
-				<p>The flexi auth library includes functions to return custom database queries on user account data.</p>
+				<p>Users management</p>
 			<?php if (isset($status) && $status == 'failed_login_users') { ?>
-				<p>This page demonstrates a database query to display all user accounts that have a high number of failed login attempts since the users last successful login. Such data could be used to highlight potential brute force hacking attempts on user accounts.</p>
+				<p>Currently showing: All user accounts that have a high number of failed login attempts since the user's last successful login. This data could be highlighting potential brute force hacking attempts on user accounts.</p>
 			<?php } else { ?>
 				<?php if (isset($status) && $status == 'active_users') { ?>
-					<p>This page demonstrates a database query to display all users that have activated their account since registration.</p>
+					<p>Currently showing: All users that have activated their account since registration.</p>
 				<?php } else { ?>
-					<p>This page demonstrates a database query to display all users that have not activated their account since registration.</p>
+					<p>Currently showing: All users that have not activated their account since registration.</p>
 				<?php } ?>
 			<?php } ?>
 			</div>		

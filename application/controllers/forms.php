@@ -44,7 +44,32 @@ class Forms extends CI_Controller {
 	}
 	
 	
-	
+
+
+
+
+
+/* Privilage Test */
+
+    public function privilagetest()
+    {
+        if ($this->flexi_auth->is_logged_in())
+            
+        {
+   /*     $session_data = $this->session->userdata('logged_in_via_password');
+        $ldata['username'] = $session_data['user_identifier']; */
+            $this->load->view('header');
+            $this->load->view('nav');        
+            $this->load->view("privilagetest_content");
+            $this->load->view('footer');
+            }
+            else
+            {
+            //If no session, redirect to login page
+            redirect('auth_lite/index', 'refresh');
+            }
+            
+    }	
 	
 	
 
@@ -125,8 +150,8 @@ class Forms extends CI_Controller {
 			}
    			else
    			{
-		    //If no session, redirect to login page
-		    redirect('login', 'refresh');
+            //If no session, redirect to login page
+            redirect('auth_lite/index', 'refresh');
 		   	}
 	}
 

@@ -123,7 +123,7 @@
 								<input type="submit" name="login_user" id="submit" value="Submit" class="link_button large"/>
 							</li>
 							<li>
-								<small>Note: On this demo, 3 failed login attempts will raise security on the account, activating a 10 second time limit ban per login attempt (20 secs after 9+ attempts), and activation of a captcha that must be completed to login.</small> 
+								<small>Note: 3 failed login attempts will raise security on the account, activating a 10 second time limit ban per login attempt (20 secs after 9+ attempts), and activation of a captcha that must be completed to login.</small> 
 							</li>
 							<li>
 								<hr/>
