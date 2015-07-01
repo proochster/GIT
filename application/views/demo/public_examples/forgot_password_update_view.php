@@ -7,7 +7,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>FPS Gateway</title>
-	<?php $this->load->view('includes/head'); ?> 
+	<?php $this->load->view('head'); ?> 
 </head>
 
 <body id="change_forgot_password">
@@ -24,9 +24,9 @@
 		<div class="content clearfix">
 			<div class="col100">
 				<h2>Change Forgotten Password</h2>
-				<p>This page is accessed via clicking on a link within a 'forgotten password' email.</p>
-				<p>Whereas a typical 'updated password' page would require the user to verify their identity via entering their current password, in the situation when the user has forgotten their password, this obviously isn't possible.</p>
-				<p>Therefore, by clicking the link in their 'forgotten password' email, they have verified they have access to that email account, the link then contains a validation token that is verified to match a token generated in the users account when they requested they had forgotten their password, provided the token is valid, the user can then manually set their new password.</p>
+				<p>You are here becouse you have requested your password to be reset.</p>
+				<p></p>
+				<p></p>
 			</div>		
 		</div>
 	</div>
@@ -48,7 +48,7 @@
 						<ul>
 							<li>
 								<small>
-									<strong>For this demo, the following validation settings have been defined:</strong><br/>
+									<strong>For this site, the following validation settings have been defined:</strong><br/>
 									Password length must be more than <?php echo $this->flexi_auth->min_password_length(); ?> characters in length.<br/>Only alpha-numeric, dashes, underscores, periods and comma characters are allowed.
 								</small>
 							</li>

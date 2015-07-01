@@ -7,7 +7,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>FPS Gateway</title>
-	<?php $this->load->view('includes/head'); ?> 
+	<?php $this->load->view('head'); ?> 
 </head>
 
 <body id="manage_address_book">
@@ -24,9 +24,9 @@
 		<div class="content clearfix">
 			<div class="col100">
 				<h2>Public: Manage Address Book</h2>
-				<p>The flexi auth library allows multiple custom user data tables to be related to the libraries user account table.</p>
-				<p>As an example of this, this demo includes a user address book that can be used by each user to save addresses and relate them to their account.</p>
-				<p>This page lists all addresses that are related to the current logged in user.</p>
+				<p>Here you can save multiple addresses and then use them or relate to them in other forms.</p>
+				<p></p>
+				<p>Below is a list of all addresses that are related to your account.</p>
 			</div>		
 		</div>
 	</div>

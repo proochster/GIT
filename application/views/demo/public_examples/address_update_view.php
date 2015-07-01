@@ -7,7 +7,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>FPS Gateway</title>
-	<?php $this->load->view('includes/head'); ?> 
+	<?php $this->load->view('head'); ?> 
 </head>
 
 <body id="update_address">
@@ -24,8 +24,8 @@
 		<div class="content clearfix">
 			<div class="col100">
 				<h2>Public: Update Address</h2>
-				<p>The flexi auth library allows multiple custom user data tables to be related to the libraries user account table.</p>
-				<p>As an example of this, this demo includes a user address book that can be used by each user to save addresses and relate them to their account.</p>
+				<p></p>
+				<p></p>
 				<p>This page will update a specific address within the current logged in users address book.</p>
 			</div>		
 		</div>
@@ -110,7 +110,7 @@
 						<ul>
 							<li>
 								<h6>Important Note</h6>
-								<small>The data saved via this demo is available for anyone else using the demo to see, therefore, it is recommended you do not include any personal details. All data that is saved via this demo, is completely wiped every few hours.</small>
+								<small>The data saved in your address book is potentially visible to site admin and the managers</small>
 							</li>
 							<li>
 								<hr/>

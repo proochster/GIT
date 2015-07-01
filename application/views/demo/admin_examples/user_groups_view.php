@@ -7,7 +7,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>FPS Gateway</title>
-	<?php $this->load->view('includes/head'); ?> 
+	<?php $this->load->view('head'); ?> 
 </head>
 
 <body id="manage_user_groups">

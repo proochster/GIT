@@ -9,7 +9,7 @@
 	<title>Validation and Security Configuration | User Guide | flexi auth | A User Authentication Library for CodeIgniter</title>
 	<meta name="description" content="The user guide for configuring validation and security settings in flexi auth."/> 
 	<meta name="keywords" content="validation and security configuration, user guide, flexi auth, user authentication, codeigniter"/>
-	<?php $this->load->view('includes/head'); ?> 
+	<?php $this->load->view('head'); ?> 
 </head>
 
 <body id="user_guide">

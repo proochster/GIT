@@ -7,7 +7,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>FPS Gateway</title>
-	<?php $this->load->view('includes/head'); ?> 
+	<?php $this->load->view('head'); ?> 
 </head>
 
 <body id="update_email">
@@ -24,8 +24,8 @@
 		<div class="content clearfix">
 			<div class="col100">
 				<h2>Public: Change Email via Email Verification</h2>
-				<p>Whilst it is possible to instantly update a users email address using the flexi auth library, if a user was to unknowingly mispell their email address, they would be unable to login at a later date, as they wouldn't know how they spelt the email address.</p>
-				<p>To counter this problem, when updating the email via email verification, once the user submits their new email address, an email is sent to the user, if they do not click the verification link in that email, their account is not updated.</p>
+				<p>You can change your emial address here. After the form submission you will be sent new verification emmail with a link that you need to click.</p>
+				<p>If you ignore the email verification your email address will not be updated.</p>
 			</div>		
 		</div>
 	</div>

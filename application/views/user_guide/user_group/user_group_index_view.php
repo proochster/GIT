@@ -9,7 +9,7 @@
 	<title>User Group Functions | User Guide | flexi auth | A User Authentication Library for CodeIgniter</title>
 	<meta name="description" content="The user guide for user group functions in flexi auth."/> 
 	<meta name="keywords" content="user group functions, user guide, flexi auth, user authentication, codeigniter"/>
-	<?php $this->load->view('includes/head'); ?> 
+	<?php $this->load->view('head'); ?> 
 </head>
 
 <body id="user_guide_index">

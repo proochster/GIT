@@ -7,7 +7,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>FPS Gateway</title>
-	<?php $this->load->view('includes/head'); ?> 
+	<?php $this->load->view('head'); ?> 
 </head>
 
 <body id="public_dashboard">
@@ -24,7 +24,7 @@
 		<div class="content clearfix">
 			<div class="col100">
 				<h2>Public: Dashboard</h2>
-				<p>This page acts as an example dashboard landing page for logged in public users, demonstrating how some of the functions within the flexi auth library can be used to manage the account details of public users.</p>
+				<p>This is your user dashboard where you can change basic account settings or update your password.</p>
 			</div>		
 		</div>
 	</div>
@@ -42,8 +42,8 @@
 				
 				<div class="w100 frame">							
 					<h3>Account Details</h3>
-					<p>Update the account details of the currently logged in user.</p>
-					<p>This example updates records from the required 'User Accounts' table, and from the custom 'Demo User Profile' table that in this demo is used to store a users name, phone number etc.</p>
+					<p>Update the account details.</p>
+					<p>Update your phone number, address etc.</p>
 					<ul>
 						<li>
 							<a href="<?php echo $base_url;?>auth_public/update_account">Update Account Details</a>
@@ -52,11 +52,8 @@
 					<hr/>
 					
 					<h3>Email Address</h3>
-					<p>Update the email address of the currently logged in user, via email verification.</p>
-					<p>
-						Using email verification to update an email address confirms the user has entered the correct new email address.<br/>
-						If they were make a typo entering the address, that then was NOT verified via email, they could potentially be prevented from logging back in via their email address as they wouldn't know how they misspelled it. 
-					</p>
+					<p>Update the email address, via email verification.</p>
+					<p></p>
 					<ul>
 						<li>
 							<a href="<?php echo $base_url;?>auth_public/update_email">Update Email Address via Email Verification</a>
@@ -65,7 +62,7 @@
 					<hr/>
 					
 					<h3>Password</h3>
-					<p>Update the password of the currently logged in user.</p>
+					<p>Update the password.</p>
 					<p>All passwords are securely hashed using the <a href="http://www.openwall.com/phpass/" target="_blank">phpass framework</a>.</p>
 					<ul>
 						<li>
@@ -75,8 +72,8 @@
 					<hr/>
 					
 					<h3>Address Book</h3>
-					<p>Manage the custom address details of the currently logged in user.</p>
-					<p>This example manages records from the custom 'Demo User Address' table that in this demo is used to store a list of different addresses per user.</p>
+					<p>Manage the custom address details.</p>
+					<p></p>
 					<ul>
 						<li>
 							<a href="<?php echo $base_url;?>auth_public/manage_address_book">Manage Address Book</a>

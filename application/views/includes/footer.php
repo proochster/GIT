@@ -1,5 +1,5 @@
 	<div class="content_wrap footer_bg">
-		<div id="footer" class="content clearfix">
+		<div id="footer_flexi" class="content clearfix">
 			<div class="float_l" style="margin-top:35px;">
 				
 			</div>

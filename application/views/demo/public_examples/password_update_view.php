@@ -7,7 +7,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>FPS Gateway</title>
-	<?php $this->load->view('includes/head'); ?> 
+	<?php $this->load->view('head'); ?> 
 </head>
 
 <body id="change_password">
@@ -24,9 +24,9 @@
 		<div class="content clearfix">
 			<div class="col100">
 				<h2>Public: Update Password</h2>
-				<p>The users password is the front line of defence when protecting an account from unauthorised access.</p>
-				<p>The flexi auth library includes functions to help the secure managment of user passwords using the popular <a href="http://www.openwall.com/phpass/" target="_blank">phpass framework</a>.</p>
-				<p>In addition, flexi auth extends CodeIgniters form validation class so that entered passwords can be consistently validated to contain valid characters and be of a specific character length.</p>
+				<p>Your password is the front line of defence when protecting an account from unauthorised access.</p>
+				<p>Make sure that you use at least 8 - 10 characters long password and that you use good mixture of upper and lower case letters, numbers and few special characters.</a>.</p>
+				<p></p>
 			</div>
 		</div>
 	</div>
@@ -49,7 +49,7 @@
 						<ul>
 							<li>
 								<small>
-									<strong>For this demo, the following validation settings have been defined:</strong><br/>
+									<strong>Following validation settings have been defined:</strong><br/>
 									Password length must be more than <?php echo $this->flexi_auth->min_password_length(); ?> characters in length.<br/>
 									Only alpha-numeric, dashes, underscores, periods and comma characters are allowed.
 								</small>

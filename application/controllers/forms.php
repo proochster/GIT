@@ -24,6 +24,7 @@ class Forms extends CI_Controller {
    		{
  		$session_data = $this->session->userdata('logged_in_via_password');
  		$ldata['username'] = $session_data['user_identifier'];
+            $this->load->view('head',$ldata);
 			$this->load->view('header',$ldata);
 			$this->load->view('nav',$ldata);		
 			$this->load->view("home_content",$ldata);
@@ -58,6 +59,7 @@ class Forms extends CI_Controller {
         {
    /*     $session_data = $this->session->userdata('logged_in_via_password');
         $ldata['username'] = $session_data['user_identifier']; */
+            $this->load->view('head');
             $this->load->view('header');
             $this->load->view('nav');        
             $this->load->view("privilagetest_content");
@@ -131,7 +133,8 @@ class Forms extends CI_Controller {
 		
 		if ($this->form_validation->run() == FALSE)
 		{
-			$this->load->view('header',$ldata);
+			$this->load->view('head',$ldata);
+            $this->load->view('header',$ldata);
 			$this->load->view('nav',$ldata);
 			$data['results'] = $this->form_model->getAll_cars();					
 			$this->load->view("cars_content", $data);
@@ -141,7 +144,8 @@ class Forms extends CI_Controller {
 		{
 			$this->form_model->insertValues_cars();		
 		
-			$this->load->view('header',$ldata);
+			$this->load->view('head',$ldata);
+            $this->load->view('header',$ldata);
 			$this->load->view('nav',$ldata);
 			$data['results'] = $this->form_model->getAll_cars();		
 			$this->load->view("cars_content", $data);
@@ -198,7 +202,8 @@ class Forms extends CI_Controller {
 		
 		if ($this->form_validation->run() == FALSE)
 		{
-			$this->load->view('header',$ldata);
+			$this->load->view('head',$ldata);
+            $this->load->view('header',$ldata);
 			$this->load->view('nav',$ldata);					
 			$this->load->view("users_content");
 			$this->load->view('footer',$ldata);
@@ -207,7 +212,8 @@ class Forms extends CI_Controller {
 		{
 			$this->form_model->insertValues_users();	
 			
-			$this->load->view('header',$ldata);
+			$this->load->view('head',$ldata);
+            $this->load->view('header',$ldata);
 			$this->load->view('nav',$ldata);	
 			$this->load->view('users_content');
 			$this->load->view('footer',$ldata);
@@ -257,7 +263,8 @@ class Forms extends CI_Controller {
 				
 				if ($this->form_validation->run() == FALSE)
 				{
-					$this->load->view('header',$ldata);
+					$this->load->view('head',$ldata);
+                    $this->load->view('header',$ldata);
 					$this->load->view('nav',$ldata);
 					$data['registration'] = $this->form_model->getReg();	
 					$data['user'] = $this->form_model->getUser();						
@@ -268,7 +275,8 @@ class Forms extends CI_Controller {
 				{
 					$this->form_model->insertValues_carassign();	
 					
-					$this->load->view('header',$ldata);
+					$this->load->view('head',$ldata);
+                    $this->load->view('header',$ldata);
 					$this->load->view('nav',$ldata);
 					$data['registration'] = $this->form_model->getReg();	
 					$data['user'] = $this->form_model->getUser();	
@@ -300,7 +308,8 @@ class Forms extends CI_Controller {
  		$session_data = $this->session->userdata('logged_in');
  		$ldata['username'] = $session_data['username'];
 			$this->load->model("form_model");
-			$this->load->view('header',$ldata);
+			$this->load->view('head',$ldata);
+            $this->load->view('header',$ldata);
 			$this->load->view('nav',$ldata);	
 			$data['results'] = $this->form_model->getCar();
 			$data['expensive'] = $this->form_model->getExpensiveCar();
@@ -337,7 +346,8 @@ class Forms extends CI_Controller {
  		$session_data = $this->session->userdata('logged_in');
  		$ldata['username'] = $session_data['username'];
 			$this->load->model("form_model");
-			$this->load->view('header',$ldata);
+			$this->load->view('head',$ldata);
+            $this->load->view('header',$ldata);
 			$this->load->view('nav',$ldata);	
 			$data['users'] = $this->form_model->userSelect();
 			$this->load->view("select_content",$data);
@@ -350,7 +360,8 @@ class Forms extends CI_Controller {
 		$session_data = $this->session->userdata('logged_in');
  		$ldata['username'] = $session_data['username'];
 			$this->load->model("form_model");
-			$this->load->view('header',$ldata);
+			$this->load->view('head',$ldata);
+            $this->load->view('header',$ldata);
 			$this->load->view('nav',$ldata);	
 			$data['users'] = $this->form_model->userSelect();
 			$data['carsforperiod'] = $this->form_model->getUserCarsForPeriod(); 
@@ -409,7 +420,8 @@ class Forms extends CI_Controller {
 				
 				if ($this->form_validation->run() == FALSE)
 				{
-					$this->load->view('header',$ldata);
+					$this->load->view('head',$ldata);
+                    $this->load->view('header',$ldata);
 					$this->load->view('nav',$ldata);					
 					$this->load->view('narrative_content');
 					$this->load->view('footer',$ldata);
@@ -418,7 +430,8 @@ class Forms extends CI_Controller {
 				{
 					$this->form_model->insertValues_narrative();	
 					
-					$this->load->view('header',$ldata);
+					$this->load->view('head',$ldata);
+                    $this->load->view('header',$ldata);
 					$this->load->view('nav',$ldata);	
 					$this->load->view('narrative_content');
 					$this->load->view('footer',$ldata);
@@ -460,7 +473,8 @@ class Forms extends CI_Controller {
 				
 				if ($this->form_validation->run() == FALSE)
 				{
-					$this->load->view('header',$ldata);
+					$this->load->view('head',$ldata);
+                    $this->load->view('header',$ldata);
 					$this->load->view('nav',$ldata);					
 					$this->load->view('period_content');
 					$this->load->view('footer',$ldata);
@@ -469,7 +483,8 @@ class Forms extends CI_Controller {
 				{
 					$this->form_model->insertValues_period();	
 					
-					$this->load->view('header',$ldata);
+					$this->load->view('head',$ldata);
+                    $this->load->view('header',$ldata);
 					$this->load->view('nav',$ldata);	
 					$this->load->view('period_content');
 					$this->load->view('footer',$ldata);
@@ -531,7 +546,8 @@ class Forms extends CI_Controller {
 		
 		if ($this->form_validation->run() == FALSE)
 		{
-			$this->load->view('header',$ldata);
+			$this->load->view('head',$ldata);
+            $this->load->view('header',$ldata);
 			$this->load->view('nav',$ldata);
 			$data['registration'] = $this->form_model->getRegOnly();	
 			$data['results'] = $this->form_model->getAll_mileage();						
@@ -542,7 +558,8 @@ class Forms extends CI_Controller {
 		{
 			$this->form_model->insertValues_mileage();	
 					
-			$this->load->view('header',$ldata);
+			$this->load->view('head',$ldata);
+            $this->load->view('header',$ldata);
 			$this->load->view('nav',$ldata);
 			$data['registration'] = $this->form_model->getRegOnly();	
 			$data['results'] = $this->form_model->getAll_mileage();			
@@ -605,7 +622,8 @@ class Forms extends CI_Controller {
 		
 		if ($this->form_validation->run() == FALSE)
 		{
-			$this->load->view('header',$ldata);
+			$this->load->view('head',$ldata);
+            $this->load->view('header',$ldata);
 			$this->load->view('nav',$ldata);
 			$data['supplier'] = $this->form_model->getSupplier();	
 			$data['period'] = $this->form_model->getPeriod();
@@ -619,7 +637,8 @@ class Forms extends CI_Controller {
 		{
 			$this->form_model->insertValues_purchases();	
 					
-			$this->load->view('header',$ldata);
+			$this->load->view('head',$ldata);
+            $this->load->view('header',$ldata);
 			$this->load->view('nav',$ldata);
 			$data['supplier'] = $this->form_model->getSupplier();	
 			$data['period'] = $this->form_model->getPeriod();
@@ -666,7 +685,8 @@ class Forms extends CI_Controller {
 				
 				if ($this->form_validation->run() == FALSE)
 				{
-					$this->load->view('header',$ldata);
+					$this->load->view('head',$ldata);
+                    $this->load->view('header',$ldata);
 					$this->load->view('nav',$ldata);					
 					$this->load->view('paymentmthd_content');
 					$this->load->view('footer',$ldata);
@@ -675,7 +695,8 @@ class Forms extends CI_Controller {
 				{
 					$this->form_model->insertValues_paymentmthd();	
 					
-					$this->load->view('header',$ldata);
+					$this->load->view('head',$ldata);
+                    $this->load->view('header',$ldata);
 					$this->load->view('nav',$ldata);	
 					$this->load->view('paymentmthd_content');
 					$this->load->view('footer',$ldata);
@@ -717,7 +738,8 @@ class Forms extends CI_Controller {
 				
 				if ($this->form_validation->run() == FALSE)
 				{
-					$this->load->view('header',$ldata);
+					$this->load->view('head',$ldata);
+                    $this->load->view('header',$ldata);
 					$this->load->view('nav',$ldata);					
 					$this->load->view('supplier_content');
 					$this->load->view('footer',$ldata);
@@ -726,7 +748,8 @@ class Forms extends CI_Controller {
 				{
 					$this->form_model->insertValues_supplier();	
 					
-					$this->load->view('header',$ldata);
+					$this->load->view('head',$ldata);
+                    $this->load->view('header',$ldata);
 					$this->load->view('nav',$ldata);	
 					$this->load->view('supplier_content');
 					$this->load->view('footer',$ldata);
@@ -786,7 +809,8 @@ public function expenses()
 		
 		if ($this->form_validation->run() == FALSE)
 		{
-			$this->load->view('header',$ldata);
+			$this->load->view('head',$ldata);
+            $this->load->view('header',$ldata);
 			$this->load->view('nav',$ldata);
 			$data['results'] = $this->form_model->getAll_expenses();					
 			$this->load->view("expenses_content", $data);
@@ -796,7 +820,8 @@ public function expenses()
 		{
 			$this->form_model->insertValues_expenses();		
 		
-			$this->load->view('header',$ldata);
+			$this->load->view('head',$ldata);
+            $this->load->view('header',$ldata);
 			$this->load->view('nav',$ldata);
 			$data['results'] = $this->form_model->getAll_expenses();		
 			$this->load->view("expenses_content", $data);

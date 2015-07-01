@@ -7,7 +7,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>FPS Gateway</title>
-	<?php $this->load->view('includes/head'); ?> 
+	<?php $this->load->view('head'); ?> 
 </head>
 
 <body id="update_account">
@@ -24,10 +24,10 @@
 		<div class="content clearfix">
 			<div class="col100">
 				<h2>Public: Update Account Details</h2>
-				<p>The data saved within user accounts typically consists of two primary types, data that is essential for user authentication and then user profile data.</p>
-				<p>The essential user authentication data consists of information like a users email address and password that are required by users to securely log into their account. In addition to this, the flexi auth library can also automatically save and manage user data like IP addresses, last login dates etc.</p>
-				<p>As for the user profile data, flexi auth allows you to save and relate whatever data you require to the users account, whether that data is all stored in the same table, or via multiple tables. The design of the database schema is up to you.</p>
-				<p>This demo includes two example tables to store user data, a user profile table for the users name and contact details, and an address table so the user can save and relate an <a href="<?php echo $base_url;?>auth_public/manage_address_book">address book</a> to their account.</p>
+				<p></p>
+				<p>Update email address and password that are required by users to securely log into their account.</p>
+				<p></p>
+				<p></p>
 			</div>		
 		</div>
 	</div>
@@ -84,8 +84,8 @@
 									title="Set an email address that can be used to login with."
 								/>
 								<p class="note">
-									Note: This method simply updates the users email address, if you want to verify the user has spelt their new email address correctly, you can send them a verification email to their new email address.<br/> 
-									<a href="<?php echo $base_url;?>auth_public/update_email">Click here to see an example of updating a users email via email verification</a>.
+									Note: This method simply updates the email address, if you want to verify your new email address, you can send a verification email.<br/> 
+									<a href="<?php echo $base_url;?>auth_public/update_email">Click here to verify email via email verification</a>.
 								</p>
 							</li>
 							<li>
@@ -107,7 +107,7 @@
 						<ul>
 							<li>
 								<h6>Important Note</h6>
-								<small>The data saved via this demo is available for anyone else using the demo to see, therefore, it is recommended you do not include any personal details. All data that is saved via this demo, is completely wiped every few hours.</small>
+								<small>Notice</small>
 							</li>
 							<li>
 								<hr/>

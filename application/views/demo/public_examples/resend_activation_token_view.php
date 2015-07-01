@@ -7,7 +7,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>FPS Gateway</title>
-	<?php $this->load->view('includes/head'); ?> 
+	<?php $this->load->view('head'); ?> 
 </head>
 
 <body id="resend_activation_token">
@@ -24,8 +24,8 @@
 		<div class="content clearfix">
 			<div class="col100">
 				<h2>Resend Activation Token</h2>
-				<p>This demo is setup to require that users that register for a new account must activate their account via clicking a link that is emailed to them immediately upon registration.</p>
-				<p>Since the user can not gain access to their account until it is activated, it is important to allow users to request for the activation email to be resent to them incase they have not received the initial activation email.</p>
+				<p>This site requires that users that register for a new account must activate their account via clicking a link that is emailed to them immediately upon registration.</p>
+				<p>This page allows users to request for the activation email to be resent to them incase they have not received the initial activation email.</p>
 			</div>		
 		</div>
 	</div>

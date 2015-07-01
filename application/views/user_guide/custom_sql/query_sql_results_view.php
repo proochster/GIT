@@ -9,7 +9,7 @@
 	<title>Querying Results | User Guide | flexi auth | A User Authentication Library for CodeIgniter</title>
 	<meta name="description" content="The user guide for querying results from flexi auth functions."/> 
 	<meta name="keywords" content="query results, active record, flexi auth, user authentication, codeigniter"/>
-	<?php $this->load->view('includes/head'); ?> 
+	<?php $this->load->view('head'); ?> 
 </head>
 
 <body id="user_guide">

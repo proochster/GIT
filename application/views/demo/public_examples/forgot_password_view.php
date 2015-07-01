@@ -7,7 +7,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>FPS Gateway</title>
-	<?php $this->load->view('includes/head'); ?> 
+	<?php $this->load->view('head'); ?> 
 </head>
 
 <body id="forgot_password">
@@ -24,12 +24,11 @@
 		<div class="content clearfix">
 			<div class="col100">
 				<h2>Forgotten Password</h2>
-				<p>Users forgetting passwords is a common problem for sites that support user accounts. It is an essential feature that users must be able to securely reset their password without the involvement of a site administrator.</p>
+				<p>You can request your password to be securely reset, if you have any problems with this process please contact the site administrator.</p>
 				<p>
-					Since the flexi auth library securely hashes all user passwords, it is not possible to check what the users forgotten password is and then inform them.<br/>
-					Therefore, the library includes a function that will email a link to the user that includes a unique token. When the user clicks the link, the user is directed to a page that validates whether the token is valid, provided it is, the flexi auth library can then be configured to allow the user to manually reset their password, or to automatically email the user a new password.
+					Your passwords are twice scrambled and twice encrypted and there is no way for us to retrieve original password for you and remind you of it.<br/>
 				</p>
-				<p>This demo is setup to send the user an email with a link, when they click the link, they are directed to a page where they can manually change their password.</p>
+				<p>This page is setup to send you an email with a link, when you click the link, you are directed to a page where you can manually change your password.</p>
 			</div>		
 		</div>
 	</div>
@@ -58,7 +57,7 @@
 							<li>
 								<label for="submit">Send Email:</label>
 								<input type="submit" name="send_forgotten_password" id="submit" value="Submit" class="link_button large"/>
-								<small>Note: By default, this demo is set so that the password must be reset within 15 minutes of the 'forgotten password' email being sent.</small>
+								<small>Note: By default, this site is set so that the password must be reset within 15 minutes of the 'forgotten password' email being sent.</small>
 							</li>
 						</ul>
 					</div>	

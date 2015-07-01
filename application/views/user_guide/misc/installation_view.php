@@ -9,7 +9,7 @@
 	<title>Installation Guide | flexi auth | A User Authentication Library for CodeIgniter</title>
 	<meta name="description" content="The user guide for installing the flexi auth library."/> 
 	<meta name="keywords" content="installation guide, user guide, flexi auth, user authentication, codeigniter"/>
-	<?php $this->load->view('includes/head'); ?> 
+	<?php $this->load->view('head'); ?> 
 </head>
 
 <body id="user_guide">

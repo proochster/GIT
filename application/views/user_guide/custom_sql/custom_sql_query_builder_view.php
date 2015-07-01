@@ -9,7 +9,7 @@
 	<title>Query Builder | User Guide | flexi auth | A User Authentication Library for CodeIgniter</title>
 	<meta name="description" content="A user guide list of building custom SQL queries in flexi auth functions."/> 
 	<meta name="keywords" content="query builder functions, user guide, flexi auth, user authentication, codeigniter"/>
-	<?php $this->load->view('includes/head'); ?> 
+	<?php $this->load->view('head'); ?> 
 </head>
 
 <body id="user_guide">

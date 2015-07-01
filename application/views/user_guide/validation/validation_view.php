@@ -9,7 +9,7 @@
 	<title>Validation Functions | User Guide | flexi auth | A User Authentication Library for CodeIgniter</title>
 	<meta name="description" content="The user guide for validation functions in flexi auth."/> 
 	<meta name="keywords" content="validation functions, user guide, flexi auth, user authentication, codeigniter"/>
-	<?php $this->load->view('includes/head'); ?> 
+	<?php $this->load->view('head'); ?> 
 </head>
 
 <body id="user_guide">
