@@ -4,7 +4,7 @@
 	
 	# Enforce NO www
     RewriteCond %{HTTP_HOST} ^www [NC]
-    RewriteRule ^(.*)$ http://backup-pc.dyndns-server.com/stage/bik/$1 [L,R=301]
+    RewriteRule ^(.*)$ http://backup-pc.dyndns-server.com/stage/qba/$1 [L,R=301]
 
     #Removes access to the system folder by users.
     #Additionally this will allow you to create a System.php controller,
