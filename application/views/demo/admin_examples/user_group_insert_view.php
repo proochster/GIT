@@ -14,7 +14,7 @@
 
 <div id="body_wrap">
 	<!-- Header -->  
-	<?php $this->load->view('includes/header'); ?> 
+	<?php $this->load->view('includes/header_nav'); ?> 
 
 	<!-- Demo Navigation -->
 	<?php $this->load->view('includes/admin_header'); ?> 
@@ -81,11 +81,11 @@
 	</div>	
 	
 	<!-- Footer -->  
-	<?php $this->load->view('includes/footer'); ?> 
+	<?php $this->load->view('footer'); ?> 
 </div>
 
 <!-- Scripts -->  
-<?php $this->load->view('includes/scripts'); ?> 
+<!-- <?php $this->load->view('includes/scripts'); ?>  -->
 
 </body>
 </html>

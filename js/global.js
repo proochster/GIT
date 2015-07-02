@@ -36,18 +36,18 @@ $(function()
 	// ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ //
 
 	// Animate flexi cart ribbon
-	$('#flexi_cart_ribbon').hover(
-		function()
-		{
-			$(this).addClass('hover');
-			$(this).clearQueue().animate({top:0}, 250);
-		},
-		function()
-		{
-			$(this).removeClass('hover');
-			$(this).clearQueue().animate({top:-60}, 500);
-		}
-	);
+//	$('#flexi_cart_ribbon').hover(
+//		function()
+//		{
+//			$(this).addClass('hover');
+//			$(this).clearQueue().animate({top:0}, 250);
+//		},
+//		function()
+//		{
+//			$(this).removeClass('hover');
+//			$(this).clearQueue().animate({top:-60}, 500);
+//		}
+//	);
 
 	// ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ //
 	

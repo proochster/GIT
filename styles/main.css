@@ -1108,19 +1108,38 @@ textarea {
 }
 
 
-.center {
-	text-align: center;
-	margin: 0 auto;
-}	
+	
 
 .errormsg p {
 	margin-left: 50px;
 	color: #C41846;
 	font-family: Exo,sans-serif;
 	font-weight: 600;
+}	
+
+.center {
+	text-align: center;
+	margin: 0 auto;
+	width: auto;
+}
+
+
+.container {
+/*	width: auto;
+	height: auto;
+	display: block;
 	
+	border-radius: 15px;
+	background-color: #ebebeb;
+	margin-right: 1%;
+	margin-left: 1%;
+	position: relative; */
+	width: 60%;
+	margin: 0 auto;
+	border: 1px solid #3f3f3f;
 	
 }
+
 
 
 
@@ -1384,12 +1403,15 @@ textarea {
 
 /* GRID */
 
+
+
+
 .grid{
     overflow: hidden;
     padding: 1% 0
 }
 .grid-1, .grid-2, .grid-3, .grid-4, .grid-5, .grid-6, .grid-7, .grid-8, .grid-9, .grid-10, .grid-11, .grid-12, .grid-13, .grid-14, .grid-15, .grid-16, .grid-17, .grid-18, .grid-19, .grid-20, .grid-21, .grid-22, .grid-23, .grid-24{
-    background-color: #999999;
+    background-color: #EEEEEE;
     border-radius: 15px;
     color: #333;
     margin: 0 2%;
@@ -1490,18 +1512,32 @@ textarea {
     width: 96%
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1366px) {
 	body {}
+}
+
+
+@media only screen and (min-width: 1024px) and (max-width: 1366px) {
+	body {}
+	.container {
+		width: 70%;
+	}
 }
 
 @media only screen and (min-width: 721px) and (max-width: 1024px){
 	body {}
+	.container {
+		width: 80%;
+	}
 }
 
 @media only screen and (max-width: 720px) {
     .posts .grid-8{
         width: 46%
     }
+    .container {
+		width: 90%;
+	}
 }
 
 @media only screen and (min-width: 681px) {
@@ -1517,6 +1553,7 @@ textarea {
 @media only screen and (max-width: 680px) {
     .posts .grid-8, .posts .grid-12 {
         width: 96%;
+        margin-top: 20px;
     }
     .header .menu-icon{
         display: block
@@ -1866,7 +1903,7 @@ body {/*background:url(../images/site_bg.png) repeat #292929;*/ text-align:cente
 
 .content {position:relative; width:960px; margin:0 auto; padding:10px 0;}
 
-fieldset {width:926px; margin:10px 0; padding:10px 15px; background-color:#f0f0f0; border:2px solid #aaa;}
+fieldset {width:auto; margin:10px 0; padding:10px 15px; background-color:#f0f0f0; border:2px solid #aaa;}
 fieldset.w50 {margin:5px 10px 5px 0;}
 fieldset.w50.r_margin {margin-right:0;}
 .frame {margin-top:10px; background-color:#f0f0f0; border:2px solid #aaa;}

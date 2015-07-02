@@ -15,8 +15,6 @@
         <!-- Stylesheets -->
         <link rel="stylesheet" href="//code.jquery.com/ui/1.11.3/themes/smoothness/jquery-ui.css">
 		<link rel="stylesheet" href="http://backup-pc.dyndns-server.com/stage/bik/styles/main.css" type="text/css" media="screen">
-		<!-- <link rel="stylesheet" href="http://backup-pc.dyndns-server.com/stage/bik/styles/global.css?v=1.0"> -->
-        <!-- <link rel="stylesheet" href="http://backup-pc.dyndns-server.com/stage/bik/styles/structure.css?v=1.0"> -->
 		
 		<!-- Fonts -->
 		<link href='http://fonts.googleapis.com/css?family=Raleway:500,900,200' rel='stylesheet' type='text/css'>
@@ -33,7 +31,10 @@
         <script>window.jQuery || document.write('<script src="../js/vendor/jquery-{{JQUERY_VERSION}}.min.js"><\/script>')</script>
         <script src="/stage/bik/js/plugins.js"></script>
         <script src="/stage/bik/js/main.js"></script>
+        <script src="http://backup-pc.dyndns-server.com/stage/bik/js/jquery.tools.tooltips.min.js?v=1.0"></script>
+        <script src="http://backup-pc.dyndns-server.com/stage/bik/js/global.js?v=1.0"></script>
 		
+		<!-- Global JS Functions - use anywhere -->
 		 <script>
 				$(function() {
 				$( "#datepicker" ).datepicker({dateFormat: 'dd-mm-yy'});

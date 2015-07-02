@@ -16,7 +16,7 @@
 
 <div id="body_wrap">
 	<!-- Header -->  
-	<?php $this->load->view('includes/header'); ?> 
+	<?php $this->load->view('includes/header_nav'); ?> 
 
 	<!-- User Guide Navigation -->
 	<?php $this->load->view('includes/user_guide_header'); ?> 
@@ -89,11 +89,11 @@ $config['email']['email_template_update_email'] = 'update_email_address.tpl.php'
 	</div>	
 	
 	<!-- Footer -->  
-	<?php $this->load->view('includes/footer'); ?> 
+	<?php $this->load->view('footer'); ?> 
 </div>
 
 <!-- Scripts -->  
-<?php $this->load->view('includes/scripts'); ?> 
+<!-- <?php $this->load->view('includes/scripts'); ?>  -->
 
 </body>
 </html>

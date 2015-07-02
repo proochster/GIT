@@ -14,7 +14,7 @@
 
 <div id="body_wrap">
 	<!-- Header -->  
-	<?php $this->load->view('includes/header'); ?> 
+	<?php $this->load->view('includes/header_nav'); ?> 
 
 	<!-- Intro Content -->
 <!--	<div class="content_wrap nav_bg main_banner">
@@ -70,10 +70,10 @@
 </div>
 
 <!-- Footer -->  
-<!-- <?php $this->load->view('includes/footer'); ?> --> 
+<!-- <?php $this->load->view('footer'); ?> --> 
 
 <!-- Scripts -->  
-<?php $this->load->view('includes/scripts'); ?> 
+<!-- <?php $this->load->view('includes/scripts'); ?>  -->
 
 </body>
 </html>

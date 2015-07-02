@@ -10,25 +10,37 @@
 	<?php $this->load->view('head'); ?> 
 </head>
 
-<body>
+<body id="login">
 
-
+<div id="body_wrap">
 	<!-- Header -->  
 	<?php $this->load->view('includes/header_nav'); ?> 
 
 	<!-- Demo Navigation -->
 	<?php // $this->load->view('includes/admin_header'); ?> 
 	
+	<!-- Intro Content -->
+	<div class="content_wrap intro_bg">
+		<div class="content clearfix">
+			<div class="col100">
+			<!--	<h2>User Login</h2>
+				<p>The user login page is the primary gateway for authenticating a users login details are valid before redirecting the user to a logged in landing page.</p>
+				<p>The flexi auth library offers numerous methods and features to aid authentication of users, including auto login via 'Remember me' cookies, captchas automatically activated upon repeated failed login attempts, and incremental time limit bans for users with a high number of failed login attempts.</p>
+				<p>In addition to the authentication methods, the library includes functions to help users with tasks like reseting forgotten passwords, and resending account activation emails. All of these features available within the library are optional, and can be mixed and matched with each other or completely left out.</p> -->
+			</div>		
+		</div>
+	</div>
 	
 	<!-- Main Content -->
 	
 	<!-- <div class="content_wrap main_content_bg"> -->
 	
-	<div class="container">
+	<div class="center">
 		
 		<!-- <div class="content clearfix"> -->
 		
-			<div class="grid posts">
+		<div class="grid content clearfix">
+			<div class="col100">
 				<h2>User Login</h2>
 
 			<?php if (! empty($message)) { ?>
@@ -41,10 +53,10 @@
 				
 					<!-- <fieldset class="w50 parallel_target grid-12"> -->
 				
-					<div class="grid-12 extra_top_margin">
-				
 					
-						<h3>Registered Users</h3>
+				
+					<fieldset class="w50 parallel_target">
+						<legend>Registered Users</legend>
 						<ul>
 							<li>
 								<label for="identity">Email or Username:</label>
@@ -132,16 +144,16 @@
 								<a href="<?php echo $base_url;?>auth/resend_activation_token">Resend Account Activation Token</a>
 							</li>
 						</ul>
+					</fieldset>
 					
 					
-					</div>
 	
 					<!-- <fieldset class="w50 r_margin parallel_target grid-12"> -->
 		
-					<div class="grid-12 extra_top_margin">
-	
 					
-						<h3>New Users</h3>
+	
+					<fieldset class="w50 r_margin parallel_target">
+						<legend>New Users</legend>
 						<ul>
 							<li>
 								New users can register for an account.
@@ -151,17 +163,18 @@
 								<a href="<?php echo $base_url;?>auth/register_account" class="link_button large">Register New Account</a>
 							</li>
 						</ul>
+					</fieldset>
 					
-					
-					</div>
+				
 					
 				<?php echo form_close();?>
+			</div>
 		</div>
-
 	</div>	
+	
 	<!-- Footer -->  
 	<?php $this->load->view('footer'); ?> 
-
+</div>
 
 <!-- Scripts -->  
 <!-- <?php $this->load->view('includes/scripts'); ?>  -->
