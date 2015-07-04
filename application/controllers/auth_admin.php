@@ -42,8 +42,8 @@ class Auth_admin extends CI_Controller {
 		}
 
 		// Note: This is only included to create base urls for purposes of this demo only and are not necessarily considered as 'Best practice'.
-		$this->load->vars('base_url', 'http://backup-pc.dyndns-server.com/stage/bik/');
-		$this->load->vars('includes_dir', 'http://backup-pc.dyndns-server.com/stage/bik/includes/');
+		$this->load->vars('base_url', 'http://backup-pc.dyndns-server.com/stage/qba/');
+		$this->load->vars('includes_dir', 'http://backup-pc.dyndns-server.com/stage/qba/includes/');
 		$this->load->vars('current_url', $this->uri->uri_to_assoc(1));
 		
 		// Define a global variable to store data that is then used by the end view page.
