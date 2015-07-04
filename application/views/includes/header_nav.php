@@ -7,7 +7,7 @@
 	<div id="header">
 		<h1 id="logo">
 			<a href="<?php echo $base_url; ?>" title="flexi auth">
-				<img src="http://backup-pc.dyndns-server.com/stage/qba/img/logo-side.png" alt="fps"/>
+				<img src="http://backup-pc.dyndns-server.com/stage/bik/img/logo-side.png" alt="fps"/>
 				<span class="img_rep">FPS</span> 
 			</a>
 		</h1>

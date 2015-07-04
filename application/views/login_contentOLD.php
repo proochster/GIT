@@ -11,8 +11,8 @@
 		<link href='http://fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
     	<link href='http://fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css'>
    		<link href='http://fonts.googleapis.com/css?family=Exo:600' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" href="http://backup-pc.dyndns-server.com/stage/qba/styles/login_normalize.css">
-        <link rel="stylesheet" href="http://backup-pc.dyndns-server.com/stage/qba/styles/login_main.css">
+        <link rel="stylesheet" href="http://backup-pc.dyndns-server.com/stage/bik/styles/login_normalize.css">
+        <link rel="stylesheet" href="http://backup-pc.dyndns-server.com/stage/bik/styles/login_main.css">
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
     <body>
