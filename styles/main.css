@@ -2444,6 +2444,10 @@ hr.clear {clear:both; display:block; border:0 none; height:0;}
         font-weight: lighter;
     }
     
+    #nav.active li a .fa{
+        color: #fff;
+    }
+    
     /* User Navigation */
     nav > ul{
        display: none
