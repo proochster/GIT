@@ -285,25 +285,7 @@ textarea {
 
 /* -------------------------- */
 
-#table2 {
-	margin-left: auto;
-	margin-right: auto;
-}
-
-
-#table2 td {
-  padding: 5px;
-  margin: 5px 5px 5px 5px;
-  border-bottom: 1px solid #BEBEBE;
-  font-family: Lato,sans-serif;
-  font-weight:400;
-  
-}
-
-#table2 h4 {
-	font-family: Abel,sans-serif;
-	color: #3f3f3f;
-}
+#table2 {}
 
 /* -------------------------- */
 
@@ -341,12 +323,12 @@ textarea {
 
 /*----------------------------------- */
 
-#table4 {
+table {
 	margin-left: auto;
 	margin-right: auto;
 }
 
-#table4 select {
+table select {
   padding: 8px 20px 8px 20px;
   margin: 5px 2px 5px 2px;
   border: solid 1px #fff;
@@ -355,7 +337,7 @@ textarea {
   border-radius: 15px;
 }
 
-#table4 input:not([type=submit]):not([type=file]) {
+table input:not([type=submit]):not([type=file]) {
   padding: 8px 10px 8px 10px;
   margin: 5px 2px 5px 2px;
   border: solid 1px #fff;
@@ -364,11 +346,11 @@ textarea {
   border-radius: 15px;
 }
 
-#table4 td {
+table td {
 	text-align:center;
 }
 
-#table4 h4 {
+table h4 {
 	font-family: Abel,sans-serif;
 	color: #3f3f3f;
 }
@@ -603,11 +585,7 @@ textarea {
 /*----------------------------------- */
 
 #container {
-	width: 88%;
-	border-radius: 25px;
 	background-color: #ebebeb;
-	margin: 2%;
-	padding: 2% 4%;
 }
 
 #container h1 {
@@ -1230,10 +1208,14 @@ textarea {
 
 #footer_fps {
     background: #0F5193;
-    color: #FFFFFF;
-    padding: 1.5em 4%;
-    font-size: 0.7em;
+    color: #FFF;
+    font-family: Lato,sans-serif;
+    padding-bottom: 0.2em;
+}
+
+#footer_fps h4{
     font-weight: 100;
+    font-size: 0.9em
 }
 
 /* ----------------------------------- */
@@ -1480,16 +1462,19 @@ textarea {
 .grid{
     overflow: hidden;
     padding: 1.3em 2%;
-    /*outline: 1px solid;*/
 }
+
 .grid-1, .grid-2, .grid-3, .grid-4, .grid-5, .grid-6, .grid-7, .grid-8, .grid-9, .grid-10, .grid-11, .grid-12, .grid-13, .grid-14, .grid-15, .grid-16, .grid-17, .grid-18, .grid-19, .grid-20, .grid-21, .grid-22, .grid-23, .grid-24{
     margin: 0 2% 1em;
     float: left;
     position: relative;
     display: block;
-    /*outline: 1px solid red*/
 }
 
+.grid .scroll{
+    overflow-x: scroll;
+}
+ 
 /* 4 Columns */
 .grid-6{
     width: 21%
@@ -1526,11 +1511,6 @@ textarea {
 /* ==========================================================================
    Fancy button
    ========================================================================== */
-#submit1 {
-	text-align: center;
-	margin: 50px 0px 50px 0px;
-}
-
 
 .submit-button {
 	-moz-box-shadow:inset 0px 1px 0px 0px #c1ed9c;
@@ -1991,15 +1971,44 @@ a:hover, a:active {
 /* List Styling ----------------------------------------------------------------------------- */
 ul {list-style:none; margin-left:0;}
 
-/* Table Styling ----------------------------------------------------------------------------- */
 
 /* Table Styling ----------------------------------------------------------------------------- */
-table {width:100%; margin:10px 0; border:2px solid #aaa; border-collapse:collapse; border-spacing:0; background-color:#f0f0f0;}
-table caption {padding:7px; font-size:16px; font-weight:bold; text-align:left;}
-table th, table td {border-bottom:1px dotted #aaa; border-right:1px dotted #aaa; text-align:left; vertical-align:middle;}
-thead th, thead td, tfoot th, tfoot td {border-bottom:1px solid #aaa; border-top:1px solid #aaa; background-color:#d9d9d9;}
-table th {padding:8px; font-weight:bold;}
-table td {padding:8px;}
+
+table {
+    width:auto;
+    border:2px solid #aaa;
+    border-collapse:collapse;
+    border-spacing:0;
+    background-color:#f0f0f0;
+}
+table caption {
+    padding:7px;
+    font-size:16px;
+    font-weight:bold;
+    text-align:left;
+}
+
+table th, table td {
+    border-bottom:1px dotted #aaa;
+    border-right:1px dotted #aaa;
+    vertical-align:middle;
+}
+
+thead th, thead td, tfoot th, tfoot td {
+    border-bottom:1px solid #aaa;
+    border-top:1px solid #aaa;
+    background-color:#d9d9d9;
+}
+
+table th { 
+    padding: 0.3em;
+    font-weight:bold;
+}
+
+table td { 
+    padding: 0.3em;
+}
+
 /* END Table Styling ----------------------------------------------------------------------------- */
 
 /* Form Styling ---------------------------------------------------------------------------------- */
@@ -2393,19 +2402,9 @@ hr.clear {clear:both; display:block; border:0 none; height:0;}
 
 @media only screen and (min-width: 1367px) {}
 
-@media only screen and (min-width: 1025px) and (max-width: 1366px) {
-	body {}
-	.container {
-		width: 70%;
-	}
-}
+@media only screen and (min-width: 1025px) and (max-width: 1366px) {}
 
-@media only screen and (min-width: 721px) and (max-width: 1024px){
-	body {}
-	.container {
-		width: 80%;
-	}
-}
+@media only screen and (min-width: 721px) and (max-width: 1024px){}
 
 @media only screen and (max-width: 960px){}
 
@@ -2524,9 +2523,72 @@ hr.clear {clear:both; display:block; border:0 none; height:0;}
         width: 96%;
     }
     
-    .container {
-		width: 90%;
-	}
+    .grid > .scroll{
+        overflow: visible;
+    }
+    
+    table {
+        width: 100%;
+        border: 0;
+        background-color: #fff;
+    }
+
+    table tr { 
+        display: block;
+    }
+
+    table thead, table tbody { 
+        float: left;
+    }
+    
+    table thead {
+        width: 40%;
+    }
+    
+    table tbody {
+        width: 60%;
+    }
+    
+    table td { 
+        display: list-item;
+        list-style: none;
+        border: 0;
+    }
+    
+    table thead tr td h4{
+        font-size: 1.2em;
+        padding: 0.4em 1em;
+        text-align: right;
+        border-bottom: 1px dotted #aaa;   
+    }
+    
+    table tbody tr td select{
+        padding: 0.6em 1em;
+        box-shadow: none;
+        border: 1px solid #BEBEBE;
+        border-radius: 6px;
+        margin: 0.2em 0;        
+    }
+    
+    table tbody tr td{
+        padding: 0.2em 1em;
+        text-align: left !important;
+        position: relative;
+    }
+    
+    table tbody tr td p{
+        padding: 0.7em 0 0.5em;
+        white-space: nowrap;
+    }
+    
+    table input:not([type=submit]):not([type=file]){
+        padding: 0.6em 1em;
+        box-shadow: none;
+        border: 1px solid #BEBEBE;
+        border-radius: 6px;
+        margin: 0.2em 0;
+        width: 78%;
+    }
 }
 
 @media only screen and (min-width: 681px) {
@@ -2572,20 +2634,20 @@ hr.clear {clear:both; display:block; border:0 none; height:0;}
 @media only screen and (min-width: 481px) and (max-width: 680px) {}
 
 @media only screen and (max-width: 480px) {
-    body{
-        font-size: 102%
-    }
     #logo img{
         width: 61%;
     }
+
     input[type=text], input[type=password], input[type=button], textarea, select, button{
         width: 90%;
         display: block;
     }
+    
     input[type=submit] {
         width: 100%;
         display: block;
     }
+    
     a.link_button.large {
         width: 90%;
         display: block;
