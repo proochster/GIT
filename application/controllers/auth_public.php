@@ -89,6 +89,7 @@ class Auth_public extends CI_Controller {
 		$this->data['message'] = $this->session->flashdata('message');
 		
 		$this->load->view('demo/public_examples/dashboard_view', $this->data);
+        $this->load->view('footer'); 
 	}
 
 	###++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++###	
