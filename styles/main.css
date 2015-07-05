@@ -151,6 +151,35 @@ h1 .fa, h2 .fa, h3 .fa, h4 .fa, h5 .fa, h6 .fa{
  * https://github.com/h5bp/html5-boilerplate/issues/440
  */
 
+
+/* Links List */
+
+ul.links li a{
+    text-decoration: none;
+    display: block;
+    font-weight: 500;
+    border-bottom: 1px dotted #FFFFFF;
+    padding: 0.5em 1em;
+    color: #0F5193;
+}
+
+ul.links li a:hover{
+   color: #C61745; 
+}
+
+ul.links li a:after{
+    font-family: FontAwesome;
+    content: '\f105';
+    padding: 0 0 0 1em;
+    font-weight: bold;
+}
+
+ul.links li a .fa{
+    padding: 0 0.4em 0 0;
+    font-size: 1.2em;
+    color: #fff;
+}
+
 audio,
 canvas,
 iframe,
@@ -200,8 +229,11 @@ textarea {
 }
 
 #logolarge {
-	display: block;
-	margin: 0 auto;
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
 }
 
 .logocontainer {
@@ -1185,15 +1217,6 @@ textarea {
 
 
 .container {
-/*	width: auto;
-	height: auto;
-	display: block;
-	
-	border-radius: 15px;
-	background-color: #ebebeb;
-	margin-right: 1%;
-	margin-left: 1%;
-	position: relative; */
 	width: 60%;
 	margin: 0 auto;
 	border: 1px solid #3f3f3f;
@@ -1562,6 +1585,8 @@ textarea {
 
 nav {
     font-family: Abel,sans-serif;
+    z-index: 1;
+    position: relative;
 }
 
 nav a:link{
@@ -1602,6 +1627,10 @@ nav ul li a {
     background: #175696;
     padding: 0.5em 1em;
     color: #fff;
+}
+
+nav .expand{
+    display: none;
 }
 
 /* ------------------------------------------------ */
@@ -2436,11 +2465,12 @@ hr.clear {clear:both; display:block; border:0 none; height:0;}
         float: none;
     }
     
-    nav .expand{
+    nav.active .expand{
         position: absolute;
         top: 0.6em;
         right: 4%;
         font-size: 1.3em;
+        display: block;
     }    
     
 /* Top        ---------- */
