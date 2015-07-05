@@ -1,9 +1,20 @@
 
 $(document).ready(function(){
     
-    // Mobile Navigation
+    // Mobile Public Navigation
     $('.hamburger').click( function(){
         $('#nav').toggleClass('active');
+    });
+    
+    // Mobile User Dropdown Menu
+    $('.dropdown-menu').click( function(){
+        $('nav').toggleClass('active');
+        $('.dropdown-menu i').toggleClass('fa-chevron-down');
+        $('.dropdown-menu i').toggleClass('fa-chevron-up');
+    });
+    
+    $('nav li ul').each(function(){
+        $(this).parent().append('<i class="fa fa-plus-square-o white expand"></i>');
     });
 });
 

@@ -14,36 +14,35 @@
 
 <div id="body_wrap">
 	<!-- Header -->  
-	<?php $this->load->view('includes/header_nav'); ?> 
-
-	<!-- Demo Navigation -->
-	<?php $this->load->view('includes/admin_header'); ?> 
+	<?php $this->load->view('includes/header_nav'); ?>
 	
 	<!-- Intro Content -->
 	<div class="content_wrap intro_bg">
 		<div class="content clearfix">
-			<div class="col100">
-				<h2>Resend Activation Token</h2>
-				<p>This site requires that users that register for a new account must activate their account via clicking a link that is emailed to them immediately upon registration.</p>
-				<p>This page allows users to request for the activation email to be resent to them incase they have not received the initial activation email.</p>
-			</div>		
+            <div class="grid">
+                <div class="grid-24">
+                    <h2><i class="fa fa-send"></i> Resend Activation Token</h2>
+                    <p>This site requires that users that register for a new account must activate their account via clicking a link that is emailed to them immediately upon registration.</p>
+                    <p>This page allows users to request for the activation email to be resent to them incase they have not received the initial activation email.</p>
+                </div>
+            </div>	
 		</div>
 	</div>
 	
 	<!-- Main Content -->
 	<div class="content_wrap main_content_bg">
 		<div class="content clearfix">
-			<div class="col100">
-				<h2>Resend Activation Token</h2>
-
-			<?php if (! empty($message)) { ?>
-				<div id="message">
-					<?php echo $message; ?>
-				</div>
-			<?php } ?>
-				
-				<?php echo form_open(current_url());?>  	
-					<div class="w100 frame">
+            <div class="grid">
+                
+                <?php if (! empty($message)) { ?>
+                <div class="grid-24" id="message">
+                    <?php echo $message; ?>
+                </div>
+                <?php } ?>
+                
+                <div class="grid-24">
+                    <?php echo form_open(current_url());?>  	
+					<div class="frame">
 						<ul>
 							<li class="info_req">
 								<label for="identity">Email or Username:</label>
@@ -57,17 +56,9 @@
 							</li>
 						</ul>
 					</div>	
-				<?php echo form_close();?>
-			</div>
+				    <?php echo form_close();?>
+                </div>
+            </div>
 		</div>
 	</div>	
-	
-	<!-- Footer -->  
-	<?php $this->load->view('footer'); ?> 
 </div>
-
-<!-- Scripts -->  
-<!-- <?php $this->load->view('includes/scripts'); ?>  -->
-
-</body>
-</html>

@@ -15,63 +15,51 @@
 <div id="body_wrap">
 	<!-- Header -->  
 	<?php $this->load->view('includes/header_nav'); ?> 
-
-	<!-- Demo Navigation -->
-	<?php $this->load->view('includes/admin_header'); ?> 
 	
 	<!-- Intro Content -->
 	<div class="content_wrap intro_bg">
 		<div class="content clearfix">
-			<div class="col100">
-				<h2>Forgotten Password</h2>
-				<p>You can request your password to be securely reset, if you have any problems with this process please contact the site administrator.</p>
-				<p>
-					Your passwords are twice scrambled and twice encrypted and there is no way for us to retrieve original password for you and remind you of it.<br/>
-				</p>
-				<p>This page is setup to send you an email with a link, when you click the link, you are directed to a page where you can manually change your password.</p>
-			</div>		
-		</div>
-	</div>
-	
-	<!-- Main Content -->
-	<div class="content_wrap main_content_bg">
-		<div class="content clearfix">
-			<div class="col100">
-				<h2>Forgotten Password</h2>
-
-			<?php if (! empty($message)) { ?>
-				<div id="message">
-					<?php echo $message; ?>
-				</div>
-			<?php } ?>
-				
-				<?php echo form_open(current_url());	?>  	
-					<div class="w100 frame">
-						<ul>
-							<li class="info_req">
-								<label for="identity">Email or Username:</label>
-								<input type="text" id="identity" name="forgot_password_identity" value="" class="tooltip_trigger"
-									title="Please enter either your email address or username defined during registration."
-								/>
-							</li>
-							<li>
-								<label for="submit">Send Email:</label>
-								<input type="submit" name="send_forgotten_password" id="submit" value="Submit" class="link_button large"/>
-								<small>Note: By default, this site is set so that the password must be reset within 15 minutes of the 'forgotten password' email being sent.</small>
-							</li>
-						</ul>
-					</div>	
-				<?php echo form_close();?>
-			</div>
-		</div>
-	</div>	
-	
-	<!-- Footer -->  
-	<?php $this->load->view('footer'); ?> 
+            <div class="grid">
+                <div class="grid-24">
+                    <h2><i class="fa fa-rotate-right"></i> Forgotten Password</h2>
+                    <p>You can request your password to be securely reset, if you have any problems with this process please contact the site administrator.</p>
+                    <p>
+                        Your passwords are twice scrambled and twice encrypted and there is no way for us to retrieve original password for you and remind you of it.<br/>
+                    </p>
+                    <p>This page is setup to send you an email with a link, when you click the link, you are directed to a page where you can manually change your password.</p>
+                </div>
+            </div>         
+        </div>
+    </div>
+     <!-- Main Content -->
+    <div class="content_wrap main_content_bg">
+        <div class="content clearfix">
+            <div class="grid"> 
+                <?php if (! empty($message)) { ?>
+                <div class="grid-24" id="message">
+                    <?php echo $message; ?>
+                </div>
+                <?php } ?>
+                <div class="grid-24">
+                    <?php echo form_open(current_url());?>  	
+                    <div class="frame">
+                        <ul>
+                            <li class="info_req">
+                                <label for="identity">Email or Username:</label>
+                                <input type="text" id="identity" name="forgot_password_identity" value="" class="tooltip_trigger"
+                                    title="Please enter either your email address or username defined during registration."
+                                />
+                            </li>
+                            <li>
+                                <label for="submit">Send Email:</label>
+                                <input type="submit" name="send_forgotten_password" id="submit" value="Submit" class="link_button large"/>
+                                <small>Note: By default, this site is set so that the password must be reset within 15 minutes of the 'forgotten password' email being sent.</small>
+                            </li>
+                        </ul>
+                    </div>	
+                    <?php echo form_close();?>  
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
-
-<!-- Scripts -->  
-<!-- <?php $this->load->view('includes/scripts'); ?>  -->
-
-</body>
-</html>

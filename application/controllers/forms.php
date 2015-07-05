@@ -27,7 +27,7 @@ class Forms extends CI_Controller {
             $this->load->view('head',$ldata);
 			$this->load->view('header',$ldata);
 			$this->load->view('nav',$ldata);		
-			$this->load->view("home_content",$ldata);
+			$this->load->view('home_content',$ldata);
 			$this->load->view('footer',$ldata);
 			}
    			else

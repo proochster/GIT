@@ -125,7 +125,7 @@
                         </p>
                     </div>
 
-                    <h3><i class="fa fa-exclamation"></i> Forgotten Passwords</h3>
+                    <h3><i class="fa fa-rotate-right"></i> Forgotten Passwords</h3>
                     <div class="frame_note">
                         <ul class="bullet">
                             <li>Forgotten passwords can either be reset by generating a new random password and emailing it to the user, or by allowing the user to manually reset the password after click a verifcation link that is emailed to them.</li>

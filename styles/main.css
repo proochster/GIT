@@ -194,24 +194,9 @@ textarea {
    ========================================================================== */
 
 #logout {
-	float: right;
-	margin-top: 1%;
-	margin-bottom: 0.5%;
-	margin-left: 2%;
-	margin-right: 2%;
-}
-
-.top_bar {
-	display: block;
-	clear: both;
-	height: 60px;
-}
-
-.top_bar a {
-	text-decoration: none;
-	color: #3f3f3f;
-	font-family: Abel,sans-serif;
-	text-align:center;
+    position: absolute;
+    right: 4%;
+    top: 1.7em;
 }
 
 #logolarge {
@@ -1575,26 +1560,17 @@ textarea {
 
 /* NAVIGATION */
 
-
-
-nav ul ul {
-	display:none;
+nav {
+    font-family: Abel,sans-serif;
 }
 
-nav ul li:hover > ul {
-	display:block;
+nav a:link{
+    text-decoration: none;
 }
 
 nav ul {
-	background: #175696;
-/*	padding 0 5px;  */
-	list-style: none;
-	position: relative;
-	display: block;
-	font-family: Abel,sans-serif;
-	font-weight: 900;
-	margin: 0;
-	
+    background: #175696;
+    position: relative;	
 }
 
 nav ul:after {
@@ -1617,15 +1593,25 @@ nav ul li:hover a {
 	
 nav ul li a {
 	display: block; 
-	padding: 5px 30px;
-	color: #FFF; 
-	text-decoration: none;
+    padding: 0.5em 1em;
+	color: #FFF;
+}
+
+.dropdown-menu{
+    display: none;
+    background: #175696;
+    padding: 0.5em 1em;
+    color: #fff;
 }
 
 /* ------------------------------------------------ */
 
+nav ul li:hover > ul {
+	display:block;
+}
 
 nav ul ul {
+    display:none;
 	background: #175696; 
 	padding: 0;
 	position: absolute; 
@@ -1638,7 +1624,7 @@ nav ul ul li {
 }
 
 nav ul ul li a {
-	padding: 5px 40px;
+	padding: 0.4em 1em;
 	color: #fff;
 }	
 			
@@ -1656,7 +1642,6 @@ nav ul ul ul {
 /* ------------------------------------------------ */
 
 nav ul ul ul {
-/*	background: #175696;  */
 	background: #888888;
 	padding: 0;
 	position: absolute; 
@@ -1668,58 +1653,12 @@ nav ul ul ul li {
 	float: none; 
 	position: relative;
 }
-
-nav ul ul ul li a {
-	padding: 5px 40px;
-	color: #fff;
-/*	border-bottom: 1px #222222 solid; */
-}	
 			
-nav ul ul ul li a:hover {
-	background: #888888;
-	color: #C41846;
-}
-
 nav ul ul ul {
 	position: absolute; 
 	left: 100%;
 	top:0;
 }
-
-
-/*
-
-
-nav ul {
-	list-style: none;
-	padding: 0 0 0 2%;
-	margin: 0;
-	font-family: Abel,sans-serif;
-	overflow: auto;  
-	background: rgb(23, 86, 150);
-}
-
-nav li{
-	float: left;
-}
-
-nav li a{
-	float: left;
-	text-decoration: none;
-	color: #fff;
-	padding: 1em;
-}
-
-nav li a:hover{
-	background-color: rgb(203, 22, 66);
-}
-
-*/
-
-/* ==========================================================================
-   flexi_auth temp styles
-   ========================================================================== */
-  
   
 /* STRUCTURE CSS */
 
@@ -1734,8 +1673,6 @@ nav li a:hover{
 #header #logo a{
     display: block;
 }
-
-#header a:link, #header a:active, #header a:hover, #header a:visited {color:#777;}
 
 /* Main Navigation */
 
@@ -1973,7 +1910,9 @@ span.tooltip_trigger:after {content:"\2020"; vertical-align:7px; font-size:70%; 
 }
 
 #message p{
-    padding: 1em;    
+    padding: 1em;   
+    color: rgb(0, 0, 0);
+    font-weight: lighter;
 }
 
 #message .status_msg {
@@ -2010,9 +1949,6 @@ a {
     vertical-align:baseline;
     background:transparent;
     color: #0F5193;
-}
-
-a, a:link, a:active, a:visited {
     text-decoration:underline; 
     font-weight:bold;
 }
@@ -2024,7 +1960,7 @@ a:hover, a:active {
 
 /* List Styling ----------------------------------------------------------------------------- */
 ul {list-style:none; margin-left:0;}
-li {padding:3px 0;}
+
 /* Table Styling ----------------------------------------------------------------------------- */
 
 /* Table Styling ----------------------------------------------------------------------------- */
@@ -2139,27 +2075,30 @@ input.width_400, select.width_400, textarea.width_400 {width:400px;}
     text-decoration: none;
     text-shadow: 0 -1px 1px rgba(157, 31, 98, 1);
     cursor: pointer;
-}
-.link_button:visited, a.link_button:visited {color:#FAFAFA;}
-.link_button:hover, a.link_button:hover {color:#FFF; text-decoration:none;}
-.link_button:active, a.link_button:active {color:#F0F0F0;}
-
-.small.link_button, .small.link_button:visited {padding:5px 6px; font-size:11px; box-shadow:0 1px 1px rgba(0,0,0,0.2); -webkit-box-shadow:0 1px 1px rgba(0,0,0,0.2); -moz-box-shadow:0 1px 1px rgba(0,0,0,0.2);}
-
-.link_button, .link_button:visited {
     font-weight:bold;
     box-shadow:0px 1px 0px rgba(157, 31, 98, 1);
     -webkit-box-shadow:0px 1px 0px rgba(157, 31, 98, 1);
     -moz-box-shadow:0px 1px 0px rgba(157, 31, 98, 1);
-    background: #DA1248;
+    background: #DA1248;    
+    padding: 0.6em 1em;
+    text-align: center
+}
+
+a.link_button{
+    padding: 0.6em 1em;
+}
+
+.small.link_button, .small.link_button:visited {
+    padding:5px 6px;
+    font-size:11px;
+    box-shadow:0 1px 1px rgba(0,0,0,0.2);
+    -webkit-box-shadow:0 1px 1px rgba(0,0,0,0.2);
+    -moz-box-shadow:0 1px 1px rgba(0,0,0,0.2);
 }
 
 .large.link_button, .large.link_button:visited {
     font-size: 1em;
-    padding: 0.6em 1em;
-    box-shadow:0 1px 2px rgba(157, 31, 98, 1); 
-    -webkit-box-shadow:0px 1px 0px rgba(157, 31, 98, 1);
-    -moz-box-shadow:0px 1px 0px rgba(157, 31, 98, 1);
+    min-width: 200px;
 }
 
 .link_button:hover {
@@ -2199,7 +2138,6 @@ input.link_button, button.link_button {border:0 none;}
 .ie7 .link_button, .ie8 .link_button  {overflow:visible; border:1px solid #777;}
 .ie6 a.small, .ie6 input.small  {padding:5px 6px; font-size:11px;}
 .ie6 a.large, .ie6 input.large, .ie6 button.large  {padding:8px; font-size:14px;}
-/* END Input~Link Buttons ----------------------------------------------------------------------------- */
 
 /* Inline Element Spacers -------------------------------------------------------------------------------- */
 .spacer_25, label.spacer_25, .spacer_50, label.spacer_50, .spacer_75, label.spacer_75, .spacer_100, label.spacer_100, .spacer_125, label.spacer_125, 
@@ -2442,6 +2380,8 @@ hr.clear {clear:both; display:block; border:0 none; height:0;}
 @media only screen and (max-width: 960px){}
 
 @media only screen and (max-width: 940px){
+    
+    /* Public Navigation */
     #nav{
         display: none;
     }  
@@ -2472,6 +2412,71 @@ hr.clear {clear:both; display:block; border:0 none; height:0;}
         padding: 0.4em 0 0.4em 1em;
         color: #fff;
         font-weight: lighter;
+    }
+    
+    /* User Navigation */
+    nav > ul{
+       display: none
+    }    
+    
+    nav.active > ul{
+       display: block
+    }
+    
+    .dropdown-menu{
+        display: block;
+    }
+    
+    body nav li ul{
+        width: 100%
+    } 
+    
+    nav ul li {
+        display: block;
+        float: none;
+    }
+    
+    nav .expand{
+        position: absolute;
+        top: 0.6em;
+        right: 4%;
+        font-size: 1.3em;
+    }    
+    
+/* Top        ---------- */
+    
+    nav > ul > li {
+        background: #C61745;
+        position: relative;
+        border-bottom: 1px solid #D45F84;
+    }
+    
+/* > Second   ---------- */
+    
+    nav ul > li > ul {
+        position: static;
+    }   
+    
+    nav ul > li > ul > li > a {
+        padding-left: 2em;
+        background: #0F5193;
+    }
+    
+/* > > Third  ---------- */
+        
+    nav ul > li > ul > li > ul {
+        position: static;       
+    }        
+    
+    nav ul > li > ul > li > ul > li > a {
+        padding-left: 4em;
+        font-weight: lighter;
+    }
+    
+    nav ul > li > ul > li > ul > li > a:before {
+        font-family: FontAwesome;
+        content: '\f105';
+        padding: 0 0.5em 0 0;
     }
 }
 
@@ -2522,6 +2527,11 @@ hr.clear {clear:both; display:block; border:0 none; height:0;}
     .menu ul li a{
         color: #494949;
     }
+    #logout{
+        position: static;
+        padding: 1em 0 0.2em;
+        border-top: 1px solid #ddd;
+    }
 }
 
 @media only screen and (min-width: 481px) and (max-width: 680px) {}
@@ -2539,6 +2549,10 @@ hr.clear {clear:both; display:block; border:0 none; height:0;}
     }
     input[type=submit] {
         width: 100%;
+        display: block;
+    }
+    a.link_button.large {
+        width: 90%;
         display: block;
     }
 }
