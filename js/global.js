@@ -1,5 +1,16 @@
+
+$(document).ready(function(){
+    
+    // Mobile Navigation
+    $('.hamburger').click( function(){
+        $('#nav').toggleClass('active');
+    });
+});
+
 $(function() 
 {
+
+    
 	// Remove No JS Class
 	$('html').removeClass('no-js');
 
@@ -87,5 +98,5 @@ $(function()
 	$('.help_link').click(function(){
 		$('#help_guide').show();
 	});
-
+    
 });

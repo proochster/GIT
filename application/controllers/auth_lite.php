@@ -43,11 +43,13 @@ class Auth_lite extends CI_Controller {
     function index()
 	{	
 		$this->load->view('index_view');
+        $this->load->view('footer');
 	}
 
     function features()
 	{
 		$this->load->view('features_view');
+        $this->load->view('footer');
 	}
 
     function demo()

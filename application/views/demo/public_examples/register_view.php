@@ -22,32 +22,37 @@
 	<!-- Intro Content -->
 	<div class="content_wrap intro_bg">
 		<div class="content clearfix">
-			<div class="col100">
-				<h2>Register Account</h2>
-				<p>Please use this form to register an account. You will get an email to activate your account.</p>
-				<p>Your new user will have no privilages, you need to contact your admin to be granted access to the forms you need. </p>
-				<p>Please make sure that you observe your company rules for creating new accounts and naming conventions.</p>
-				
-			</div>
+            <div class="grid">
+                <div class="grid-24">
+                    <h1><i class="fa fa-user-plus"></i> Register Account</h1>
+                    <p>Please use this form to register an account. You will get an email to activate your account.</p>
+                    <p>Your new user will have no privilages, you need to contact your admin to be granted access to the forms you need. </p>
+                    <p>Please make sure that you observe your company rules for creating new accounts and naming conventions.</p>
+                </div>
+            </div>
 		</div>
 	</div>
 	
 	<!-- Main Content -->
 	<div class="content_wrap main_content_bg">
 		<div class="content clearfix">
-			<div class="col100">
-				<h2>Register Account</h2>
-
-			<?php if (! empty($message)) { ?>
-				<div id="message">
-					<?php echo $message; ?>
-				</div>
-			<?php } ?>
-				
-				<?php echo form_open(current_url()); ?>  	
-					<fieldset>
-						<legend>Personal Details</legend>
-						<ul>
+            <div class="grid">
+                <h2 class="grid-24">Register Account</h2>
+                
+                <?php if (! empty($message)) { ?>
+                <div class="grid-24" id="message">
+                    <?php echo $message; ?>
+                </div>
+                <?php } ?>
+                
+                <div class="grid-24">
+                    
+                    <?php echo form_open(current_url()); ?>  
+                    
+                    <div class="frame">
+                        
+                        <h3>Personal Details</h3>
+                        <ul>
 							<li class="info_req">
 								<label for="first_name">First Name:</label>
 								<input type="text" id="first_name" name="register_first_name" value="<?php echo set_value('register_first_name');?>"/>
@@ -57,24 +62,25 @@
 								<input type="text" id="last_name" name="register_last_name" value="<?php echo set_value('register_last_name');?>"/>
 							</li>
 						</ul>
-					</fieldset>
-					
-					<fieldset>
-						<legend>Contact Details</legend>
-						<ul>
+                        
+                        <hr>
+                        
+                        <h3>Contact Details</h3>
+                        <ul>
 							<li class="info_req">
 								<label for="phone_number">Phone Number:</label>
 								<input type="text" id="phone_number" name="register_phone_number" value="<?php echo set_value('register_phone_number');?>"/>
 							</li>
 							<li>
-								<label for="newsletter">Subscribe to Newsletter:</label>
+                                <label>&nbsp;</label>
 								<input type="checkbox" id="newsletter" name="register_newsletter" value="1" <?php echo set_checkbox('register_newsletter',1);?>/>
+                                <label for="newsletter">subscribe to newsletter</label>
 							</li>
 						</ul>
-					</fieldset>
-					
-					<fieldset>
-						<legend>Login Details</legend>
+                        
+                        <hr>
+                        
+                        <h3>Login Details</h3>
 						<ul>
 							<li class="info_req">
 								<label for="email_address">Email Address:</label>
@@ -103,34 +109,17 @@
 								<input type="password" id="confirm_password" name="register_confirm_password" value="<?php echo set_value('register_confirm_password');?>"/>
 							</li>
 						</ul>
-					</fieldset>
-					
-					<fieldset>
-						<legend>Register</legend>
 
 						<ul>
-						<!--	<li>
-								<h6>Important Note</h6>
-								<small>The data saved via this demo is available for anyone else using the demo to see, therefore, you may wish to only test this registration page via your local development environment. All data that is saved via this demo, is completely wiped every few hours.</small>
-							</li> -->
 							<li>
-								<hr/>
-								<label for="submit">Register:</label>
+								<label for="submit">&nbsp;</label>
 								<input type="submit" name="register_user" id="submit" value="Submit" class="link_button large"/>
 							</li>
 						</ul>
-					</fieldset>
-				<?php echo form_close();?>
-			</div>
+                        
+                    </div>
+                    <?php echo form_close();?>
+                </div>
+            </div>
 		</div>
-	</div>	
-	
-	<!-- Footer -->  
-	<?php $this->load->view('footer'); ?> 
-</div>
-
-<!-- Scripts -->  
-<!-- <?php $this->load->view('includes/scripts'); ?>  -->
-
-</body>
-</html>
+	</div>

@@ -137,6 +137,7 @@ class Auth extends CI_Controller {
 		$this->data['message'] = (! isset($this->data['message'])) ? $this->session->flashdata('message') : $this->data['message'];		
 
 		$this->load->view('demo/login_view', $this->data);
+        $this->load->view('footer'); 
     }
 
 	/**
@@ -184,6 +185,7 @@ class Auth extends CI_Controller {
 		$this->data['message'] = (! isset($this->data['message'])) ? $this->session->flashdata('message') : $this->data['message'];		
 
 		$this->load->view('demo/public_examples/register_view', $this->data);
+		$this->load->view('footer');
 	}
 
 	###++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++###	

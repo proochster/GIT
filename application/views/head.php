@@ -20,14 +20,13 @@
 		<link href='http://fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
     	<link href='http://fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css'>
    		<link href='http://fonts.googleapis.com/css?family=Exo:600' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
 		<!-- Javascript -->
-		<script src="/stage/bik/js/vendor/modernizr-2.8.3.min.js"></script> 
-		<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+        <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+        <script src="/stage/bik/js/vendor/modernizr-2.8.3.min.js"></script> 
   		<script src="//code.jquery.com/ui/1.11.3/jquery-ui.js"></script>
   		<script type="text/javascript" src="https://www.google.com/jsapi"></script>
-  		<script src="//ajax.googleapis.com/ajax/libs/jquery/{{JQUERY_VERSION}}/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="../js/vendor/jquery-{{JQUERY_VERSION}}.min.js"><\/script>')</script>
         <script src="/stage/bik/js/plugins.js"></script>
         <script src="/stage/bik/js/main.js"></script>
         <script src="http://backup-pc.dyndns-server.com/stage/qba/js/jquery.tools.tooltips.min.js?v=1.0"></script>

@@ -37,43 +37,37 @@
 			</div>		
 		</div>
 </div>  -->
-
 	<div class="content_wrap intro_bg">
-		<div class="content clearfix">
-			<div class="w100">
-				<h3>Welcome to FPS Gateway</h3>
-				<p>This is a development version - v0.0.0.21.2015</p>
-				<hr style="margin-top:10px; margin-bottom:10px; border:none; border-top:1px dotted #999;"/>
-			</div>
+		<div class="content clearfix"> 
+            <div class="grid">
+                <div class="grid-24">
+                    <h1>Welcome to FPS Gateway</h1>
+                    <p>This is a development version - v0.0.0.21.2015</p>
+                    <hr/>
+                </div>
+            </div>
 		</div>
 	</div>
 
 	<!-- Main Content -->
 	<div class="content_wrap main_content_bg">
 		<div class="content clearfix">
-					
-			<div class="w100 frame">
-				<h2>News	</h2>
-				
-				<p>Version - v0.0.0.0.21.2015</p>
-				<h5>Changelog</h5>
-				<p>Fully integrated role based system</p>
-				<p>Group based navigation system</p>
-				<p>Removed obsolette library functions and methods</p>
-				<p>Integrated Expenses and Mileage forms, and access to those based on user role</p>
-				<hr/>
-
-			</div>
-			
+            <div class="grid">                
+                <h2 class="grid-24"><i class="fa fa-info-circle"></i> News</h2> 
+                <div class="grid-24">
+                    <div class="frame">			
+                        <p>Version - v0.0.0.0.21.2015</p>
+                        <h5>Changelog</h5>
+                        <p><i class="fa fa-check"></i> Fully integrated role based system</p>
+                        <p><i class="fa fa-check"></i> Group based navigation system</p>
+                        <p><i class="fa fa-check"></i> Removed obsolette library functions and methods</p>
+                        <p><i class="fa fa-check"></i> Integrated Expenses and Mileage forms, and access to those based on user role</p>
+                    </div>
+                </div>
+                <div class="grid-24">
+                    <a href="<?php echo $base_url;?>auth"><?php echo ($this->flexi_auth->is_logged_in()) ? 'Login via Password <i class="fa fa-angle-double-right"></i>' : 'Continue to Login <i class="fa fa-angle-double-right"></i>';?></a>                   
+                </div>
+            </div>			
 		</div>
 	</div>
 </div>
-
-<!-- Footer -->  
-<!-- <?php $this->load->view('footer'); ?> --> 
-
-<!-- Scripts -->  
-<!-- <?php $this->load->view('includes/scripts'); ?>  -->
-
-</body>
-</html>
