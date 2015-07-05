@@ -1720,17 +1720,18 @@ nav ul ul ul {
 }
 
 #nav a:link, #nav a:active, #nav a:visited {
-    color:#777;
+    color:#C61745;
     padding: 0.5em;
     text-decoration: none;
 }
 
 #nav a:hover{
-    color: #CB1743;
+    color: #0F5193;
 }
 
 #nav a .fa{
     padding: 0 0.1em 0;
+    color: #ACAFA6;
 }
 
 .hamburger{
