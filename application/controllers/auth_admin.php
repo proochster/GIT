@@ -98,9 +98,9 @@ class Auth_admin extends CI_Controller {
  	 */
     function dashboard()
     {
-		$this->data['message'] = $this->session->flashdata('message');
-		
+		$this->data['message'] = $this->session->flashdata('message');		
 		$this->load->view('demo/admin_examples/dashboard_view', $this->data);
+		$this->load->view('footer');
 	}
 
 	###++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++###	
