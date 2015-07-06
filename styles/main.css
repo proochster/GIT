@@ -44,7 +44,6 @@ body{
 .grey       { color: #ACAFA6; }
 .light-grey { color: #f0f0f0; }
 .white      { color: #fff; }
-.white      { color: #fff; }
 .black      { color: #333; }
 
 /*
@@ -247,7 +246,6 @@ textarea {
 	color: #3f3f3f;
 	text-align:center;
 }
-
 
 #table1 {
 	margin-left: auto;
@@ -1238,6 +1236,25 @@ table h4 {
     font-size: 0.9em
 }
 
+/* Back to top */
+.back-to-top{
+    position: fixed;
+    bottom: 1em;
+    right: 0;
+    background-color: #fff;
+    padding: 0.5em 1em 0.2em;
+    border-radius: 5px 0 0 5px;
+    font-size: 0.8em;
+    box-shadow: 0px 3px 0px #C8D7E6;
+    display: none;
+}
+
+.back-to-top .fa{
+    color: #0F5193;
+    font-size: 1.6em;
+    padding: 0em 0.3em 0 0.2em;
+}
+
 /* ----------------------------------- */
 /* -------- DASHBOARD STYLES --------- */
 /* ----------------------------------- */
@@ -1995,7 +2012,7 @@ ul {list-style:none; margin-left:0;}
 /* Table Styling ----------------------------------------------------------------------------- */
 
 table {
-    width:auto;
+    width: 100%;
     border:2px solid #aaa;
     border-collapse:collapse;
     border-spacing:0;
@@ -2547,42 +2564,43 @@ hr.clear {clear:both; display:block; border:0 none; height:0;}
         overflow: visible;
     }
     
-    table {
+    .scroll table {
         width: 100%;
         border: 0;
         background-color: #fff;
     }
 
-    table tr { 
+    .scroll table tr { 
         display: block;
     }
 
-    table thead, table tbody { 
+    .scroll table thead, .scroll table tbody { 
         float: left;
     }
     
-    table thead {
+    .scroll table thead {
         width: 40%;
     }
     
-    table tbody {
+    .scroll table tbody {
         width: 60%;
     }
     
-    table td { 
+    .scroll table td { 
         display: list-item;
         list-style: none;
         border: 0;
     }
     
-    table thead tr td h4{
-        font-size: 1.2em;
-        padding: 0.4em 1em;
+    .scroll table thead tr td h4{
+        font-size: 1em;
+        padding: 0.44em 1em;
         text-align: right;
         border-bottom: 1px dotted #fff;   
+        white-space: nowrap;
     }
     
-    table tbody tr td select{
+    .scroll table tbody tr td select{
         padding: 0.6em 1em;
         box-shadow: none;
         border: 1px solid #BEBEBE;
@@ -2590,18 +2608,18 @@ hr.clear {clear:both; display:block; border:0 none; height:0;}
         margin: 0.2em 0;        
     }
     
-    table tbody tr td{
+    .scroll table tbody tr td{
         padding: 0.2em 1em;
         text-align: left !important;
         position: relative;
     }
     
-    table tbody tr td p{
+    .scroll table tbody tr td p{
         padding: 0.7em 0 0.5em;
         white-space: nowrap;
     }
     
-    table input:not([type=submit]):not([type=file]){
+    .scroll table input:not([type=submit]):not([type=file]){
         padding: 0.6em 1em;
         box-shadow: none;
         border: 1px solid #BEBEBE;
@@ -2610,13 +2628,13 @@ hr.clear {clear:both; display:block; border:0 none; height:0;}
         width: 78%;
     }
     
-    thead th, thead td, tfoot th, tfoot td {
+    .scroll thead th, .scroll thead td, .scroll tfoot th, .scroll tfoot td {
     border-bottom:1px solid #fff;
     border-top:1px solid #fff;
     background-color:#fff;
 	}
 	
-	table th, table td {
+	.scroll table th, .scroll table td {
     border-bottom:1px dotted #fff;
     border-right:1px dotted #fff;
     vertical-align:middle;

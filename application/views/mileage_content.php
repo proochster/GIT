@@ -1,5 +1,5 @@
-<div id="container">
-    <div class="clearfix">    
+<div class="content_wrap intro_bg">
+    <div class="content clearfix">  
         <h1>MILEAGE DATA INPUT</h1>
         <?= form_open('forms/mileage'); ?>
 

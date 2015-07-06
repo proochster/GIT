@@ -13,9 +13,21 @@ $(document).ready(function(){
         $('.dropdown-menu i').toggleClass('fa-chevron-up');
     });
     
+    // Add EXPAND icons to mobile dropdowns
     $('nav li ul').each(function(){
         $(this).parent().append('<i class="fa fa-plus-square-o white expand"></i>');
     });
+    
+    // Scroll to top
+    $(window).scroll(function() {
+        $(this).scrollTop() > 100 ? $(".back-to-top").fadeIn() : $(".back-to-top").fadeOut();
+    });
+    $(".back-to-top").click(function() {
+        return $("html, body").animate({
+            scrollTop: 0
+        }, 800), !1;
+    });
+    
 });
 
 $(function() 
