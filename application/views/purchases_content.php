@@ -1,7 +1,10 @@
-       	
 <div id="container">
+	<div class="clearfix">
 	<h1>PURCHASES DATA INPUT</h1>
 	<?= form_open('forms/purchases'); ?>
+	
+	<div class="grid">
+            <div class="grid-24 scroll">
 	
 	<table id="table4" width="100%">
 		<thead>
@@ -79,12 +82,22 @@
 			<p><?php echo form_error('gross'); ?></p>
 			<p><?php echo form_error('vatpercent'); ?></p>
 		</div>
-		
-	<div class="center"><input type="submit" id="submit1" class="submit-button"/></div>
+	</div>
+	
+			
+	<div class="grid-24 center">
+		<input type="submit" id="submit1" class="large link_button"/>
+	</div>
+	
+	</div>
 	
 	<?= form_close(); ?>
 	
-	<table id="table2" width="100%">
+    <div class="grid">
+    	<div class="grid-24 scroll">
+           		
+			<table id="table2">
+				
 		<thead>
 			<tr>
 				<td class="ref"><h4>Ref No</h4></td>
@@ -104,21 +117,24 @@
 	<?php
 	
 	foreach($results as $row){
-		echo "<tr><td>".$row->autoid."</td>";
-		echo "<td>".$row->supplier."</td>";
-		echo "<td>".$row->invoiceref."</td>";
-		echo "<td>".$row->date."</td>";
-		echo "<td>".$row->period."</td>";		
-		echo "<td>".$row->net."</td>";
-		echo "<td>".$row->vat."</td>";
-		echo "<td>".$row->gross."</td>";
-		echo "<td>".$row->vatpercent."%</td>";
-		echo "<td>".$row->narrative."</td>";
-		echo "<td>".$row->paidby."</td>";
+		echo "<tr><td><p>".$row->autoid."</p></td>";
+		echo "<td><p>".$row->supplier."</p></td>";
+		echo "<td><p>".$row->invoiceref."</p></td>";
+		echo "<td><p>".$row->date."</p></td>";
+		echo "<td><p>".$row->period."</p></td>";		
+		echo "<td><p>".$row->net."</p></td>";
+		echo "<td><p>".$row->vat."</p></td>";
+		echo "<td><p>".$row->gross."</p></td>";
+		echo "<td><p>".$row->vatpercent."%</p></td>";
+		echo "<td><p>".$row->narrative."</p></td>";
+		echo "<td><p>".$row->paidby."</p></td>";
 		
 	} 
 	 
 	?>
 	</table>
 
+			</div>
+		</div>
+	</div>
 </div>

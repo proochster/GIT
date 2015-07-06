@@ -9,11 +9,24 @@
 				<td><h4>Model*</h4></td>
 				<td><input placeholder="Model" type="text" name="car" /></td>
 			</tr>
-			
 			<tr>
 				<td><h4>List Price*</h4></td>
 				<td><input placeholder="25000" type="number" step="any" name="listprice" /></td>
 			</tr>
+			<tr>
+				<td><h4>Fuel Type*</h4></td>
+				<td>
+		                <select name="fueltype">
+                            <option value = "Diesel">Diesel</option>
+                            <option value = "Petrol">Petrol</option>
+                            <option value = "Electric">Electric</option>
+                        </select>
+                 </td>
+			</tr>
+			<tr>
+				<td><h4>Engine Capacity*</h4></td>
+				<td><input placeholder="1600" type="number" step="any" name="enginecc" /></td>
+			</tr>		
 		
 			<tr>
 				<td><h4>CO2*</h4></td>
@@ -24,7 +37,7 @@
 				<td><h4>Registration*</h4></td>
 				<td><input placeholder="Registration" type="text" name="registration" /></td>
 			</tr>
-		
+			
 			
 	</table>
 	<table id="table9" class="cellemphasis" width="100%">
@@ -64,12 +77,16 @@
 	
 	<?= form_close(); ?>
 	
+	<div class="clearboth"></div>
+	
 	<table id="table2" width="100%">
 		<h4>Cars already in Database:</h4>
 	<thead>
 		<tr>
 			<td><h4>Model</h4></td>
 			<td><h4>List Price</h4></td>
+			<td><h4>Fuel Type</h4></td>
+			<td><h4>Engine CC</h4></td>
 			<td><h4>Co2</h4></td>
 			<td><h4>Registration</h4></td>
 			<td><h4>Benefit</h4></td>
@@ -83,6 +100,8 @@
 	foreach($results as $row){
 		echo "<tr><td>".$row->car."</td>";
 		echo "<td>£".$row->listprice."</td>";
+		echo "<td>".$row->fueltype."</td>";
+		echo "<td>".$row->enginecc."</td>";
 		echo "<td>".$row->co2."</td>";
 		echo "<td>".$row->registration."</td>";
 		echo "<td>£".$row->benefit."</td>";

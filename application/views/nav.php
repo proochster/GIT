@@ -1,11 +1,11 @@
 <nav>
 <div class="dropdown-menu">Menu <i class="fa fa-chevron-down"></i> </div>
 <ul>	
-	<li><?php echo anchor( base_url(), 'Home', 'title="Home"'); ?></li>	
+	<li><?php echo anchor( base_url(), '<i class="fa fa-home"></i> Home', 'title="Home"'); ?></li>	
     
 	<li><a href="#">Policies</a>
         <ul>
-            <li><a href="#">HMRC Tax Guidelines</a></li>
+            <li><?php echo anchor('forms/hmrc', 'HMRC Guidelines', 'title="HMRC Guidelines"'); ?></li>
             <li><a href="#">Company Tax Guide</a></li>
             <li><a href="#">Company Cars</a></li>
             <li><a href="#">Mileage Claims</a></li>
@@ -17,7 +17,7 @@
     <li><a href="#">Input</a>
         <ul>
             <li><?php echo anchor('forms/mileage', 'Business Mileage', 'title="Business Mileage"'); ?></li>
-            <li><?php echo anchor('forms/purchases', 'Fuel Claims', 'title="Fuel Claims"'); ?></li>
+            <li><?php echo anchor('forms/fuelpurchases', 'Fuel Claims', 'title="Fuel Claims"'); ?></li>
             <li><?php echo anchor('forms/purchases', 'Business Expenses', 'title="Business Expenses"'); ?></li>
         </ul>
     </li>
@@ -30,15 +30,21 @@
 					<li><?php echo anchor('forms/selectform', 'Tutorials', 'title="Company Car Log"'); ?></li>
 				</ul>
 			</li>
+			<li><a href="#">Averaging</a>
+				<ul>
+					<li><?php echo anchor('forms/Averaging', 'Avergaing', 'title="Averaging"'); ?></li>
+				</ul>
+			</li>
 			<li><a href="#">Benefit In Kind</a>
 				<ul>
 					<li><?php echo anchor('forms/taxbycar', 'View All Company Cars', 'title="Tax By Car"'); ?></li>
-					<li><?php echo anchor('forms/selectform', 'View Company Car Log By User', 'title="Company Car Log"'); ?></li>
+					<li><?php echo anchor('forms/viewccbyuser', 'View Company Car Log By User', 'title="Company Car Log"'); ?></li>
 				</ul>
 			</li>
 			<li><a href="#">Comparisons</a>
 				<ul>
 					<li><?php echo anchor('forms/taxbycar', 'Compare Cars', 'title="Tax By Car"'); ?></li>
+					<li><?php echo anchor('forms/carbik', 'BIK Comparisons By Individual', 'title="BIK by individual"'); ?></li>
 				</ul>
 			</li>
 			<li><a href="#">VAT Scale Charge</a></li>
@@ -163,6 +169,12 @@
                     <li><?php echo anchor('forms/supplier', 'Add Supplier', 'title="Add Supplier"'); ?></li>
                 </ul>
             </li>
+            <li><a href="#">Fuel Purchases Details</a>
+                <ul>
+                    <li><?php echo anchor('forms/fuelpaymentmthd', 'Add Fuel Payment Method', 'title="Add Fuel Payment Method"'); ?></li>
+                    <li><?php echo anchor('forms/fuelsupplier', 'Add Fuel Supplier', 'title="Add Fuel Supplier"'); ?></li>
+                </ul>
+            </li>
 		</ul>
 	</li>
     <li><a href="#">Admin</a>
@@ -183,6 +195,7 @@
            <?php } ?>        
 
             <li><?php echo anchor('forms/privilagetest', 'Privilage Test', 'title="Privilages"'); ?></li>
+            <li><?php echo anchor('forms/selectform', 'View Company Car Log By User', 'title="Company Car Log"'); ?></li>
         </ul>
     </li>	
 </ul>

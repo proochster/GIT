@@ -5,7 +5,7 @@ class Form_model extends CI_Model {
  // Cars --BEGIN--
 		
 	public function getAll_cars() {
-		$query = $this->db->query("SELECT car, listprice, co2, benefit, fuel, total, registration FROM cars ORDER BY registration;");
+		$query = $this->db->query("SELECT car, listprice, fueltype, enginecc, co2, benefit, fuel, total, registration FROM cars ORDER BY registration;");
 		
 		return $query->result();
 	}
@@ -15,6 +15,8 @@ class Form_model extends CI_Model {
 		$data = array(		
 			'car' => $this->input->post('car'),
 			'listprice' => $this->input->post('listprice'),
+			'fueltype' => $this->input->post('fueltype'),
+			'enginecc' => $this->input->post('enginecc'),
 			'co2' => $this->input->post('co2'),
 			'benefit' => $this->input->post('benefit'),
 			'fuel' => $this->input->post('fuel'),
@@ -600,7 +602,7 @@ class Form_model extends CI_Model {
 	}
 	
 	public function getAll_mileage() {
-		$query = $this->db->query("SELECT * FROM bikdemo.mileage LEFT JOIN bikdemo.cars ON bikdemo.mileage.`reg` = bikdemo.cars.`registration` ORDER BY bikdemo.mileage.`autoid` DESC");
+		$query = $this->db->query("SELECT *, DATE_FORMAT(date, '%d-%m-%Y') as `date` FROM bikdemo.mileage LEFT JOIN bikdemo.cars ON bikdemo.mileage.`reg` = bikdemo.cars.`registration` ORDER BY bikdemo.mileage.`autoid` DESC LIMIT 1");
 		
 		return $query->result();
 	}
@@ -660,10 +662,100 @@ class Form_model extends CI_Model {
  	}	
 	
 	public function getAll_purchases() {
-		$query = $this->db->query("SELECT * FROM bikdemo.expenses ORDER BY bikdemo.expenses.`date` DESC;");
+		$query = $this->db->query("SELECT *, DATE_FORMAT(date, '%d-%m-%Y') as `date` FROM bikdemo.expenses ORDER BY bikdemo.expenses.`date` DESC LIMIT 1;");
 		
 		return $query->result();
 	}
+	
+// fuel paymentmthd --BEGIN--
+ 
+ 	public function insertValues_fuelpaymentmthd() {
+		
+		$data = array(		
+			'fuelpaymentmthd' => $this->input->post('fuelpaymentmthd')
+		);
+		
+		$this->db->insert('fuelpaymentmthd_tb', $data);
+		
+	}
+	
+	public function getfuelPaymentmthd() {
+ 		
+		$this->db->select('fuelpaymentmthd')->order_by('fuelpaymentmthd', 'asc');
+		$query = $this->db->get('fuelpaymentmthd_tb');
+				
+		return $query->result();
+ 		
+ 	}
+  
+// fuel paymentmthd --END--
+	
+// Fuel Suppliers --BEGIN--
+ 
+ 	public function insertValues_fuelsupplier() {
+		
+		$data = array(		
+			'fuelsupname' => $this->input->post('fuelsupname')
+		);
+		
+		$this->db->insert('fuelsupplier_tb', $data);
+		
+	}
+	
+// ----
+ 
+ 	public function getfuelSupplier() {
+ 		
+		$this->db->select('fuelsupname')->order_by('fuelsupname', 'asc');
+		$query = $this->db->get('fuelsupplier_tb');
+				
+		return $query->result();
+ 		
+ 	}
+ 
+
+// Fuel Suppliers --END--	
+	
+// Get Fuel Suppliers --START--
+
+	public function insertValues_fuelpurchases() {
+  		
+		$dateconv = $this->form_model->dateconv();
+		
+		$vatpercent = 20;
+		$gross = $this->input->post('gross');
+		
+		if ( $vatpercent == "20"){
+			$vat = $gross - ($gross - ($gross / 6));
+			$net = $gross - ($gross / 6);
+		} elseif ( $vatpercent == "0"){
+			$vat = 0;
+			$net = $gross; 
+		} else {
+			echo "Something went terribly wrong";
+		}
+		 		
+		$data = array(
+			'fuelsupplier' => $this->input->post('fuelsupplier'),
+			'date' => $dateconv,
+			'period' => $this->input->post('period'),
+			'net' => round($net,2),
+			'vat' => round($vat,2),
+			'gross' => $this->input->post('gross'),
+			'paidby' => $this->input->post('fuelpaymentmthd')
+		);
+	
+		$this->db->insert('fuelexpenses', $data);	
+ 		
+ 	}
+
+	public function getAll_fuelpurchases() {
+		$query = $this->db->query("SELECT *, DATE_FORMAT(date, '%d-%m-%Y') as `date` FROM bikdemo.fuelexpenses ORDER BY bikdemo.fuelexpenses.`autoid` DESC LIMIT 1;");
+		
+		return $query->result();
+	}
+	
+// Get Fuel Suppliers --END--		
  
 }
 			

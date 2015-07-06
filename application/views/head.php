@@ -12,7 +12,7 @@
         
         
         <!-- Stylesheets -->
-        <link rel="stylesheet" href="//code.jquery.com/ui/1.11.3/themes/smoothness/jquery-ui.css">
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
 		<link rel="stylesheet" href="http://backup-pc.dyndns-server.com/stage/qba/styles/main.css" type="text/css" media="screen">
 		
 		<!-- Fonts -->
@@ -22,13 +22,16 @@
    		<link href='http://fonts.googleapis.com/css?family=Exo:600' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
+		
 		<!-- Javascript -->
         <script src="//code.jquery.com/jquery-1.10.2.js"></script>
-        <script src="/stage/bik/js/vendor/modernizr-2.8.3.min.js"></script> 
-  		<script src="//code.jquery.com/ui/1.11.3/jquery-ui.js"></script>
+      	<script src="/stage/qba/js/vendor/modernizr-2.8.3.min.js"></script> 
+  		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.11/jquery-ui.min.js"></script>
+  		<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
   		<script type="text/javascript" src="https://www.google.com/jsapi"></script>
-        <script src="/stage/bik/js/plugins.js"></script>
-        <script src="/stage/bik/js/main.js"></script>
+        <script src="/stage/qba/js/plugins.js"></script>
+        <script src="/stage/qba/js/main.js"></script>
         <script src="http://backup-pc.dyndns-server.com/stage/qba/js/jquery.tools.tooltips.min.js?v=1.0"></script>
         <script src="http://backup-pc.dyndns-server.com/stage/qba/js/global.js?v=1.0"></script>
 		

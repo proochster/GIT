@@ -31,6 +31,7 @@
 					<a href="<?php echo $base_url;?>auth"><?php echo ($this->flexi_auth->is_logged_in()) ? 'Login via Password' : '<i class="fa fa-sign-in"></i> Login';?></a>
 			</li>
 			<?php } ?>
+			
 			<?php if (! $this->flexi_auth->is_logged_in()) { ?>
 				<li>
 					<a href="<?php echo $base_url;?>auth/register_account"><i class="fa fa-user-plus"></i> Register</a>
@@ -39,6 +40,10 @@
 				<li>
 					<a href="<?php echo $base_url;?>auth/logout"><i class="fa fa-sign-out"></i> Logout</a>
 				</li>
+				<li>
+					<a href="<?php echo $base_url;?>forms/index"><i class="fa fa-table"></i> Forms</a>
+				</li>
+				
 			<?php } ?>
 		<!--	<li>
 				<a href="https://github.com/haseydesign/flexi-auth">Download</a>

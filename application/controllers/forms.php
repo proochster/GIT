@@ -41,13 +41,102 @@ class Forms extends CI_Controller {
 	public function logout()
 	{
 		$this->session->sess_destroy();
-   		redirect('login', 'refresh');
+		    redirect('auth_lite/index', 'refresh');
+		   	}
+	
+
+/* HMRC Guidelines */
+
+	public function hmrc()
+	{
+		if ($this->flexi_auth->is_logged_in())
+   			
+   		{
+ 		$session_data = $this->session->userdata('logged_in_via_password');
+ 		$ldata['username'] = $session_data['user_identifier'];
+            $this->load->view('head',$ldata);
+			$this->load->view('header',$ldata);
+			$this->load->view('nav',$ldata);		
+			$this->load->view('hmrc_content',$ldata);
+			$this->load->view('footer',$ldata);
+			}
+   			else
+   			{
+		    //If no session, redirect to login page
+		    redirect('auth_lite/index', 'refresh');
+		   	}
+			
 	}
-	
-	
 
 
+/* Averaging */
 
+	public function averaging()
+	{
+		if ($this->flexi_auth->is_logged_in())
+   			
+   		{
+ 		$session_data = $this->session->userdata('logged_in_via_password');
+ 		$ldata['username'] = $session_data['user_identifier'];
+            $this->load->view('head',$ldata);
+			$this->load->view('header',$ldata);
+			$this->load->view('nav',$ldata);		
+			$this->load->view('averaging_content',$ldata);
+			$this->load->view('footer',$ldata);
+			}
+   			else
+   			{
+		    //If no session, redirect to login page
+		    redirect('auth_lite/index', 'refresh');
+		   	}
+			
+	}
+
+/* View Company Car Log By User */
+
+	public function viewccbyuser()
+	{
+		if ($this->flexi_auth->is_logged_in())
+   			
+   		{
+ 		$session_data = $this->session->userdata('logged_in_via_password');
+ 		$ldata['username'] = $session_data['user_identifier'];
+            $this->load->view('head',$ldata);
+			$this->load->view('header',$ldata);
+			$this->load->view('nav',$ldata);		
+			$this->load->view('viewccbyuser_content',$ldata);
+			$this->load->view('footer',$ldata);
+			}
+   			else
+   			{
+		    //If no session, redirect to login page
+		    redirect('auth_lite/index', 'refresh');
+		   	}
+			
+	}
+
+/* Carbik */
+
+	public function carbik()
+	{
+		if ($this->flexi_auth->is_logged_in())
+   			
+   		{
+ 		$session_data = $this->session->userdata('logged_in_via_password');
+ 		$ldata['username'] = $session_data['user_identifier'];
+            $this->load->view('head',$ldata);
+			$this->load->view('header',$ldata);
+			$this->load->view('nav',$ldata);		
+			$this->load->view('carbik_content',$ldata);
+			$this->load->view('footer',$ldata);
+			}
+   			else
+   			{
+		    //If no session, redirect to login page
+		    redirect('auth_lite/index', 'refresh');
+		   	}
+			
+	}
 
 
 /* Privilage Test */
@@ -223,7 +312,7 @@ class Forms extends CI_Controller {
    			else
    			{
 		    //If no session, redirect to login page
-		    redirect('login', 'refresh');
+		    redirect('auth_lite/index', 'refresh');
 		   	}
 		
 	}
@@ -288,7 +377,7 @@ class Forms extends CI_Controller {
    			else
    			{
 		    //If no session, redirect to login page
-		    redirect('login', 'refresh');
+		    redirect('auth_lite/index', 'refresh');
 		   	}
 				
 			}
@@ -323,8 +412,8 @@ class Forms extends CI_Controller {
 
 		{
 	    //If no session, redirect to login page
-	    redirect('login', 'refresh');
-	   	}
+		    redirect('auth_lite/index', 'refresh');
+		   	}
 		
 	}
 
@@ -384,9 +473,8 @@ class Forms extends CI_Controller {
 	{
 		
 	//If no session, redirect to login page
-	redirect('login', 'refresh');
-	
-	}
+		    redirect('auth_lite/index', 'refresh');
+		   	}
 			
 	}
 	
@@ -440,7 +528,7 @@ class Forms extends CI_Controller {
    			else
    			{
 		    //If no session, redirect to login page
-		    redirect('login', 'refresh');
+		    redirect('auth_lite/index', 'refresh');
 		   	}
 				
 			}
@@ -493,7 +581,7 @@ class Forms extends CI_Controller {
    			else
    			{
 		    //If no session, redirect to login page
-		    redirect('login', 'refresh');
+		    redirect('auth_lite/index', 'refresh');
 		   	}
 
 			}
@@ -570,7 +658,7 @@ class Forms extends CI_Controller {
    			else
    			{
 		    //If no session, redirect to login page
-		    redirect('login', 'refresh');
+		    redirect('auth_lite/index', 'refresh');
 		   	}
 
 	
@@ -652,7 +740,7 @@ class Forms extends CI_Controller {
    			else
    			{
 		    //If no session, redirect to login page
-		    redirect('login', 'refresh');
+		    redirect('auth_lite/index', 'refresh');
 		   	}
 			
 	}
@@ -705,9 +793,9 @@ class Forms extends CI_Controller {
    			else
    			{
 		    //If no session, redirect to login page
-		    redirect('login', 'refresh');
+		    redirect('auth_lite/index', 'refresh');
 		   	}
-			}
+	}
 
 
 /* ------------------------------------------------------------------------------------
@@ -759,7 +847,7 @@ class Forms extends CI_Controller {
    			else
    			{
 		    //If no session, redirect to login page
-		    redirect('login', 'refresh');
+		    redirect('auth_lite/index', 'refresh');
 		   	}
 				
 			}
@@ -831,10 +919,179 @@ public function expenses()
    			else
    			{
 		    //If no session, redirect to login page
-		    redirect('login', 'refresh');
+		    redirect('auth_lite/index', 'refresh');
 		   	}
 	}
 
+
+/* ------------------------------------------------------------------------------------
+ * --------------------------------FUEL PURCHASES--------------------------------------
+ * ------------------------------------------------------------------------------------ */
+
+
+	public function fuelpurchases()
+	{
+		
+	if ($this->flexi_auth->is_logged_in())
+   			
+   		{
+   		$session_data = $this->session->userdata('logged_in');
+ 		$ldata['username'] = $session_data['username'];
+		$this->load->model("form_model");
+		$this->load->library('form_validation');
+		
+		$config = array(
+               array(
+                     'field'   => 'date', 
+                     'label'   => 'Date', 
+                     'rules'   => 'required'
+                  ),
+               array(
+                     'field'   => 'gross', 
+                     'label'   => 'Gross', 
+                     'rules'   => 'required'
+                  )
+            );
+
+		$this->form_validation->set_rules($config);
+		
+		
+		if ($this->form_validation->run() == FALSE)
+		{
+			$this->load->view('head',$ldata);
+            $this->load->view('header',$ldata);
+			$this->load->view('nav',$ldata);
+			$data['fuelsupplier'] = $this->form_model->getfuelSupplier();	
+			$data['period'] = $this->form_model->getPeriod();	
+			$data['fuelpaymentmthd'] = $this->form_model->getfuelPaymentmthd();
+			$data['results'] = $this->form_model->getAll_fuelpurchases();							
+			$this->load->view("fuelpurchases_content", $data);
+			$this->load->view('footer',$ldata);
+		}
+		else
+		{
+			$this->form_model->insertValues_fuelpurchases();	
+					
+			$this->load->view('head',$ldata);
+            $this->load->view('header',$ldata);
+			$this->load->view('nav',$ldata);
+			$data['fuelsupplier'] = $this->form_model->getfuelSupplier();	
+			$data['period'] = $this->form_model->getPeriod();
+			$data['fuelpaymentmthd'] = $this->form_model->getfuelPaymentmthd();
+			$data['results'] = $this->form_model->getAll_fuelpurchases();							
+			$this->load->view("fuelpurchases_content", $data);
+			$this->load->view('footer',$ldata);
+		}
+			}
+   			else
+   			{
+		    //If no session, redirect to login page
+		    redirect('auth_lite/index', 'refresh');
+		   	}
+			
+	}
+
+/* -------------------------------FUEL PAYMENT METHOD---------------------------------- */
+
+		public function fuelpaymentmthd()
+			{
+				
+			if ($this->flexi_auth->is_logged_in())
+   			
+   				{
+				$session_data = $this->session->userdata('logged_in');
+ 				$ldata['username'] = $session_data['username'];
+				$this->load->model("form_model");
+				$this->load->library('form_validation');
+				
+				$config = array(
+		               array(
+		                     'field'   => 'fuelpaymentmthd', 
+		                     'label'   => 'Payment Method', 
+		                     'rules'   => 'required'
+		                  )
+		            );
+		
+				$this->form_validation->set_rules($config);
+				
+				
+				if ($this->form_validation->run() == FALSE)
+				{
+					$this->load->view('head',$ldata);
+                    $this->load->view('header',$ldata);
+					$this->load->view('nav',$ldata);					
+					$this->load->view('fuelpaymentmthd_content');
+					$this->load->view('footer',$ldata);
+				}
+				else
+				{
+					$this->form_model->insertValues_fuelpaymentmthd();	
+					
+					$this->load->view('head',$ldata);
+                    $this->load->view('header',$ldata);
+					$this->load->view('nav',$ldata);	
+					$this->load->view('fuelpaymentmthd_content');
+					$this->load->view('footer',$ldata);
+				}
+				}
+   			else
+   			{
+		    //If no session, redirect to login page
+		    redirect('auth_lite/index', 'refresh');
+		   	}
+	}
+
+/* ------------------------------FUEL SUPPLIER----------------------------------------- */
+
+		public function fuelsupplier()
+			{
+				
+			if ($this->flexi_auth->is_logged_in())
+   			
+   				{
+   				$session_data = $this->session->userdata('logged_in');
+ 				$ldata['username'] = $session_data['username'];
+				$this->load->model("form_model");
+				$this->load->library('form_validation');
+				
+				$config = array(
+		               array(
+		                     'field'   => 'fuelsupname', 
+		                     'label'   => 'Supplier Name', 
+		                     'rules'   => 'required'
+		                  )
+		            );
+		
+				$this->form_validation->set_rules($config);
+				
+				
+				if ($this->form_validation->run() == FALSE)
+				{
+					$this->load->view('head',$ldata);
+                    $this->load->view('header',$ldata);
+					$this->load->view('nav',$ldata);					
+					$this->load->view('fuelsupplier_content');
+					$this->load->view('footer',$ldata);
+				}
+				else
+				{
+					$this->form_model->insertValues_fuelsupplier();	
+					
+					$this->load->view('head',$ldata);
+                    $this->load->view('header',$ldata);
+					$this->load->view('nav',$ldata);	
+					$this->load->view('fuelsupplier_content');
+					$this->load->view('footer',$ldata);
+				}
+				
+			}
+   			else
+   			{
+		    //If no session, redirect to login page
+		    redirect('auth_lite/index', 'refresh');
+		   	}
+				
+			}
 
 
 /* --- THE LAST BRACKET --- */

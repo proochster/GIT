@@ -20,7 +20,7 @@
                     <tbody>
                         <tr>			 
                             <td>
-                                <input type="text" id="datepicker" name="date" />
+                                <input type="text" id="datepicker2" name="date" />
                             </td>
                             <td>
                                 <select name="reg">
@@ -74,15 +74,17 @@
                 <table id="table2">
                     <thead>
                         <tr>
-                            <td class="date"><h4>Date</h4></td>
-                            <td class="reg"><h4>From</h4></td>
-                            <td class="model"><h4>To</h4></td>
-                            <td class="fuel"><h4>Client</h4></td>
-                            <td class="from"><h4>Return</h4></td>
-                            <td class="to"><h4>Registration</h4></td>
-                            <td class="client"><h4>Model</h4></td>
-                            <td class="return"><h4>Fuel</h4></td>
-                            <td class="mileage"><h4>Milage</h4></td>
+                            <td><h4>Date</h4></td>
+                            <td><h4>From</h4></td>
+                            <td><h4>To</h4></td>
+                            <td><h4>Client</h4></td>
+                            <td><h4>Return</h4></td>
+                            <td><h4>Registration</h4></td>
+                            <td><h4>Fuel Type</h4></td>
+                            <td><h4>Engine Capacity</h4></td>
+                            <td><h4>Model</h4></td>
+                            <td><h4>Fuel</h4></td>
+                            <td><h4>Milage</h4></td>
                         </tr>
                     </thead>
 
@@ -95,6 +97,8 @@
                         echo "<td><p>".$row->client."</p></td>";
                         echo "<td><p>".$row->return."</p></td>";		
                         echo "<td><p>".$row->reg."</p></td>";
+						echo "<td><p>".$row->fueltype."</p></td>";
+						echo "<td><p>".$row->enginecc." cc</p></td>";
                         echo "<td><p>".$row->car."</p></td>";
                         echo "<td><p>".$row->fuel."</p></td>";
                         echo "<td><p>".$row->mileage."</p></td></tr>";
