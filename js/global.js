@@ -122,4 +122,4 @@ $(function()
 		$('#help_guide').show();
 	});
     
-});
+}); 
