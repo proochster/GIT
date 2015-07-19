@@ -1094,34 +1094,41 @@ public function expenses()
 			}
 
     /* ------------------------------Image Upload----------------------------------------- */
-
+        
+    
+        // Initial page for file uploading
+        
 		public function imageupload()
 			{
 				
-			if ($this->flexi_auth->is_logged_in())
-   			
-   				{
-   				$session_data = $this->session->userdata('logged_in');
- 				$ldata['username'] = $session_data['username'];
-                            
-                
-                $this->load->view('head',$ldata);
-                $this->load->view('header',$ldata);
-                $this->load->view('nav',$ldata);
-                $this->load->view('image_upload', array('error' => ' ' ));
-                $this->load->view('footer',$ldata);
-				
-			}
-   			else
-   			{
-		    //If no session, redirect to login page
-		    redirect('auth_lite/index', 'refresh');
-		   	}
+                if ($this->flexi_auth->is_logged_in())
+
+                    {
+                    $session_data = $this->session->userdata('logged_in');
+                    $ldata['username'] = $session_data['username'];
+
+
+                    $data['error'] = $error = ' ';
+                    $data['upload_message'] = 'Upload an image';
+
+                    $this->load->view('head',$ldata);
+                    $this->load->view('header');
+                    $this->load->view('nav');
+                    $this->load->view('image_upload', $data);
+                    $this->load->view('footer');
+
+                }
+                else
+                {
+                //If no session, redirect to login page
+                redirect('auth_lite/index', 'refresh');
+                }
 				
 			}
     
+        // Processing file upload, both success and failed uploads
     
-    		public function imageuploaded()
+        public function imageuploaded()
 			{
 				
 			if ($this->flexi_auth->is_logged_in())
@@ -1131,7 +1138,7 @@ public function expenses()
                 
  				$ldata['username'] = $session_data['username'];
                 
-                $config['upload_path'] = 'http://backup-pc.dyndns-server.com/stage/qba/img/uploads/';
+                $config['upload_path'] = 'img/uploads/';
                 $config['allowed_types'] = 'gif|jpg|png';
                 $config['max_size']	= '1000';              
 		      
@@ -1140,24 +1147,28 @@ public function expenses()
                 $this->upload->initialize($config);
                 
                     if ( ! $this->upload->do_upload())
-                    {
-                        $error = array('error' => $this->upload->display_errors());
+                    {                        
+                        $data['error'] = $this->upload->display_errors();
+                        $data['upload_message'] = 'Ooops!';
                         
                         $this->load->view('head',$ldata);
-                        $this->load->view('header',$ldata);
-                        $this->load->view('nav',$ldata);
-                        $this->load->view('image_upload', $error);
-                        $this->load->view('footer',$ldata);
+                        $this->load->view('header');
+                        $this->load->view('nav');
+                        $this->load->view('image_upload', $data);
+                        $this->load->view('footer');
                     }
                     else
                     {
                         $data = array('upload_data' => $this->upload->data());
+                        $data['error'] = $this->upload->display_errors();
+                        $data['upload_message'] = 'File uploaded';
                         
-                        $this->load->view('head',$ldata);
-                        $this->load->view('header',$ldata);
-                        $this->load->view('nav',$ldata);
+                        
+                        $this->load->view('head', $ldata);
+                        $this->load->view('header');
+                        $this->load->view('nav');
                         $this->load->view('image_upload', $data);
-                        $this->load->view('footer',$ldata);
+                        $this->load->view('footer');
                     }
  
                 }

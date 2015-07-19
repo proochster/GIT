@@ -4,9 +4,12 @@
             <div class="grid">
                 <div class="grid-24">
 			        <a name="whats_not_included"></a>				
-                    <h2><i class="fa fa-list-alt"></i> Image Upload</h2>
+                    <h2><i class="fa fa-cloud-upload"></i>
+                        <?php echo $upload_message;?>
+                    </h2>
                     <div class="frame">
-                        <div class="frame_note"> 
+                        <div class="frame_note">
+                            
                         </div>
                         
 						<?php echo $error;?>
