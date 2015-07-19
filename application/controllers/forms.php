@@ -1093,6 +1093,84 @@ public function expenses()
 				
 			}
 
+    /* ------------------------------Image Upload----------------------------------------- */
+
+		public function imageupload()
+			{
+				
+			if ($this->flexi_auth->is_logged_in())
+   			
+   				{
+   				$session_data = $this->session->userdata('logged_in');
+ 				$ldata['username'] = $session_data['username'];
+                            
+                
+                $this->load->view('head',$ldata);
+                $this->load->view('header',$ldata);
+                $this->load->view('nav',$ldata);
+                $this->load->view('image_upload', array('error' => ' ' ));
+                $this->load->view('footer',$ldata);
+				
+			}
+   			else
+   			{
+		    //If no session, redirect to login page
+		    redirect('auth_lite/index', 'refresh');
+		   	}
+				
+			}
+    
+    
+    		public function imageuploaded()
+			{
+				
+			if ($this->flexi_auth->is_logged_in())
+   			
+   				{
+   				$session_data = $this->session->userdata('logged_in');
+                
+ 				$ldata['username'] = $session_data['username'];
+                
+                $config['upload_path'] = 'http://backup-pc.dyndns-server.com/stage/qba/img/uploads/';
+                $config['allowed_types'] = 'gif|jpg|png';
+                $config['max_size']	= '1000';              
+		      
+                
+                $this->load->library('upload', $config);
+                $this->upload->initialize($config);
+                
+                    if ( ! $this->upload->do_upload())
+                    {
+                        $error = array('error' => $this->upload->display_errors());
+                        
+                        $this->load->view('head',$ldata);
+                        $this->load->view('header',$ldata);
+                        $this->load->view('nav',$ldata);
+                        $this->load->view('image_upload', $error);
+                        $this->load->view('footer',$ldata);
+                    }
+                    else
+                    {
+                        $data = array('upload_data' => $this->upload->data());
+                        
+                        $this->load->view('head',$ldata);
+                        $this->load->view('header',$ldata);
+                        $this->load->view('nav',$ldata);
+                        $this->load->view('image_upload', $data);
+                        $this->load->view('footer',$ldata);
+                    }
+ 
+                }
+                else
+                {
+                //If no session, redirect to login page
+                redirect('auth_lite/index', 'refresh');
+                }
+				
+			}
+    
+    
+
 
 /* --- THE LAST BRACKET --- */
   
