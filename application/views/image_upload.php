@@ -22,8 +22,7 @@
 
                         <input type="submit" value="upload" />
 
-                        </form>					
-				
+                        </form>				
 						
                     </div>
                 </div>
